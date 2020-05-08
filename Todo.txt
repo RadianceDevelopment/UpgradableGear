@@ -1,0 +1,14 @@
+soul banks - crafted with 25 of the coin + 5/5/15/30 souls, can be uncrafted to get coins back. Stacks to 40 (250 coins per full stack)
+soul armour - WIP, but will make souls drop more often. Uses Compressed Souls (each one of those is 10 souls)
+
+accessories:
+Warrior's/Ranger's/Mage's/Summoner's Essence (T 1 - 10): Improves stats of that class
+Damaging Essence: +15% Damage - 50 Mob Souls
+Critical Essence: +3% Critical Chance - 65 Mob Souls
+
+Defensive Essence: +2/4/8/12 Defense - 20/20/60 + 5 Cobalt or Palladium Bars/75 + 10 Spectre or Shroomite Bars
+
+
+add alternatives to the T10 weapons that have different effects
+- Crafted with T10 weapon + Flask of the debuff type
+-- Change existing T10 to only give bonus money (2 mins instead of 1)

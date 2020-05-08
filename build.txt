@@ -1,0 +1,4 @@
+displayName = Upgradable Gear
+author = vizthex
+version = 1.0
+homepage = https://github.com/RadianceDevelopment/UpgradableGear
