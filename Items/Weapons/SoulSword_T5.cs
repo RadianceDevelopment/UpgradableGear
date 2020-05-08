@@ -20,7 +20,7 @@ namespace UpgradableGear.Items.Weapons
 			item.melee = true;
 			item.width = 45;
 			item.height = 50;
-			item.useTime = 16;
+			item.useTime = 18;
 			item.useAnimation = 20;
 			item.useStyle = 1;
 			item.rare = 3;

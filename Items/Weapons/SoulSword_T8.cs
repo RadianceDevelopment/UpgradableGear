@@ -1,6 +1,6 @@
 using Terraria;
 using Terraria.ID;
-using Terraria.ModLoader;
+using Terraria.ModLoader
 
 namespace UpgradableGear.Items.Weapons
 {
@@ -20,7 +20,7 @@ namespace UpgradableGear.Items.Weapons
 			item.melee = true;
 			item.width = 50;
 			item.height = 60;
-			item.useTime = 11;
+			item.useTime = 12;
 			item.useAnimation = 20;
 			item.useStyle = 1;
 			item.rare = 6;
