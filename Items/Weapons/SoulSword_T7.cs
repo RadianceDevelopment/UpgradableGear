@@ -14,7 +14,7 @@ namespace UpgradableGear.Items.Weapons
 
 		public override void SetDefaults() 
 		{
-			item.damage = 50;
+			item.damage = 55;
 			item.knockBack = 7;
 			item.crit = 6;
 			item.melee = true;
