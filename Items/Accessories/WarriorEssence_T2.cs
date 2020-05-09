@@ -9,7 +9,7 @@ namespace UpgradableGear.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Warrior's Essence");
-			Tooltip.SetDefault("The Essence of monsters compressed into a form that imbues the user with limited power.\nGrants +4% melee damage");
+			Tooltip.SetDefault("The Essence of monsters compressed into a form that imbues the user with limited power.\nGrants +4% melee damage\nCurrent Tier: II");
 		}
 		
         public override void SetDefaults()

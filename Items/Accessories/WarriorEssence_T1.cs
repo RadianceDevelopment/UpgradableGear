@@ -9,7 +9,7 @@ namespace UpgradableGear.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Warrior's Essence");
-			Tooltip.SetDefault("The Essence of monsters compressed into a form that imbues the user with very limited power.\nGrants +2% melee damage");
+			Tooltip.SetDefault("The Essence of monsters compressed into a form that imbues the user with very limited power.\nGrants +2% melee damage\nCurrent Tier: I");
 		}
 		
         public override void SetDefaults()
@@ -36,3 +36,4 @@ namespace UpgradableGear.Items.Accessories
         }
     }
 }
+// No, the name isn't a Hollow Knight reference. I didn't even think of that until recently tbh

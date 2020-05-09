@@ -32,7 +32,7 @@ namespace UpgradableGear.Items.Accessories
 			recipe.AddIngredient(mod.GetItem("WarriorEssence_T4"), 1);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 32);
 			recipe.AddIngredient(ItemID.HellstoneBar, 3);
-			//recipe.AddTile(TileType<SoulInfuser>());
+			//recipe.AddTile(TileType<SoulForge>());
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
