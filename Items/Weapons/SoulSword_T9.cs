@@ -9,18 +9,18 @@ namespace UpgradableGear.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Sword");
-			Tooltip.SetDefault("The sword hums with assurance, and drains you of your endurance\nHeals equal to the damage dealt divided by 7\nInflicts Ichor 50% of the time\nInflicts Frostburn 33% of the time\nCurrent Tier: IX\nThe sword seems to speak to you, saying 'The time is near...'");
+			Tooltip.SetDefault("The sword hums with assurance, and drains you of your endurance\nHeals equal to the damage dealt divided by 7\nInflicts Frostburn 33% of the time\nInflicts On Fire! 50% of the time\nLaunches a ghostly projectile when swung (Still WIP!)\nCurrent Tier: IX\nThe sword seems to speak to you, saying 'The time is near...'");
 	    }
 
 		public override void SetDefaults() 
 		{
 			item.damage = 100;
-			item.knockBack = 7;
+			item.knockBack = 8;
 			item.crit = 10;
 			item.melee = true;
 			item.width = 55;
 			item.height = 65;
-			item.useTime = 10;
+			item.useTime = 15;
 			item.useAnimation = 20;
 			item.useStyle = 1;
 			item.rare = 8;
@@ -33,10 +33,20 @@ namespace UpgradableGear.Items.Weapons
 		{
 			
 			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.TerraBlade, 1);
 			recipe.AddIngredient(mod.GetItem("SoulSword_T8"), 1);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 100);
 			recipe.AddIngredient(ItemID.SpectreBar, 10);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.AddTile(TileID.WorkBenches);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.TerraBlade, 1);
+			recipe.AddIngredient(mod.GetItem("SoulSword_T8"), 1);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 100);
+			recipe.AddIngredient(ItemID.ShroomiteBar, 10);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
@@ -50,11 +60,11 @@ namespace UpgradableGear.Items.Weapons
 			player.statLife +=healingAmount;
 			player.HealEffect(healingAmount, true);
 			
-			if(Main.rand.NextBool(2)){
-			target.AddBuff(BuffID.Ichor, 120);
-		}
 		if(Main.rand.NextBool(3)){
-			target.AddBuff(BuffID.Frostburn, 240);
+			target.AddBuff(BuffID.Frostburn, 360);
+		}
+		    if(Main.rand.NextBool(2)){
+			target.AddBuff(BuffID.OnFire, 360);
 		}
 	  }
 	}

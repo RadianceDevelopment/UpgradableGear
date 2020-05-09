@@ -9,7 +9,7 @@ namespace UpgradableGear.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Sword");
-			Tooltip.SetDefault("The sword lights up with blue fire...\nHeals equal to the damage dealt divided by 9\nApplies Frostburn 50% of the time\nCurrent Tier: VII");
+			Tooltip.SetDefault("The sword lights up with blue fire...\nHeals equal to the damage dealt divided by 9\nApplies Frostburn 50% of the time\nLaunches a ghostly projectile when swung (Still WIP!)\nCurrent Tier: VII");
 	    }
 
 		public override void SetDefaults() 
@@ -20,7 +20,7 @@ namespace UpgradableGear.Items.Weapons
 			item.melee = true;
 			item.width = 48;
 			item.height = 55;
-			item.useTime = 14;
+			item.useTime = 21;
 			item.useAnimation = 20;
 			item.useStyle = 1;
 			item.rare = 5;
@@ -35,7 +35,17 @@ namespace UpgradableGear.Items.Weapons
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SoulSword_T6"), 1);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 60);
-			recipe.AddIngredient(ItemID.HallowedBar, 5);
+			recipe.AddIngredient(ItemID.AdamantiteBar, 5);
+			recipe.AddIngredient(ItemID.FrostCore, 1);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.AddTile(TileID.WorkBenches);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(mod.GetItem("SoulSword_T6"), 1);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 60);
+			recipe.AddIngredient(ItemID.TitaniumBar, 5);
 			recipe.AddIngredient(ItemID.FrostCore, 1);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.AddTile(TileID.WorkBenches);
@@ -51,7 +61,7 @@ namespace UpgradableGear.Items.Weapons
 			player.HealEffect(healingAmount, true);
 			
 			if(Main.rand.NextBool(2)){
-			target.AddBuff(BuffID.Frostburn, 210);
+			target.AddBuff(BuffID.Frostburn, 180);
 		}
 	  }
 	}

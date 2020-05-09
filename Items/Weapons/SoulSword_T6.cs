@@ -20,7 +20,7 @@ namespace UpgradableGear.Items.Weapons
 			item.melee = true;
 			item.width = 47;
 			item.height = 52;
-			item.useTime = 16;
+			item.useTime = 21;
 			item.useAnimation = 20;
 			item.useStyle = 1;
 			item.rare = 4;
@@ -59,7 +59,7 @@ namespace UpgradableGear.Items.Weapons
 			player.HealEffect(healingAmount, true);
 			
 			if(Main.rand.NextBool(3)){
-			target.AddBuff(BuffID.OnFire, 180);
+			target.AddBuff(BuffID.OnFire, 240);
 		}
 	  }
 	}

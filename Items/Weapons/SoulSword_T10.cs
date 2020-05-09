@@ -9,7 +9,7 @@ namespace UpgradableGear.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("True Soul Sword");
-			Tooltip.SetDefault("The Sword convulses for a moment, then reveals its true form.\nAt last, you have fed it enough energy to weild its ultimate power.\nHeals equal to the damage dealt divided by 5\nLaunches a ghostly projectile when swung (Still WIP!)\n Inflicts Frostburn 50% of the time\nFoes drop extra money when killed\nCurrent Tier: X");
+			Tooltip.SetDefault("The sword convulses for a moment, then reveals its true form.\nAt last, you have fed it enough energy to weild its ultimate power.\nHeals equal to the damage dealt divided by 5\nInflicts Frostburn and On Fire! 50% of the time\nLaunches a ghostly projectile when swung (Still WIP!)\n Inflicts Frostburn 50% of the time\nFoes drop extra money when killed\nCurrent Tier: X");
 	    }
 
 		public override void SetDefaults() 
@@ -20,7 +20,7 @@ namespace UpgradableGear.Items.Weapons
 			item.melee = true;
 			item.width = 70;
 			item.height = 85;
-			item.useTime = 5;
+			item.useTime = 10;
 			item.useAnimation = 15;
 			item.useStyle = 1;
 			item.rare = 11;
@@ -38,7 +38,7 @@ namespace UpgradableGear.Items.Weapons
 			recipe.AddIngredient(mod.GetItem("SoulSword_T9"), 1);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 250);
 			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddTile(TileID.AncientManipulator);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
@@ -49,18 +49,14 @@ namespace UpgradableGear.Items.Weapons
 			int healingAmount = damage/5;
 			player.statLife +=healingAmount;
 			player.HealEffect(healingAmount, true);
-		/* Disabled - Moved to other swords
-			if(Main.rand.NextBool(3)){
-			target.AddBuff(BuffID.Ichor, 180);
-		}
-		if(Main.rand.NextBool(2)){
-			target.AddBuff(BuffID.CursedInferno, 300);
-		}
-		*/
+
 		if(Main.rand.NextBool(2)){
 			target.AddBuff(BuffID.Frostburn, 420);
 		}
-		// This should apply Midas for 5 minutes
+		    if(Main.rand.NextBool(2)){
+			target.AddBuff(BuffID.OnFire, 600);
+		}
+		// This should apply Midas (enemies drop 10 -50% more coins when killed) for 5 minutes
 		if(Main.rand.NextBool(1)){
 			target.AddBuff(BuffID.Midas, 18000);
 		}

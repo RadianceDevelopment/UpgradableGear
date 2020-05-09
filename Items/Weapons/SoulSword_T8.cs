@@ -9,7 +9,7 @@ namespace UpgradableGear.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Sword");
-			Tooltip.SetDefault("The sword resonants with power, and lights up with cursed flames...\nHeals equal to the damage dealt divided by 8\nEnemies are enveloped in cursed fire 33% of the time\nCurrent Tier: VIII");
+			Tooltip.SetDefault("The sword resonants with power, and lights up with cursed flames...\nHeals equal to the damage dealt divided by 8\nEnemies are enveloped in cursed fire 33% of the time\nLaunches a ghostly projectile when swung (Still WIP!)\nCurrent Tier: VIII");
 	    }
 
 		public override void SetDefaults() 
@@ -20,7 +20,7 @@ namespace UpgradableGear.Items.Weapons
 			item.melee = true;
 			item.width = 50;
 			item.height = 60;
-			item.useTime = 12;
+			item.useTime = 19;
 			item.useAnimation = 20;
 			item.useStyle = 1;
 			item.rare = 6;
@@ -35,10 +35,10 @@ namespace UpgradableGear.Items.Weapons
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SoulSword_T7"), 1);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 75);
-			recipe.AddIngredient(ItemID.ChlorophyteBar, 5);
-			recipe.AddIngredient(ItemID.SoulofFright, 1);
-			recipe.AddIngredient(ItemID.SoulofMight, 1);
-			recipe.AddIngredient(ItemID.SoulofSight, 1);
+			recipe.AddIngredient(ItemID.ChlorophyteBar, 7);
+			recipe.AddIngredient(ItemID.SoulofFright, 5);
+			recipe.AddIngredient(ItemID.SoulofMight, 5);
+			recipe.AddIngredient(ItemID.SoulofSight, 5);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
@@ -51,9 +51,9 @@ namespace UpgradableGear.Items.Weapons
 			int healingAmount = damage/8;
 			player.statLife +=healingAmount;
 			player.HealEffect(healingAmount, true);
-			
-			if(Main.rand.NextBool(3)){
-			target.AddBuff(BuffID.CursedInferno, 300);
+		
+			if(Main.rand.NextBool(2)){
+			target.AddBuff(BuffID.Frostburn, 300);
 		}
 	  }
 	}

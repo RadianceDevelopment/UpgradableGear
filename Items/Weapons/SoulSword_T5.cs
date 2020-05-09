@@ -34,8 +34,8 @@ namespace UpgradableGear.Items.Weapons
 			
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SoulSword_T4"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 32);
-			recipe.AddIngredient(ItemID.HellstoneBar, 1);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 30);
+			recipe.AddIngredient(ItemID.HellstoneBar, 3);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
@@ -47,7 +47,7 @@ namespace UpgradableGear.Items.Weapons
 			// 60 frames = 1 second
 			// Formula is 1 in X (x = 3 in this case) chance to be applied
 			if(Main.rand.NextBool(3)){
-			target.AddBuff(BuffID.OnFire, 180);
+			target.AddBuff(BuffID.OnFire, 120);
 		}
 	  }
 	}

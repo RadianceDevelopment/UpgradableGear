@@ -14,12 +14,12 @@ namespace UpgradableGear.Items.Weapons
 
 		public override void SetDefaults() 
 		{
-			item.damage = 17;
+			item.damage = 15;
 			item.knockBack = 4;
 			item.melee = true;
 			item.width = 40;
 			item.height = 42;
-			item.useTime = 23;
+			item.useTime = 25;
 			item.useAnimation = 20;
 			item.useStyle = 1;
 			item.rare = 2;
