@@ -9,7 +9,7 @@ namespace UpgradableGear.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Warrior's Essence");
-			Tooltip.SetDefault("The Essence of monsters compressed into a form that imbues the user with a bit of power.\nGrants +7% melee damage");
+			Tooltip.SetDefault("The Essence of monsters compressed into a form that imbues the user with a bit of power.\nGrants +6% melee damage\nCurrent Tier: III");
 		}
 		
         public override void SetDefaults()
@@ -23,7 +23,7 @@ namespace UpgradableGear.Items.Accessories
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.meleeDamage += 0.07f;
+			player.meleeDamage += 0.06f;
         }
         public override void AddRecipes()
         {
