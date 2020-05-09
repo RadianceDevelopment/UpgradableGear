@@ -33,7 +33,7 @@ namespace UpgradableGear.Items.Weapons
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SoulSword_T3"), 1);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
-			recipe.AddIngredient(ItemID.Sapphire, 1);
+			recipe.AddIngredient(ItemID.Ruby, 3);
 			//recipe.AddTile(TileID.SoulInfuser);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
