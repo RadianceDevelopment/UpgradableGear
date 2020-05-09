@@ -15,7 +15,7 @@ namespace UpgradableGear.Items.Weapons
 		public override void SetDefaults() 
 		{
 			item.damage = 225;
-			item.knockBack = 12;
+			item.knockBack = 10;
 			item.crit = 16;
 			item.melee = true;
 			item.width = 70;
@@ -49,7 +49,7 @@ namespace UpgradableGear.Items.Weapons
 			int healingAmount = damage/5;
 			player.statLife +=healingAmount;
 			player.HealEffect(healingAmount, true);
-			
+		/* Disabled - Moved to other swords
 			if(Main.rand.NextBool(3)){
 			target.AddBuff(BuffID.Ichor, 180);
 		}
@@ -59,8 +59,10 @@ namespace UpgradableGear.Items.Weapons
 		if(Main.rand.NextBool(1)){
 			target.AddBuff(BuffID.Frostburn, 420);
 		}
+		*/
+		// This should apply Midas for 5 minutes
 		if(Main.rand.NextBool(1)){
-			target.AddBuff(BuffID.Midas, 3600);
+			target.AddBuff(BuffID.Midas, 18000);
 		}
 	  }
 	}
