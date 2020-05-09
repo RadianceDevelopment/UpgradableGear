@@ -1,1 +1,7 @@
-Upgradable Gear is a pretty cool mod, it does...this. Modify this file with a description of your mod.
+Upgradable Gear is a mod that allows you to gather Monster Souls (which are crafted with mob drops, but I plan to make them actually drop soon) and convert them into useful gear.
+
+It's intended to be used alongside mods that expand the game past the Moon Lord (such as Calamity and Thorium), but can be used by itself.
+
+Currently adds 12 Swords and 6 Accesssories (all for the melee class rn)
+
+You can visit the homepage (it's the GitHub repository) to report issues and find a content wiki (and the to-do list)

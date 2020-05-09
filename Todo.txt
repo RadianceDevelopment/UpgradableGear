@@ -1,14 +1,22 @@
-soul banks - crafted with 25 of the coin + 5/5/15/30 souls, can be uncrafted to get coins back. Stacks to 40 (250 coins per full stack)
 soul armour - WIP, but will make souls drop more often. Uses Compressed Souls (each one of those is 10 souls)
 
-accessories:
-Warrior's/Ranger's/Mage's/Summoner's Essence (T 1 - 10): Improves stats of that class
-Damaging Essence: +15% Damage - 50 Mob Souls
-Critical Essence: +3% Critical Chance - 65 Mob Souls
+Add Wiki pages for current content, maybe some images too
 
-Defensive Essence: +2/4/8/12 Defense - 20/20/60 + 5 Cobalt or Palladium Bars/75 + 10 Spectre or Shroomite Bars
+Accessories:
+
+Warrior's/Ranger's/Mage's/Summoner's Essence (T 1 - 10): Improves stats of that class
+- T4 needs 3 of the class's gem, T5 uses Hellstone, T6 uses Mythril/Orichalcum (stat boost jump is bigger), T7 uses Chlorophyte, T8 uses the class bar (Spectre, Shroomite, etc.), T9 uses post-Golem materials (check and see if there are any), T10 uses Luminite items
+
+Damaging Essence: +15/20% Damage - 50 Mob Souls/T1 + 25 Souls + 10 Spectre
+Critical Essence: +3/6/10% Critical Chance - 65 Mob Souls/T1 + 50 Souls + 10 Mythril/T2 + 60 Soul + 10 Spectre
+Defensive Essence: +2/4/8/12 Defense - 20 Souls/T1 + 20 Souls/T2 + 60 Souls + 5 Cobalt or Palladium Bars/T3 + 75 Souls + 10 Spectre or Shroomite Bars
 
 
 add alternatives to the T10 weapons that have different effects
 - Crafted with T10 weapon + Flask of the debuff type
 -- Change existing T10 to only give bonus money (2 mins instead of 1)
+
+
+
+Implemented:
+soul banks - crafted with 25 of the coin + 5/5/15/30 souls, can be uncrafted to get coins back. Stacks to 40 (250 coins per full stack)

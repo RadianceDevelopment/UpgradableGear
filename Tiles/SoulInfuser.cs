@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
 
-namespace UpgradableGear.Tiles
+namespace SoulSang.Tiles
 {
 	public class SoulInfuser : ModItem
 	{

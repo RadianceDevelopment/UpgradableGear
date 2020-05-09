@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace UpgradableGear.Items.Weapons
+namespace SoulSang.Items.Weapons
 {
 	public class SoulSword_T8 : ModItem
 	{

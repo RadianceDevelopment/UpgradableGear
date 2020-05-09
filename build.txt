@@ -1,4 +1,4 @@
-displayName = Upgradable Gear
+displayName = Soul Sanguisuge
 author = vizthex
 version = 1.0
 homepage = https://github.com/RadianceDevelopment/UpgradableGear

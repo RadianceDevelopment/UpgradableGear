@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace UpgradableGear.Items.Accessories
+namespace SoulSang.Items.Accessories
 {
 	public class WarriorEssence_T4 : ModItem
 	{

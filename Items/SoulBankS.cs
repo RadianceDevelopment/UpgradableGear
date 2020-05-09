@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace UpgradableGear.Items
+namespace SoulSang.Items
 {
 	public class SoulBankS : ModItem
 	{
