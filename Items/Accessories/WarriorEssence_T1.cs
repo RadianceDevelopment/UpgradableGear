@@ -9,7 +9,7 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Warrior's Essence");
-			Tooltip.SetDefault("The Essence of monsters compressed into a form that imbues the user with very limited power.\nGrants +2% melee damage\nCurrent Tier: I");
+			Tooltip.SetDefault("The Essence of monsters compressed into a form that imbues the user with a bit of power.\nGrants +5% melee damage\nCurrent Tier: I");
 		}
 		
         public override void SetDefaults()
@@ -17,20 +17,20 @@ namespace SoulSang.Items.Accessories
             item.width = 20;
             item.height = 20;
             item.maxStack = 1;
-            item.value = Item.sellPrice(0, 0, 0, 5);
+            item.value = Item.sellPrice(0, 0, 0, 50);
             item.rare = 0;
 			item.accessory = true;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.meleeDamage += 0.02f;
+			player.meleeDamage+= 0.05f;
         }
         public override void AddRecipes()
         {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 5);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 10);
 			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
         }
