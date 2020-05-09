@@ -9,7 +9,7 @@ namespace UpgradableGear.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("True Soul Sword");
-			Tooltip.SetDefault("The Sword convulses for a moment, then reveals its true form.\nAt last, you have fed it enough energy to weild its ultimate power.\nHeals equal to the damage dealt divided by 5\nInflicts Ichor 33% of the time\nInflicts Cursed Inferno 50% of the time\nInflicts Frostburn 100% of the time\nFoes drop extra money when killed\nCurrent Tier: X");
+			Tooltip.SetDefault("The Sword convulses for a moment, then reveals its true form.\nAt last, you have fed it enough energy to weild its ultimate power.\nHeals equal to the damage dealt divided by 5\nLaunches a ghostly projectile when swung (Still WIP!)\n Inflicts Frostburn 50% of the time\nFoes drop extra money when killed\nCurrent Tier: X");
 	    }
 
 		public override void SetDefaults() 
@@ -34,9 +34,9 @@ namespace UpgradableGear.Items.Weapons
 		{
 			
 			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.Meowmere, 1);
 			recipe.AddIngredient(mod.GetItem("SoulSword_T9"), 1);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 250);
-			recipe.AddIngredient(ItemID.Meowmere, 1);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
@@ -56,10 +56,10 @@ namespace UpgradableGear.Items.Weapons
 		if(Main.rand.NextBool(2)){
 			target.AddBuff(BuffID.CursedInferno, 300);
 		}
-		if(Main.rand.NextBool(1)){
+		*/
+		if(Main.rand.NextBool(2)){
 			target.AddBuff(BuffID.Frostburn, 420);
 		}
-		*/
 		// This should apply Midas for 5 minutes
 		if(Main.rand.NextBool(1)){
 			target.AddBuff(BuffID.Midas, 18000);
