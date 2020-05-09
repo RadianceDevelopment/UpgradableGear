@@ -37,8 +37,7 @@ namespace UpgradableGear.Items.Weapons
 			recipe.AddIngredient(ItemID.Meowmere, 1);
 			recipe.AddIngredient(mod.GetItem("SoulSword_T9"), 1);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 250);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.AncientManipulator);
+			recipe.AddTile(TileID.LunarCraftingStation );
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

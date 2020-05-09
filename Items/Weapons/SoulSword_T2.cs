@@ -34,7 +34,7 @@ namespace UpgradableGear.Items.Weapons
 			recipe.AddIngredient(mod.GetItem("SoulSword_T1"), 1);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 10);
 			//recipe.AddTile(TileID.SoulInfuser);
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

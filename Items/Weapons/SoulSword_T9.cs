@@ -37,8 +37,8 @@ namespace UpgradableGear.Items.Weapons
 			recipe.AddIngredient(mod.GetItem("SoulSword_T8"), 1);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 100);
 			recipe.AddIngredient(ItemID.SpectreBar, 10);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.WorkBenches);
+			//recipe.AddTile(TileType<SoulForge>());
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 			
@@ -47,8 +47,8 @@ namespace UpgradableGear.Items.Weapons
 			recipe.AddIngredient(mod.GetItem("SoulSword_T8"), 1);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 100);
 			recipe.AddIngredient(ItemID.ShroomiteBar, 10);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.WorkBenches);
+			//recipe.AddTile(TileType<SoulForge>());
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

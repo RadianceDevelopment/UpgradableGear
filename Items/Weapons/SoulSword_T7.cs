@@ -37,8 +37,8 @@ namespace UpgradableGear.Items.Weapons
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 60);
 			recipe.AddIngredient(ItemID.AdamantiteBar, 5);
 			recipe.AddIngredient(ItemID.FrostCore, 1);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.WorkBenches);
+			//recipe.AddTile(TileType<SoulForge>());
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 			
@@ -47,8 +47,8 @@ namespace UpgradableGear.Items.Weapons
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 60);
 			recipe.AddIngredient(ItemID.TitaniumBar, 5);
 			recipe.AddIngredient(ItemID.FrostCore, 1);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.WorkBenches);
+			//recipe.AddTile(TileType<SoulForge>());
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

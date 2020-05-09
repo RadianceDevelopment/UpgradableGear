@@ -39,8 +39,8 @@ namespace UpgradableGear.Items.Weapons
 			recipe.AddIngredient(ItemID.SoulofFright, 5);
 			recipe.AddIngredient(ItemID.SoulofMight, 5);
 			recipe.AddIngredient(ItemID.SoulofSight, 5);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.WorkBenches);
+			//recipe.AddTile(TileType<SoulForge>());
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

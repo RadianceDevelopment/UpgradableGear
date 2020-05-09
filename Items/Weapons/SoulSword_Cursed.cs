@@ -38,8 +38,7 @@ namespace UpgradableGear.Items.Weapons
 			recipe.AddIngredient(ItemID.FlaskofCursedFlames, 1);
 			recipe.AddIngredient(ItemID.CursedFlames, 3);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 150);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddTile(TileID.LunarCraftingStation );
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

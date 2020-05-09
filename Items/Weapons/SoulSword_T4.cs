@@ -35,7 +35,7 @@ namespace UpgradableGear.Items.Weapons
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
 			recipe.AddIngredient(ItemID.Ruby, 3);
 			//recipe.AddTile(TileID.SoulInfuser);
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
