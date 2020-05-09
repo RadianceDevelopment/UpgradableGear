@@ -35,9 +35,9 @@ namespace UpgradableGear.Items.Weapons
 			
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SoulSword_T10"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 150);
 			recipe.AddIngredient(ItemID.FlaskofIchor, 1);
 			recipe.AddIngredient(ItemID.Ichor, 3);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 150);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
