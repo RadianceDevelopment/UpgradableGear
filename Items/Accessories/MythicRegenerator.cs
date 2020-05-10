@@ -24,7 +24,7 @@ namespace SoulSang.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			// Band of Regen is 1
-			player.lifeRegen+= 6;
+			player.lifeRegen+= 7;
 			player.statLifeMax2+= 100;
 			player.potionDelayTime+= 2400;
         }
