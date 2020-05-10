@@ -32,8 +32,6 @@ namespace SoulSang.Items.Accessories
 			recipe.AddIngredient(ItemID.BandofRegeneration, 1);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 15);
 			//recipe.AddTile(TileType<SoulInfuser>());
-			// Thanks to Braycoe#3181 on the TML Discord for giving me the internal ID for Hardmode Forges
-			// Hardmode Forges
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
