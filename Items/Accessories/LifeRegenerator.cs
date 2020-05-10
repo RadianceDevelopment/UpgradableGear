@@ -4,12 +4,12 @@ using Terraria.ModLoader;
 
 namespace SoulSang.Items.Accessories
 {
-	public class MythicRegenerator : ModItem
+	public class LifeRegenerator : ModItem
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Mythic Regenerator");
-			Tooltip.SetDefault("An ancient, legendary item made from 3 relics of the past\nImproves life regeneration and maximum health\nReduces Potion Sickness to 40 seconds");
+			DisplayName.SetDefault("Life Regenerator");
+			Tooltip.SetDefault("An ancient item made from 2 relics of the past\nImproves life regeneration and maximum health");
 		}
 		
         public override void SetDefaults()
@@ -17,7 +17,7 @@ namespace SoulSang.Items.Accessories
             item.width = 25;
             item.height = 25;
             item.maxStack = 1;
-            item.value = Item.sellPrice(1, 20, 0, 0);
+            item.value = Item.sellPrice(1, 5, 0, 0);
             item.rare = 10;
 			item.accessory = true;
         }
@@ -26,20 +26,16 @@ namespace SoulSang.Items.Accessories
 			// Band of Regen is 1
 			player.lifeRegen+= 5;
 			player.statLifeMax2+= 100;
-			player.potionDelay = 40;
         }
         public override void AddRecipes()
         {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SoulVessel"), 1);
-			recipe.AddIngredient(ItemID.CharmofMyths, 1); 
-			recipe.AddIngredient(mod.GetItem("LifeRegenerator"), 1);
-			// Make it use both of these
-			//recipe.AddTile(TileID.LunarCraftingTable);
+			recipe.AddIngredient(mod.GetItem("SoulRegen"), 1);
+			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
         }
     }
 }
-// Thanks to absoluteAquarian#5189 on the TML Discord for giving me the potion delay code
