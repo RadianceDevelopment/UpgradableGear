@@ -9,7 +9,7 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Vessel");
-			Tooltip.SetDefault("Combining 3 Vessel Fragments allows you to imbue an item with the power of Soul.\nIncreases maximum life by 100 when equipped");
+			Tooltip.SetDefault("Combining 3 Vessel Fragments allows you to imbue the items with the power of Soul\nAn ancient item from a far-away land\nIncreases maximum life by 100 when equipped");
 		}
 		
         public override void SetDefaults()

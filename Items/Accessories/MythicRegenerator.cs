@@ -4,12 +4,12 @@ using Terraria.ModLoader;
 
 namespace SoulSang.Items.Accessories
 {
-	public class SoulRegen : ModItem
+	public class MythicRegenerator : ModItem
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Regenerator");
-			Tooltip.SetDefault("An ancient device thought to improve the users' ability to regenerate lost pieces of their Soul.\nIncreases life regen when equipped");
+			DisplayName.SetDefault("Mythic Regenerator");
+			Tooltip.SetDefault("A legendary item made from 2 relics of the past\nImproves life regeneration and maximum health");
 		}
 		
         public override void SetDefaults()
@@ -17,22 +17,23 @@ namespace SoulSang.Items.Accessories
             item.width = 25;
             item.height = 25;
             item.maxStack = 1;
-            item.value = Item.sellPrice(0, 1, 0, 25);
-            item.rare = 1;
+            item.value = Item.sellPrice(1, 5, 0, 0);
+            item.rare = 10;
 			item.accessory = true;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			// Band of Regen is 1
-			player.lifeRegen+= 2;
+			player.lifeRegen+= 5;
+			player.statLifeMax2+= 100;
         }
         public override void AddRecipes()
         {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.BandofRegeneration, 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
+			recipe.AddIngredient(mod.GetItem("SoulVessel"), 1);
+			recipe.AddIngredient(mod.GetItem("SoulRegen"), 1);
 			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
         }
