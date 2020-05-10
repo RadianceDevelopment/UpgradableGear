@@ -24,7 +24,7 @@ namespace SoulSang.Items
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 7);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 5);
 			recipe.AddIngredient(ItemID.GoldCoin, 25);
 			recipe.AddTile(TileID.WorkBenches);
 			//recipe.AddTile(TileID.SoulInfuser);

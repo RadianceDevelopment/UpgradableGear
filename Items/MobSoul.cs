@@ -24,31 +24,101 @@ namespace SoulSang.Items
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Gel, 1);
+			recipe.AddIngredient(ItemID.Gel, 2);
 			recipe.AddTile(TileID.WorkBenches);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.RottenChunk, 1);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 7);
+			recipe.AddIngredient(ItemID.Gel, 10);
+			recipe.AddTile(TileID.WorkBenches);
+			recipe.SetResult(ItemID.SlimeStaff, 1);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.Lens, 1);
+			recipe.AddTile(TileID.WorkBenches);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.SetResult(this, 2);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.WormTooth, 1);
 			recipe.AddTile(TileID.WorkBenches);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.SetResult(this, 3);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.RottenChunk, 1);
+			recipe.AddTile(TileID.WorkBenches);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.SetResult(this, 4);
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Vertebrae, 1);
 			recipe.AddTile(TileID.WorkBenches);
 			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.SetResult(this, 3);
+			recipe.SetResult(this, 4);
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Bone, 1);
+			recipe.AddIngredient(ItemID.Bone, 2);
 			recipe.AddTile(TileID.WorkBenches);
 			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.SetResult(this, 5);
+			recipe.SetResult(this, 6);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.ShadowScale, 1);
+			recipe.AddTile(TileID.WorkBenches);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.SetResult(this, 7);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.TissueSample, 1);
+			recipe.AddTile(TileID.WorkBenches);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.SetResult(this, 7);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.PinkGel, 2);
+			recipe.AddTile(TileID.WorkBenches);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.SetResult(this, 8);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.Ectoplasm, 1);
+			recipe.AddTile(TileID.WorkBenches);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.SetResult(this, 12);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.DarkShard, 1);
+			recipe.AddTile(TileID.WorkBenches);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.SetResult(this, 15);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.LightShard, 1);
+			recipe.AddTile(TileID.WorkBenches);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.SetResult(this, 15);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.LizardEgg, 1);
+			recipe.AddTile(TileID.WorkBenches);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.SetResult(this, 25);
 			recipe.AddRecipe();
 		}
 	}
