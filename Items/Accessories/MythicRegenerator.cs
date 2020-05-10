@@ -9,7 +9,7 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Mythic Regenerator");
-			Tooltip.SetDefault("An ancient, legendary item made from 3 relics of the past\nImproves life regeneration and maximum health\nReduces Potion Sickness to 40 seconds");
+			Tooltip.SetDefault("An ancient, legendary item made from 3 relics of the past\nImproves life regeneration and maximum health\nReduces Potion Sickness to 40 seconds\nCurrently BROKEN!");
 		}
 		
         public override void SetDefaults()
@@ -30,12 +30,14 @@ namespace SoulSang.Items.Accessories
         }
         public override void AddRecipes()
         {
+			/*
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("LifeRegenerator"), 1);
 			recipe.AddIngredient(ItemID.CharmofMyths, 1);
 			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
+			*/
         }
     }
 }
