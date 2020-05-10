@@ -29,7 +29,7 @@ namespace SoulSang.Items.Accessories
         {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 100);
-			recipe.AddIngredient(ItemID.HellstoneBar, 15);
+			recipe.AddIngredient(ItemID.HellstoneBar, 10);
 			//recipe.AddTile(TileType<SoulForge>());
 			recipe.AddTile(TileID.Hellforge);
 			recipe.SetResult(this);
