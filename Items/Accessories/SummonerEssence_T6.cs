@@ -31,8 +31,8 @@ namespace SoulSang.Items.Accessories
         {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SummonerEssence_T5"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 75);
-			recipe.AddIngredient(ItemID.LunarBar, 4);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 60);
+			recipe.AddIngredient(ItemID.FragmentStardust, 10);
 			//recipe.AddTile(TileType<SoulForge>());
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);

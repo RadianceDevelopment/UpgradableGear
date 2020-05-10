@@ -30,10 +30,10 @@ namespace SoulSang.Items.Accessories
         {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("WarriorEssence_T1"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 15);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 10);
 			recipe.AddIngredient(ItemID.Ruby, 3);
 			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
         }

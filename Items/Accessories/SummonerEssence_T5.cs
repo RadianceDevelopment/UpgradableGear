@@ -30,8 +30,8 @@ namespace SoulSang.Items.Accessories
         {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SummonerEssence_T4"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 50);
-			recipe.AddIngredient(ItemID.BeetleHusk, 4);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 40);
+			recipe.AddIngredient(ItemID.BeetleHusk, 5);
 			//recipe.AddTile(TileType<SoulForge>());
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);

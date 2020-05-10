@@ -32,7 +32,7 @@ namespace SoulSang.Items.Accessories
         {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("RangerEssence_T4"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 50);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 40);
 			recipe.AddIngredient(ItemID.FragmentVortex, 5);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);

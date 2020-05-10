@@ -31,7 +31,7 @@ namespace SoulSang.Items.Accessories
         {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("RangerEssence_T3"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 35);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 30);
 			recipe.AddIngredient(ItemID.ShroomiteBar, 4);
 			//recipe.AddTile(TileType<SoulForge>());
 			recipe.AddTile(TileID.MythrilAnvil);
