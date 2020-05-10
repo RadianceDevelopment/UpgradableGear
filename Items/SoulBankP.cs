@@ -24,7 +24,7 @@ namespace SoulSang.Items
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 7);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 1);
 			recipe.AddIngredient(ItemID.PlatinumCoin, 25);
 			recipe.AddTile(TileID.WorkBenches);
 			//recipe.AddTile(TileID.SoulInfuser);
@@ -33,7 +33,7 @@ namespace SoulSang.Items
 			
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SoulBankP"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 4);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 6);
 			recipe.AddTile(TileID.WorkBenches);
 			//recipe.AddTile(TileID.SoulInfuser);
 			recipe.SetResult(ItemID.PlatinumCoin, 25);

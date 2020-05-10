@@ -33,7 +33,6 @@ namespace SoulSang.Items
 			
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SoulBankC"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 1);
 			recipe.AddTile(TileID.WorkBenches);
 			//recipe.AddTile(TileID.SoulInfuser);
 			recipe.SetResult(ItemID.CopperCoin, 25);
