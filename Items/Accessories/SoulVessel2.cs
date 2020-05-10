@@ -8,22 +8,22 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Second Soul Vessel");
-			Tooltip.SetDefault("A vessel containing many Souls\nOriginates from a far-away land\nIncreases maximum life by 50");
+			DisplayName.SetDefault("Second Soul Vessel Fragment");
+			Tooltip.SetDefault("A fragment of something that holds great power over Souls\nOriginates from a far-away land\nIncreases maximum life by 10 when equipped");
 		}
 		
         public override void SetDefaults()
         {
-            item.width = 23;
-            item.height = 23;
+            item.width = 20;
+            item.height = 20;
             item.maxStack = 1;
-            item.value = Item.sellPrice(0, 14, 0, 0);
+            item.value = Item.sellPrice(0, 15, 0, 0);
             item.rare = 3;
 			item.accessory = true;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.statLifeMax2+= 50;
+			player.statLifeMax2+= 10;
         }
         public override void AddRecipes()
         {
