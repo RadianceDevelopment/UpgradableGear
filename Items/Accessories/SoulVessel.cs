@@ -32,7 +32,7 @@ namespace SoulSang.Items.Accessories
 			recipe.AddIngredient(mod.GetItem("SoulVessel2"), 1);
 			recipe.AddIngredient(mod.GetItem("SoulVessel3"), 1);
 			//recipe.AddTile(TileType<SoulForge>());
-			recipe.AddTile(LunarCraftingStation);
+			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
         }
