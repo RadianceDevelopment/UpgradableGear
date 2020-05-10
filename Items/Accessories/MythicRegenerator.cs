@@ -32,9 +32,7 @@ namespace SoulSang.Items.Accessories
         {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("LifeRegenerator"), 1);
-			recipe.AddIngredient(ItemID.CharmofMyths, 1); 
-			// Make it use both of these
-			//recipe.AddTile(TileID.LunarCraftingTable);
+			recipe.AddIngredient(ItemID.CharmofMyths, 1);
 			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
