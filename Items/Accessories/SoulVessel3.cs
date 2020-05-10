@@ -29,10 +29,10 @@ namespace SoulSang.Items.Accessories
         {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 150);
-			recipe.AddIngredient(ItemID.HallowedBar, 10);
-			recipe.AddIngredient(ItemID.SoulofFright, 5);
-			recipe.AddIngredient(ItemID.SoulofMight, 5);
-			recipe.AddIngredient(ItemID.SoulofSight, 5);
+			recipe.AddIngredient(ItemID.HallowedBar, 5);
+			recipe.AddIngredient(ItemID.SoulofFright, 3);
+			recipe.AddIngredient(ItemID.SoulofMight, 3);
+			recipe.AddIngredient(ItemID.SoulofSight, 3);
 			//recipe.AddTile(TileType<SoulForge>());
 			// Thanks to Braycoe#3181 on the TML Discord for giving me the internal ID for Hardmode Forges
 			// Hardmode Forges
