@@ -24,16 +24,15 @@ namespace SoulSang.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			// Band of Regen is 1
-			player.lifeRegen+= 5;
+			player.lifeRegen+= 6;
 			player.statLifeMax2+= 100;
 			player.potionDelay = 40;
         }
         public override void AddRecipes()
         {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("SoulVessel"), 1);
-			recipe.AddIngredient(ItemID.CharmofMyths, 1); 
 			recipe.AddIngredient(mod.GetItem("LifeRegenerator"), 1);
+			recipe.AddIngredient(ItemID.CharmofMyths, 1); 
 			// Make it use both of these
 			//recipe.AddTile(TileID.LunarCraftingTable);
 			recipe.AddTile(TileID.TinkerersWorkbench);
