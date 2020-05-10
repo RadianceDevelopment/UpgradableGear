@@ -18,7 +18,7 @@ namespace SoulSang.Items.Accessories
             item.height = 30;
             item.maxStack = 1;
             item.value = Item.sellPrice(1, 0, 0, 0);
-            item.rare = 11;
+            item.rare = 10;
 			item.accessory = true;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
@@ -31,6 +31,7 @@ namespace SoulSang.Items.Accessories
 			recipe.AddIngredient(mod.GetItem("SoulVessel1"), 1);
 			recipe.AddIngredient(mod.GetItem("SoulVessel2"), 1);
 			recipe.AddIngredient(mod.GetItem("SoulVessel3"), 1);
+			recipe.AddIngredient(ItemID.Ectoplasm, 5);
 			//recipe.AddTile(TileType<SoulForge>());
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
