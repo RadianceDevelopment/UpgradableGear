@@ -17,8 +17,8 @@ namespace SoulSang.Items.Accessories
             item.width = 25;
             item.height = 25;
             item.maxStack = 1;
-            item.value = Item.sellPrice(0, 30, 0, 0);
-            item.rare = 5;
+            item.value = Item.sellPrice(0, 1, 0, 25);
+            item.rare = 1;
 			item.accessory = true;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
@@ -30,7 +30,7 @@ namespace SoulSang.Items.Accessories
         {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.BandofRegeneration, 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 15);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
