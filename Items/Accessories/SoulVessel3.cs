@@ -28,7 +28,7 @@ namespace SoulSang.Items.Accessories
         public override void AddRecipes()
         {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 225);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 150);
 			recipe.AddIngredient(ItemID.HallowedBar, 10);
 			recipe.AddIngredient(ItemID.SoulofFright, 5);
 			recipe.AddIngredient(ItemID.SoulofMight, 5);

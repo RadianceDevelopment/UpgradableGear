@@ -28,7 +28,7 @@ namespace SoulSang.Items.Accessories
         public override void AddRecipes()
         {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 150);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 100);
 			recipe.AddIngredient(ItemID.HellstoneBar, 15);
 			//recipe.AddTile(TileType<SoulForge>());
 			recipe.AddTile(TileID.Hellforge);
