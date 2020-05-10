@@ -31,8 +31,8 @@ namespace SoulSang.Items
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 7);
-			recipe.AddIngredient(ItemID.Gel, 10);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 5);
+			recipe.AddIngredient(ItemID.Gel, 7);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(ItemID.SlimeStaff, 1);
 			recipe.AddRecipe();
@@ -94,6 +94,13 @@ namespace SoulSang.Items
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.TatteredCloth, 1);
+			recipe.AddTile(TileID.WorkBenches);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.SetResult(this, 10);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Ectoplasm, 1);
 			recipe.AddTile(TileID.WorkBenches);
 			//recipe.AddTile(TileType<SoulInfuser>());
@@ -104,11 +111,18 @@ namespace SoulSang.Items
 			recipe.AddIngredient(ItemID.DarkShard, 1);
 			recipe.AddTile(TileID.WorkBenches);
 			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.SetResult(this, 15);
+			recipe.SetResult(this, 12);
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LightShard, 1);
+			recipe.AddTile(TileID.WorkBenches);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.SetResult(this, 12);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.BeetleHusk, 1);
 			recipe.AddTile(TileID.WorkBenches);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.SetResult(this, 15);
