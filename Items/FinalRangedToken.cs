@@ -17,7 +17,7 @@ namespace SoulSang.Items
 			item.width = 40;
 			item.height = 40;
 			item.value = 0;
-			item.rare = -1;
+			item.rare = 11;
 			item.maxStack = 999;
 		}
 
