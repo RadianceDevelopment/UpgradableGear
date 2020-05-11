@@ -4,12 +4,12 @@ using Terraria.ModLoader;
 
 namespace SoulSang.Items.Accessories
 {
-	public class MageEssence_T3 : ModItem
+	public class MageEssence_T4 : ModItem
 	{
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Mage's Essence");
-			Tooltip.SetDefault("You hear the Souls whispering...\nGrants +15% magic damage\nIncreases magical critical chance by 5%\nReduces mana usage by 6%\nCurrent Tier: III");
+			Tooltip.SetDefault("The whispers grow into audible voices...\nGrants +20% magic damage\nIncreases magical critical chance by 8%\nReduces mana usage by 10%\nCurrent Tier: IV");
 		}
 		
         public override void SetDefaults()
@@ -17,24 +17,24 @@ namespace SoulSang.Items.Accessories
             item.width = 20;
             item.height = 20;
             item.maxStack = 1;
-            item.value = Item.sellPrice(0, 4, 0, 0);
-            item.rare = 4;
+            item.value = Item.sellPrice(0, 12, 0, 0);
+            item.rare = 6;
 			item.accessory = true;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.magicDamage+= 0.15f;
-			player.magicCrit+= 5;
-			player.manaCost-= 0.06f;
+			player.magicDamage+= 0.20f;
+			player.magicCrit+= 8;
+			player.manaCost-= 0.10f;
         }
         public override void AddRecipes()
         {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MageEssence_T2"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 15);
-			recipe.AddIngredient(ItemID.HellstoneBar, 3);
+			recipe.AddIngredient(mod.GetItem("MageEssence_T3"), 1);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
+			recipe.AddIngredient(ItemID.SpectreBar, 4);
 			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
         }
