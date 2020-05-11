@@ -37,6 +37,15 @@ namespace SoulSang.Items.Accessories
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(mod.GetItem("WarriorEssence_T3"), 1);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
+			recipe.AddIngredient(ItemID.SpectreBar, 8);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.AddTile(TileID.MythrilAnvil);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
         }
     }
 }
