@@ -9,7 +9,7 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("True Combatant's Essence");
-			Tooltip.SetDefault("The concentrated essence of a true warrior.\nGrants +100% to all damage\nGrants +30% Critical Chance\nReduces Mana Cost by 50%\nIncreases Melee Speed by 50%\nGives +10 Minion Slots\nCurrent Tier: Final");
+			Tooltip.SetDefault("The concentrated essence of a true warrior.\nGrants +100% to all damage\nGrants +30% Critical Chance\nReduces Mana Cost by 40%\nIncreases Melee Speed by 50%\nGives +10 Minion Slots\nCurrent Tier: Final");
 		}
 		
         public override void SetDefaults()
@@ -37,7 +37,7 @@ namespace SoulSang.Items.Accessories
 			
 			player.thrownCrit+= 30;
 			
-			player.manaCost-= 0.50f;
+			player.manaCost-= 0.40f;
 			player.meleeSpeed+= 0.50f;
 			player.maxMinions+= 10;
         }
@@ -60,9 +60,6 @@ namespace SoulSang.Items.Accessories
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
-			
-			
-			
 			
 			/*
 			ModRecipe recipe = new ModRecipe(mod);
