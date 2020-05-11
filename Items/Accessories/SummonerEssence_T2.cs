@@ -33,7 +33,7 @@ namespace SoulSang.Items.Accessories
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 12);
 			recipe.AddIngredient(ItemID.Amethyst, 3);
 			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
         }
