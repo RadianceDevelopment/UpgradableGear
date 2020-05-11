@@ -46,7 +46,7 @@ namespace SoulSang.Items.Accessories
         {
 			
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.PortalGun, 1);
+			recipe.AddIngredient(mod.GetItem("CombEssence"), 1);
 			recipe.AddIngredient(mod.GetItem("FinalMagicToken"), 1);
 			recipe.AddIngredient(mod.GetItem("FinalMeleeToken"), 1);
 			recipe.AddIngredient(mod.GetItem("FinalRangedToken"), 1);

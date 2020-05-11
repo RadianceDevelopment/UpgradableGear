@@ -48,7 +48,7 @@ namespace SoulSang.Items.Accessories
 			recipe.AddIngredient(mod.GetItem("SummonerEssence_T6"), 1);
 			recipe.AddIngredient(mod.GetItem("WarriorEssence_T5"), 1);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 250);
-			recipe.AddIngredient(ItemID.LunarBar, 10);
+			recipe.AddIngredient(ItemID.LunarBar, 5);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
