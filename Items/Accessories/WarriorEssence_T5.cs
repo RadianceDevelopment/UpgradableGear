@@ -9,7 +9,7 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("True Soul Warrior's Essence");
-			Tooltip.SetDefault("The Essence twists and convulses, then reveals its true form\nGrants +25% melee damage and +12% melee speed\nBoosts melee critical chance by 7%\nCurrent Tier: V");
+			Tooltip.SetDefault("The Essence twists and convulses, then reveals its true form\nGrants +25% melee damage and +12% melee speed\nBoosts melee critical chance by 10%\nCurrent Tier: V");
 		}
 		
         public override void SetDefaults()
@@ -26,7 +26,7 @@ namespace SoulSang.Items.Accessories
         {
 			player.meleeDamage+= 0.25f;
 			player.meleeSpeed+= 0.12f;
-			player.meleeCrit+= 7;
+			player.meleeCrit+= 10;
         }
         public override void AddRecipes()
         {
