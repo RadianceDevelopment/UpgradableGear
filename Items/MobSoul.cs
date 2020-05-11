@@ -27,7 +27,7 @@ namespace SoulSang.Items
 			recipe.AddIngredient(ItemID.Gel, 2);
 			recipe.AddTile(TileID.WorkBenches);
 			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.SetResult(this, 1);
+			recipe.SetResult(this);
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
