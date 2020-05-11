@@ -30,7 +30,7 @@ namespace SoulSang.Items.Accessories
         {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SummonerEssence_T2"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 18);
 			recipe.AddIngredient(ItemID.HellstoneBar, 3);
 			//recipe.AddTile(TileType<SoulForge>());
 			recipe.AddTile(TileID.Anvils);
