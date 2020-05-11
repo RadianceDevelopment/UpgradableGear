@@ -34,7 +34,7 @@ namespace SoulSang.Items.Weapons
 			
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SoulSword_T5"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 42);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 32);
 			recipe.AddIngredient(ItemID.CobaltBar, 7);
 			//recipe.AddTile(TileType<SoulForge>());
 			recipe.AddTile(TileID.MythrilAnvil);
