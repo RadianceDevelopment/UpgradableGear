@@ -36,6 +36,15 @@ namespace SoulSang.Items.Accessories
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(mod.GetItem("WarriorEssence_T1"), 1);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 10);
+			recipe.AddIngredient(ItemID.Diamond, 1);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.AddTile(TileID.Anvils);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
         }
     }
 }
