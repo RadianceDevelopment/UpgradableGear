@@ -9,7 +9,7 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Combatant's Essence");
-			Tooltip.SetDefault("The concentrated essence of a great warrior.\nGrants +50% to all damage\nGrants +20% Critical Chance\nReduces Mana Cost by 25%\nIncreases Melee Speed by 20%\nGives +8 Minion Slots\nCurrent Tier: X");
+			Tooltip.SetDefault("The concentrated essence of a great warrior.\nGrants +50% to all damage\nGrants +20% Critical Chance\nReduces Mana Cost by 25%\nIncreases Melee Speed by 30%\nGives +8 Minion Slots\nCurrent Tier: X");
 		}
 		
         public override void SetDefaults()

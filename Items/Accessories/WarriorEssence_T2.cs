@@ -9,7 +9,7 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Warrior's Essence");
-			Tooltip.SetDefault("The Essence begins to pulsate...\nGrants +10% melee damage and 3% melee speed\nCurrent Tier: II");
+			Tooltip.SetDefault("The Essence begins to pulsate...\nGrants +10% melee damage and 5% melee speed\nCurrent Tier: II");
 		}
 		
         public override void SetDefaults()

@@ -9,7 +9,7 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Warrior's Essence");
-			Tooltip.SetDefault("The humming grows louder...\nGrants +20% melee damage and 8% melee speed\nBoosts melee critical chance by 5%\nCurrent Tier: IV");
+			Tooltip.SetDefault("The humming grows louder...\nGrants +20% melee damage and 15% melee speed\nBoosts melee critical chance by 5%\nCurrent Tier: IV");
 		}
 		
         public override void SetDefaults()
