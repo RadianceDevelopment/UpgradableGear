@@ -19,6 +19,7 @@ namespace SoulSang.Items
 			item.value = 0;
 			item.rare = 1;
 			item.maxStack = 40;
+			item.value = Item.sellPrice(0, 25, 0, 0);
 		}
 
 		public override void AddRecipes() 
@@ -33,7 +34,7 @@ namespace SoulSang.Items
 			
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SoulBankG"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 4);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 3);
 			recipe.AddTile(TileID.WorkBenches);
 			//recipe.AddTile(TileID.SoulInfuser);
 			recipe.SetResult(ItemID.GoldCoin, 25);

@@ -19,6 +19,7 @@ namespace SoulSang.Items
 			item.value = 0;
 			item.rare = 0;
 			item.maxStack = 999;
+			item.value = Item.sellPrice(0, 0, 0, 1);
 		}
 
 		public override void AddRecipes() 
