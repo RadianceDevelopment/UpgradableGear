@@ -37,7 +37,7 @@ namespace SoulSang.Items.Accessories
 			player.thrownCrit+= 20;
 			
 			player.manaCost-= 0.25f;
-			player.meleeSpeed+= 0.20f;
+			player.meleeSpeed+= 0.30f;
 			player.maxMinions+= 8;
         }
         public override void AddRecipes()

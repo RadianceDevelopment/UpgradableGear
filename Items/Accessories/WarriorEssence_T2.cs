@@ -24,7 +24,7 @@ namespace SoulSang.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			player.meleeDamage+= 0.10f;
-			player.meleeSpeed+= 0.03f;
+			player.meleeSpeed+= 0.05f;
         }
         public override void AddRecipes()
         {
