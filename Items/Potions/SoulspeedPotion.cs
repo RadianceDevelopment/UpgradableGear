@@ -25,7 +25,7 @@ namespace SoulSang.Items.Potions
             item.maxStack = 99;
             item.consumable = true;
             item.rare = 1;
-			item.value = Item.sellPrice(0, 0, 4, 4);
+			item.value = Item.sellPrice(0, 0, 4, 5);
             item.buffType = BuffType<Buffs.Soulspeed>();
             item.buffTime = 14400; //4 Mins
 		}	
