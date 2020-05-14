@@ -10,7 +10,7 @@ namespace SoulSang.Items.Potions
         public override void SetStaticDefaults()
         {
 			DisplayName.SetDefault("Soulskin Potion");
-            Tooltip.SetDefault("Increases defense by 12");
+            Tooltip.SetDefault("Increases defense by 12\nStacks to 40");
         }
 
         public override void SetDefaults()
@@ -22,10 +22,10 @@ namespace SoulSang.Items.Potions
             item.useTime = 15;
             item.useTurn = true;
             item.UseSound = SoundID.Item3;
-            item.maxStack = 99;
+            item.maxStack = 40;
             item.consumable = true;
             item.rare = 1;
-			item.value = Item.sellPrice(0, 0, 2, 15);
+			item.value = Item.sellPrice(0, 0, 4, 5);
             item.buffType = BuffType<Buffs.Soulskin>();
             item.buffTime = 18000; //5 Mins
 		}	

@@ -10,7 +10,7 @@ namespace SoulSang.Items.Potions
         public override void SetStaticDefaults()
         {
 			DisplayName.SetDefault("Soulspeed Potion");
-            Tooltip.SetDefault("Increases movement speed by 40%");
+            Tooltip.SetDefault("Increases movement speed by 40%\nStacks to 40");
         }
 
         public override void SetDefaults()
@@ -22,7 +22,7 @@ namespace SoulSang.Items.Potions
             item.useTime = 15;
             item.useTurn = true;
             item.UseSound = SoundID.Item3;
-            item.maxStack = 99;
+            item.maxStack = 40;
             item.consumable = true;
             item.rare = 1;
 			item.value = Item.sellPrice(0, 0, 4, 5);
