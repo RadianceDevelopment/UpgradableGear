@@ -17,7 +17,7 @@ namespace SoulSang.Items.Accessories
             item.width = 30;
             item.height = 30;
             item.maxStack = 1;
-            item.value = Item.sellPrice(0, 6, 50, 75);
+            item.value = Item.sellPrice(0, 6, 50, 55);
             item.rare = 5;
 			item.accessory = true;
         }
@@ -31,7 +31,7 @@ namespace SoulSang.Items.Accessories
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.FleshKnuckles);
 			recipe.AddIngredient(ItemID.FeralClaws);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 75);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 55);
 			//recipe.AddTile(TileType<SoulForge>());
 			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
@@ -39,7 +39,7 @@ namespace SoulSang.Items.Accessories
 			
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("ClawedKnuckles"));
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 75);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 55);
 			//recipe.AddTile(TileType<SoulForge>());
 			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
