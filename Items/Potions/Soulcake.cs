@@ -1,3 +1,4 @@
+/*
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -34,9 +35,13 @@ namespace SoulSang.Items.Potions
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
-			recipe.AddTile(TileID.Bottles);
+			recipe.AddTile(TileID.CookingPot);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
     }
 }
+
+WIP - Needs to give Well Fed
+
+*/
