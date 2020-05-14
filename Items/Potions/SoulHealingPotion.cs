@@ -29,9 +29,9 @@ namespace SoulSang.Items.Potions
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.SuperHealingPotion, 4);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 30);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 40);
 			recipe.AddTile(TileID.Bottles);
-			recipe.SetResult(this, 2);
+			recipe.SetResult(this, 4);
 			recipe.AddRecipe();
 		}
 	}
