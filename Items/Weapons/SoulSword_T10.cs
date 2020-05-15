@@ -40,6 +40,14 @@ namespace SoulSang.Items.Weapons
 			recipe.AddTile(TileID.LunarCraftingStation );
 			recipe.SetResult(this);
 			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.StarWrath, 1);
+			recipe.AddIngredient(mod.GetItem("SoulSword_T9"), 1);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 250);
+			recipe.AddTile(TileID.LunarCraftingStation );
+			recipe.SetResult(this);
+			recipe.AddRecipe();
 		}
 		
 	    public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
