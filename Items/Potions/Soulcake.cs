@@ -1,4 +1,3 @@
-/*
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -25,23 +24,20 @@ namespace SoulSang.Items.Potions
             item.UseSound = SoundID.Item3;
             item.maxStack = 40;
             item.consumable = true;
-            item.rare = 1;
+            item.rare = 0;
 			item.value = Item.sellPrice(0, 0, 0, 20);
-            item.buffType = BuffType<Buffs.Soulskin>(); // Change to Well Fed
-            item.buffTime = 72000; //20 Mins
+            item.buffType = BuffID.WellFed;
+            item.buffTime = 25200; //7 Mins
 		}	
 	    
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
-			recipe.AddTile(TileID.CookingPot);
+			// Cooking Pot
+			recipe.AddTile(96);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
     }
 }
-
-WIP - Needs to give Well Fed
-
-*/
