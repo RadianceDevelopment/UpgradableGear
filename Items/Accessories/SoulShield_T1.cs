@@ -19,7 +19,7 @@ namespace SoulSang.Items.Accessories
             item.maxStack = 1;
             item.value = Item.sellPrice(0, 0, 0, 20);
             item.rare = 0;
-			item.accessory = true;
+	    item.accessory = true;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
@@ -30,7 +30,7 @@ namespace SoulSang.Items.Accessories
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
 			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
         }
