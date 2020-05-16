@@ -28,6 +28,13 @@ namespace SoulSang.Items.Accessories
 			player.rangedCrit+= 6;
 			
 			player.thrownCrit+= 6;
+			
+			player.magicDamage+= 0.07f;
+			player.meleeDamage+= 0.07f;
+			player.rangedDamage+= 0.07f;
+			player.minionDamage+= 0.07f;
+		
+			player.thrownDamage+= 0.07f;
         }
         public override void AddRecipes()
         {
