@@ -9,7 +9,7 @@ namespace SoulSang.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("True Soul Sword");
-			Tooltip.SetDefault("The sword convulses for a moment, then reveals its true form.\nAt last, you have fed it enough energy to weild its ultimate power.\nHeals equal to the damage dealt divided by 5\nInflicts Frostburn and On Fire! 50% of the time\nLaunches a ghostly projectile when swung (Still WIP!)\n Inflicts Frostburn 50% of the time\nFoes drop extra money when killed\nCurrent Tier: X");
+			Tooltip.SetDefault("The sword convulses for a moment, then reveals its true form.\nAt last, you have fed it enough energy to weild its ultimate power.\nHeals equal to the damage dealt divided by 5\nInflicts Frostburn and On Fire! 50% of the time\nLaunches a ghostly projectile when swung (Still WIP!)\nFoes drop extra money when killed\nCurrent Tier: X");
 	    }
 
 		public override void SetDefaults() 
