@@ -8,7 +8,7 @@ namespace SoulSang.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Sword");
+			DisplayName.SetDefault("Soul Sword VIII");
 			Tooltip.SetDefault("The sword resonants with power, and lights up with cursed flames...\nHeals equal to the damage dealt divided by 8\nEnemies are enveloped in cursed fire 33% of the time\nLaunches a ghostly projectile when swung (Still WIP!)\nCurrent Tier: VIII");
 	    }
 

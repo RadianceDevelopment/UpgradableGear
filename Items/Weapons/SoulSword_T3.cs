@@ -8,7 +8,7 @@ namespace SoulSang.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Sword");
+			DisplayName.SetDefault("Soul Sword III");
 			Tooltip.SetDefault("The sword grows in power...\nCurrent Tier: III");
 		}
 
@@ -33,6 +33,7 @@ namespace SoulSang.Items.Weapons
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SoulSword_T2"), 1);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 15);
+			recipe.AddRecipeGroup("IronBar", 3);
 			//recipe.AddTile(TileID.SoulInfuser);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);

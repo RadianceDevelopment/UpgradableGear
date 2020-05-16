@@ -8,7 +8,7 @@ namespace SoulSang.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Sword");
+			DisplayName.SetDefault("Soul Sword VI");
 			Tooltip.SetDefault("The sword demands blood...\nHeals equal to the damage dealt divided by 10\nApplies On Fire! 33% of the time\nCurrent Tier: VI\nThe answer to life, the universe, and everything");
 		}
 

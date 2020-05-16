@@ -8,7 +8,7 @@ namespace SoulSang.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Sword");
+			DisplayName.SetDefault("Soul Sword IV");
 			Tooltip.SetDefault("The sword ripples with energy...\nCurrent Tier: IV");
 		}
 

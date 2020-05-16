@@ -8,7 +8,7 @@ namespace SoulSang.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Sword");
+			DisplayName.SetDefault("Soul Sword VII");
 			Tooltip.SetDefault("The sword lights up with blue fire...\nHeals equal to the damage dealt divided by 9\nApplies Frostburn 50% of the time\nLaunches a ghostly projectile when swung (Still WIP!)\nCurrent Tier: VII");
 	    }
 

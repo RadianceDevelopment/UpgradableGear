@@ -8,7 +8,7 @@ namespace SoulSang.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Sword");
+			DisplayName.SetDefault("Soul Sword IX");
 			Tooltip.SetDefault("The sword hums with assurance, and drains you of your endurance\nHeals equal to the damage dealt divided by 7\nInflicts Frostburn 33% of the time\nInflicts On Fire! 50% of the time\nLaunches a ghostly projectile when swung (Still WIP!)\nCurrent Tier: IX\nThe sword seems to speak to you, saying 'The time is near...'");
 	    }
 

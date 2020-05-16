@@ -8,7 +8,7 @@ namespace SoulSang.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Sword");
+			DisplayName.SetDefault("Soul Sword I");
 			Tooltip.SetDefault("Monster Essence concentrated into a blade.\nCan be infused with more Souls to increase its power, up to a maximum Tier of X (10).\nCurrent Tier: I");
 		}
 

@@ -8,7 +8,7 @@ namespace SoulSang.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Sword");
+			DisplayName.SetDefault("Soul Sword II");
 			Tooltip.SetDefault("The sword reacts to the nearby souls...\nCurrent Tier: II");
 		}
 
