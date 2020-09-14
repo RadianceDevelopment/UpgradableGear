@@ -1,4 +1,4 @@
 displayName = Soul Sanguisuge
 author = vizthex
-version = 1.0
+version = 1.4
 homepage = https://github.com/RadianceDevelopment/SoulSang
