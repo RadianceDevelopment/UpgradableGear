@@ -36,7 +36,7 @@ namespace SoulSang.Items.Weapons
 			recipe.AddIngredient(mod.GetItem("SoulSword_Cursed"), 1);
 			recipe.AddIngredient(mod.GetItem("SoulSword_Ichor"), 1);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 380);
-			recipe.AddIngredient(ItemID.LunarBar, 1);
+			recipe.AddIngredient(ItemID.LunarBar, 4);
 			//recipe.AddTile(TileID.SoulInfuser);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
