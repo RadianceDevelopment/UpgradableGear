@@ -9,7 +9,7 @@ namespace SoulSang.Items
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Final Magic Token");
-			Tooltip.SetDefault("Placerholder item used to craft the True Combatant's Essence");
+			Tooltip.SetDefault("Placeholder item used to craft the True Combatant's Essence");
 		}
 
 		public override void SetDefaults() 
@@ -28,14 +28,13 @@ namespace SoulSang.Items
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
+			
 			// Lunar Flare
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(3570, 1);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
-			
-			
 		}
 	}
 }

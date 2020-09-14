@@ -9,16 +9,17 @@ namespace SoulSang.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Sword II");
-			Tooltip.SetDefault("The sword reacts to the nearby souls...\nCurrent Tier: II");
+			Tooltip.SetDefault("The sword pulses with energy");
 		}
 
 		public override void SetDefaults() 
 		{
-			item.damage = 12;
+			item.damage = 15;
 			item.knockBack = 3;
 			item.melee = true;
-			item.width = 40;
-			item.height = 40;
+			item.width = 25;
+			item.height = 25;
+			item.scale = 0.70f;
 			item.useTime = 25;
 			item.useAnimation = 20;
 			item.useStyle = 1;
@@ -32,9 +33,10 @@ namespace SoulSang.Items.Weapons
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SoulSword_T1"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 10);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 8);
+			recipe.AddIngredient(ItemID.Ruby, 1);
 			//recipe.AddTile(TileID.SoulInfuser);
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddTile(TileID.Furnaces);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

@@ -7,7 +7,7 @@ namespace SoulSang
 {
 	public class SoulSang : Mod
 	{
-		/*
+	/*
 		public SoulSang()
 		{
 		}
@@ -34,6 +34,6 @@ namespace SoulSang
 			recipe.SetResult(ModContent.ItemType<Items.Accessories.TrueCombEssence>());
 			recipe.AddRecipe();
 		}	
-		*/
+	*/
 	}
 }

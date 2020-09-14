@@ -9,7 +9,7 @@ namespace SoulSang.Items
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Final Melee Token");
-			Tooltip.SetDefault("Placerholder item used to craft the True Combatant's Essence");
+			Tooltip.SetDefault("Placeholder item used to craft the True Combatant's Essence");
 		}
 
 		public override void SetDefaults() 

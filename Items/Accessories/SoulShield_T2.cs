@@ -8,7 +8,7 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Shield: Tier II");
+			DisplayName.SetDefault("Soul Shield II");
 			Tooltip.SetDefault("+4 Defense\nMonster souls that have been forced to protect you\nYou've added more souls into the mix, improving the defense provided");
 		}
 		

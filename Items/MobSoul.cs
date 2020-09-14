@@ -9,7 +9,7 @@ namespace SoulSang.Items
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Monster Soul");
-			Tooltip.SetDefault("The concentrated essence of monsters");
+			Tooltip.SetDefault("The concentrated form of a monsters' very will and fabric of their being");
 		}
 
 		public override void SetDefaults() 
@@ -194,7 +194,7 @@ namespace SoulSang.Items
 			
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LizardEgg, 1);
-			// Should be Lihzahrd Furnace
+			// Lihzahrd Furnace
 			recipe.AddTile(303);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.SetResult(this, 75);

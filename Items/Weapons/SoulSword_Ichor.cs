@@ -8,22 +8,23 @@ namespace SoulSang.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Ichor-Coated Soul Sword");
-			Tooltip.SetDefault("You've transformed the sword into a more specialized one.\nDoes less damage, but reduces enemy defense by 20\nCurrent Tier: Ichor-X");
+			DisplayName.SetDefault("Ichor-Infused Soul Sword");
+			Tooltip.SetDefault("You've transformed the sword into a more specialized one.\nInflicts Ichor for 3 seconds 50% of the time");
 	    }
 
 		public override void SetDefaults() 
 		{
-			item.damage = 200;
-			item.knockBack = 8;
-			item.crit = 14;
+			item.damage = 30;
+			item.knockBack = 5;
+			item.crit = 6;
+			// Remember that Item.crit adds to the base 4%
 			item.melee = true;
 			item.width = 70;
 			item.height = 85;
 			item.useTime = 5;
 			item.useAnimation = 15;
 			item.useStyle = 1;
-			item.rare = 11;
+			item.rare = 4;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 			item.value = Item.sellPrice(2, 50, 0, 0);
@@ -34,29 +35,22 @@ namespace SoulSang.Items.Weapons
 		{
 			
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("SoulSword_T10"), 1);
-			recipe.AddIngredient(ItemID.FlaskofIchor, 1);
-			recipe.AddIngredient(ItemID.Ichor, 3);
+			recipe.AddIngredient(mod.GetItem("SoulSword_T2"), 1);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 150);
-			recipe.AddTile(TileID.LunarCraftingStation );
+			recipe.AddIngredient(ItemID.Ichor, 10);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
 		
 	    public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
 		{
-			// I assume you can make healingAmount any number or formula?
-			int healingAmount = damage/5;
-			player.statLife +=healingAmount;
-			player.HealEffect(healingAmount, true);
-			
-			if(Main.rand.NextBool(1)){
-			target.AddBuff(BuffID.Ichor, 300);
-		}
+			// Remember, 60 ticks = 1 second
+			if(Main.rand.NextBool(2)){
+			target.AddBuff(BuffID.Ichor, 180);
+			// 3 Seconds^
+		  }
 		}
 	}
 }
 // Shoutout to absoluteAquarian#5189 on the TML Discord for fixing the debuff application not working
-// Item.crit adds to the base 4%
-
-// Add projectile

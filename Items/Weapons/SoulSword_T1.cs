@@ -9,16 +9,17 @@ namespace SoulSang.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Sword I");
-			Tooltip.SetDefault("Monster Essence concentrated into a blade.\nCan be infused with more Souls to increase its power, up to a maximum Tier of X (10).\nCurrent Tier: I");
+			Tooltip.SetDefault("Monster Essence concentrated into a blade.\nCan be infused with Souls and other materials to increase its power");
 		}
 
 		public override void SetDefaults() 
 		{
-			item.damage = 8;
+			item.damage = 10;
 			item.knockBack = 2;
 			item.melee = true;
-			item.width = 40;
-			item.height = 40;
+			item.width = 20;
+			item.height = 20;
+			item.scale = 0.67f;
 			item.useTime = 27;
 			item.useAnimation = 20;
 			item.useStyle = 1;
@@ -31,7 +32,7 @@ namespace SoulSang.Items.Weapons
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 8);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 12);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);

@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul-Infused Clawed Knuckles");
-			Tooltip.SetDefault("+5 Defense\nA set of claws that have fleshy knuckles embedded into them\nHas been infused with many souls to amplify its power\nIncreases melee speed by 16%");
+			DisplayName.SetDefault("Soulified Clawed Knuckles");
+			Tooltip.SetDefault("+5 Defense\n+16% Melee Speed\nA set of claws that have fleshy knuckles embedded into them\nInfused with many souls to amplify its power\nStrange whispers seem to emanate from it....");
 		}
 		
         public override void SetDefaults()

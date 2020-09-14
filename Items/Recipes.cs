@@ -30,6 +30,20 @@ namespace SoulSang.Items
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
+			recipe.AddIngredient(ItemID.CursedFlame, 5);
+			recipe.AddTile(TileID.WorkBenches);
+			recipe.SetResult(ItemID.Ichor, 2);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
+			recipe.AddIngredient(ItemID.Ichor, 5);
+			recipe.AddTile(TileID.WorkBenches);
+			recipe.SetResult(ItemID.CursedFlame, 2);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 10);
 			recipe.AddIngredient(ItemID.DepthMeter, 1);
 			recipe.AddTile(TileID.Anvils);

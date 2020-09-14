@@ -9,33 +9,34 @@ namespace SoulSang.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Sword III");
-			Tooltip.SetDefault("The sword grows in power...\nCurrent Tier: III");
+			Tooltip.SetDefault("The sword has reached its zenith");
 		}
-
+		// Be sure to make this shoot the ghost orb!
 		public override void SetDefaults() 
 		{
-			item.damage = 15;
-			item.knockBack = 4;
+			item.damage = 100;
+			item.knockBack = 10;
 			item.melee = true;
-			item.width = 40;
-			item.height = 42;
-			item.useTime = 25;
+			item.autoReuse = true;
+			item.width = 30;
+			item.height = 30;
+			item.scale = 0.73f;
 			item.useAnimation = 20;
 			item.useStyle = 1;
-			item.rare = 2;
+			item.rare = 11;
 			item.UseSound = SoundID.Item1;
-			item.autoReuse = false;
-			item.value = Item.sellPrice(0, 0, 3, 25);
+			item.value = Item.sellPrice(0, 5, 0, 0);
 		}
 
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("SoulSword_T2"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 15);
-			recipe.AddRecipeGroup("IronBar", 3);
+			recipe.AddIngredient(mod.GetItem("SoulSword_Cursed"), 1);
+			recipe.AddIngredient(mod.GetItem("SoulSword_Ichor"), 1);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 380);
+			recipe.AddIngredient(ItemID.LunarBar, 1);
 			//recipe.AddTile(TileID.SoulInfuser);
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

@@ -8,7 +8,7 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Shield: Tier IV");
+			DisplayName.SetDefault("Soul Shield IV");
 			Tooltip.SetDefault("+12 Defense\nMonster souls that have been forced to protect you\nYou've compressed even more souls in, and realize that adding anymore will likely make the vessel inside the shield burst");
 		}
 		
@@ -18,7 +18,7 @@ namespace SoulSang.Items.Accessories
             item.height = 25;
             item.maxStack = 1;
             item.value = Item.sellPrice(0, 16, 1, 85);
-            item.rare = 0;
+            item.rare = 10;
 			item.accessory = true;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
