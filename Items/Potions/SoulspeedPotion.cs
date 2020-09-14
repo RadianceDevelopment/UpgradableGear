@@ -17,6 +17,7 @@ namespace SoulSang.Items.Potions
         {
             item.width = 20;
             item.height = 25;
+			item.scale = 0.50f;
             item.useStyle = ItemUseStyleID.EatingUsing;
             item.useAnimation = 15;
             item.useTime = 15;
@@ -33,7 +34,7 @@ namespace SoulSang.Items.Potions
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 5);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 6);
 			recipe.AddIngredient(ItemID.SwiftnessPotion);
 			recipe.AddIngredient(ItemID.SoulofNight);
 			recipe.AddTile(TileID.Bottles);
@@ -41,7 +42,7 @@ namespace SoulSang.Items.Potions
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 5);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 6);
 			recipe.AddIngredient(ItemID.SwiftnessPotion);
 			recipe.AddIngredient(ItemID.SoulofLight, 2);
 			recipe.AddTile(TileID.Bottles);

@@ -22,8 +22,8 @@ namespace SoulSang.Items.Weapons
 			item.autoReuse = false;
 			item.noMelee = true;
 			item.shootSpeed = 6.5f;
-			item.width = 40;
-			item.height = 40;
+			item.width = 18;
+			item.height = 44;
 			item.useTime = 23;
 			item.useAnimation = 20;
 			item.useStyle = 5;

@@ -9,12 +9,12 @@ namespace SoulSang.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Bow I");
-			Tooltip.SetDefault("A bow crafted from the souls of slain foes");
+			Tooltip.SetDefault("A bow crafted from the souls of fallen foes");
 	    }
 
 		public override void SetDefaults() 
 		{
-			item.damage = 7;
+			item.damage = 8;
 			item.knockBack = 3;
 			item.ranged = true;
 			item.UseSound = SoundID.Item5;
@@ -22,8 +22,8 @@ namespace SoulSang.Items.Weapons
 			item.autoReuse = false;
 			item.noMelee = true;
 			item.shootSpeed = 6.3f;
-			item.width = 40;
-			item.height = 40;
+			item.width = 18;
+			item.height = 44;
 			item.useTime = 26;
 			item.useAnimation = 20;
 			item.useStyle = 5;
@@ -36,7 +36,7 @@ namespace SoulSang.Items.Weapons
 		{
 			
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 7);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 8);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

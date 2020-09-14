@@ -14,7 +14,7 @@ namespace SoulSang.Items.Weapons
 
 		public override void SetDefaults() 
 		{
-			item.damage = 15;
+			item.damage = 25;
 			item.knockBack = 3;
 			item.melee = true;
 			item.width = 25;
@@ -34,9 +34,9 @@ namespace SoulSang.Items.Weapons
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SoulSword_T1"), 1);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 8);
-			recipe.AddIngredient(ItemID.Ruby, 1);
+			recipe.AddIngredient(ItemID.Ruby, 4);
 			//recipe.AddTile(TileID.SoulInfuser);
-			recipe.AddTile(TileID.Furnaces);
+			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

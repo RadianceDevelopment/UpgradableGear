@@ -13,6 +13,7 @@ namespace SoulSang.Items.Potions
 		public override void SetDefaults() {
 			item.width = 20;
 			item.height = 26;
+			item.scale = 0.50f;
 			item.useStyle = ItemUseStyleID.EatingUsing;
 			item.useAnimation = 20;
 			item.useTime = 18;
@@ -21,7 +22,7 @@ namespace SoulSang.Items.Potions
 			item.maxStack = 40;
 			item.consumable = true;
 			item.rare = 7;
-			item.healLife = 300;
+			item.healLife = 350;
 			item.potion = true;
 		}
 		
@@ -29,7 +30,7 @@ namespace SoulSang.Items.Potions
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.SuperHealingPotion, 4);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 30);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 40);
 			recipe.AddTile(TileID.Bottles);
 			recipe.SetResult(this, 4);
 			recipe.AddRecipe();

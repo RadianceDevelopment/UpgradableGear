@@ -14,18 +14,20 @@ namespace SoulSang.Items.Weapons
 		// Be sure to make this shoot the ghost orb!
 		public override void SetDefaults() 
 		{
-			item.damage = 100;
+			item.damage = 200;
 			item.knockBack = 10;
 			item.melee = true;
 			item.autoReuse = true;
 			item.width = 30;
 			item.height = 30;
 			item.scale = 0.73f;
+			item.useTime = 5;
 			item.useAnimation = 20;
 			item.useStyle = 1;
 			item.rare = 11;
 			item.UseSound = SoundID.Item1;
 			item.value = Item.sellPrice(0, 5, 0, 0);
+			item.expert = true;
 		}
 
 		public override void AddRecipes() 
@@ -39,6 +41,20 @@ namespace SoulSang.Items.Weapons
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
+		}
+		
+		 public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+		{
+			// Remember, 60 ticks = 1 second
+			if(Main.rand.NextBool(2)){
+			target.AddBuff(BuffID.Ichor, 300);
+			// 5 Seconds^
+		  }
+			// Remember, 60 ticks = 1 second
+			if(Main.rand.NextBool(2)){
+			target.AddBuff(BuffID.Ichor, 300);
+			// 5 Seconds^
+		  }
 		}
 	}
 }

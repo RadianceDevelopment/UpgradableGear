@@ -8,7 +8,7 @@ namespace SoulSang.Buffs
         public override void SetDefaults()
         {
             DisplayName.SetDefault("Soulskin");
-            Description.SetDefault("Grants +12 defense");
+            Description.SetDefault("+12 defense");
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = false;
         }

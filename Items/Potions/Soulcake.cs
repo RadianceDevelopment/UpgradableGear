@@ -15,13 +15,13 @@ namespace SoulSang.Items.Potions
 
         public override void SetDefaults()
         {
-            item.width = 20;
-            item.height = 25;
+            item.width = 40;
+            item.height = 40;
             item.useStyle = ItemUseStyleID.EatingUsing;
             item.useAnimation = 15;
             item.useTime = 15;
             item.useTurn = true;
-            item.UseSound = SoundID.Item3;
+            item.UseSound = SoundID.Item2; //Should be a food chomp
             item.maxStack = 40;
             item.consumable = true;
             item.rare = 0;

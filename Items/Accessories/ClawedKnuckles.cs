@@ -9,7 +9,7 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Clawed Knuckles");
-			Tooltip.SetDefault("+4 Defense\nA set of claws that have fleshy knuckles embedded into them\nCombining the two seems to prevent the rancid smell of flesh from attracting creatures\nIncreases melee speed by 12%");
+			Tooltip.SetDefault("+4 Defense\nIncreases melee speed by 12%\nA set of claws that have fleshy knuckles embedded into them\nCombining the two seems to prevent the rancid smell of flesh from attracting creatures");
 		}
 		
         public override void SetDefaults()

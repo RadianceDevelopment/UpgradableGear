@@ -9,7 +9,7 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Mythic Regenerator");
-			Tooltip.SetDefault("An ancient, legendary item made from 3 relics of the past\nImproves life regeneration and maximum health\nReduces Potion Sickness to 40 seconds (currently not applied due to bugs)");
+			Tooltip.SetDefault("An ancient, legendary item made from 3 relics of the past\nImproves life regeneration and maximum health\nReduces Potion Sickness to 45 seconds");
 		}
 		
         public override void SetDefaults()
@@ -26,7 +26,8 @@ namespace SoulSang.Items.Accessories
 			// Band of Regen is 1
 			player.lifeRegen+= 7;
 			player.statLifeMax2+= 100;
-			player.potionDelayTime+= 900;
+			// Reduces potion sickness to 45 seconds. Seems like I can't make it do 40 seconds.
+			player.potionDelayTime+= -900;
         }
         public override void AddRecipes()
         {

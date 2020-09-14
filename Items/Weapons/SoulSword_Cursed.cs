@@ -21,14 +21,13 @@ namespace SoulSang.Items.Weapons
 			item.melee = true;
 			item.width = 70;
 			item.height = 85;
-			item.useTime = 5;
+			item.useTime = 10;
 			item.useAnimation = 15;
 			item.useStyle = 1;
 			item.rare = 4;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 			item.value = Item.sellPrice(2, 50, 0, 0);
-			item.expert = true;
 		}
 
 		public override void AddRecipes()
