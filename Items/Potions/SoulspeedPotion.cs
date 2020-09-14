@@ -43,7 +43,7 @@ namespace SoulSang.Items.Potions
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 5);
 			recipe.AddIngredient(ItemID.SwiftnessPotion);
-			recipe.AddIngredient(ItemID.SoulofLight);
+			recipe.AddIngredient(ItemID.SoulofLight, 2);
 			recipe.AddTile(TileID.Bottles);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -5,12 +5,18 @@ It's intended to be used alongside mods that expand the game past the Moon Lord 
 Current content:
 
 Recipe for the Slime Staff
-Multiple recipes for Monster Souls
 
 An upgradable sword (has 10 levels and 2 optional forms)
 
-Upgradable accesories for the Warrior (melee), Ranger, and Summoner classes
+~20-ish new accessories (most of which are able to be upgraded throughout the game)
 
-A couple accessories related to health and health regen
+2 new buffs 
+- 2 potions that activate the new buffs
+
+A new healing potion past Super
+
+A few food item (gives Well Fed for 7 minutes)
+
+4 items that can be crafted early on to store your Coins in (because why not?)
 
 You can visit the homepage (it's the GitHub repository) to report issues and find a content wiki (and the to-do list)

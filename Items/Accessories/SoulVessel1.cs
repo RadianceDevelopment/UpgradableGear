@@ -8,7 +8,7 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("First Soul Vessel Fragment");
+			DisplayName.SetDefault("Vessel Fragment I");
 			Tooltip.SetDefault("A fragment of something that holds great power over Souls\nOriginates from a far-away land\nIncreases maximum life by 5 when equipped");
 		}
 		
@@ -28,7 +28,7 @@ namespace SoulSang.Items.Accessories
         public override void AddRecipes()
         {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 50);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 25);
 			//recipe.AddTile(TileType<SoulForge>());
 			recipe.AddTile(TileID.Furnaces);
 			recipe.SetResult(this);

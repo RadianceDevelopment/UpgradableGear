@@ -26,7 +26,7 @@ namespace SoulSang.Items.Potions
             item.consumable = true;
             item.rare = 0;
 			item.value = Item.sellPrice(0, 0, 0, 20);
-            item.buffType = BuffID.WellFed;
+            item.buffType = BuffID.WellFed; //Should be the low-tier one when (if) mod is ported to 1.4
             item.buffTime = 25200; //7 Mins
 		}	
 	    

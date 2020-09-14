@@ -29,7 +29,7 @@ namespace SoulSang.Items
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.SetResult(this);
 			recipe.AddRecipe();
-			
+			/*
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 5);
 			recipe.AddIngredient(ItemID.Gel, 7);
@@ -57,12 +57,19 @@ namespace SoulSang.Items
 			// Fisherman's Pocket Guide
 			recipe.SetResult(3120, 1);
 			recipe.AddRecipe();
-			
+			*/
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Lens, 1);
 			recipe.AddTile(TileID.WorkBenches);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.SetResult(this, 2);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.Feather, 1);
+			recipe.AddTile(TileID.WorkBenches);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.SetResult(this, 5);
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
@@ -101,6 +108,13 @@ namespace SoulSang.Items
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.Bone, 2);
+			recipe.AddTile(TileID.BoneWelder);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.SetResult(this, 5);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Stinger, 1);
 			recipe.AddTile(TileID.WorkBenches);
 			//recipe.AddTile(TileType<SoulInfuser>());
@@ -108,29 +122,15 @@ namespace SoulSang.Items
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Vine, 1);
-			recipe.AddTile(TileID.WorkBenches);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.SetResult(this, 8);
-			recipe.AddRecipe();
-			
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Bone, 2);
-			recipe.AddTile(TileID.WorkBenches);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.SetResult(this, 5);
-			recipe.AddRecipe();
-			
-			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.ShadowScale, 1);
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddTile(TileID.Anvils);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.SetResult(this, 7);
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.TissueSample, 1);
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddTile(TileID.Anvils);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.SetResult(this, 7);
 			recipe.AddRecipe();
@@ -151,37 +151,53 @@ namespace SoulSang.Items
 			
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Ectoplasm, 1);
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddTile(TileID.MythrilAnvil);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.SetResult(this, 12);
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.DarkShard, 1);
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddTile(TileID.MythrilAnvil);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.SetResult(this, 20);
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LightShard, 1);
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddTile(TileID.MythrilAnvil);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.SetResult(this, 20);
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.BeetleHusk, 1);
-			recipe.AddTile(TileID.WorkBenches);
+			// Should be Lihzahrd Furnace
+			recipe.AddTile(303);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.SetResult(this, 15);
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.LizardEgg, 1);
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddIngredient(ItemID.WhoopieCushion, 1);
+			recipe.AddTile(TileID.Anvils);
 			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.SetResult(this, 25);
+			recipe.SetResult(this, 50);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.ZombieArm, 1);
+			recipe.AddTile(TileID.Anvils);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.SetResult(this, 60);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.LizardEgg, 1);
+			// Should be Lihzahrd Furnace
+			recipe.AddTile(303);
+			//recipe.AddTile(TileType<SoulInfuser>());
+			recipe.SetResult(this, 75);
 			recipe.AddRecipe();
 		}
 	}

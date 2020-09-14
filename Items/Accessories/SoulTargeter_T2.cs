@@ -8,7 +8,7 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Tier II Soul Targeter");
+			DisplayName.SetDefault("Soul Targeter II");
 			Tooltip.SetDefault("You've added more Souls into the housing to double the efficiency\nGrants +6% Critical Chance");
 		}
 		

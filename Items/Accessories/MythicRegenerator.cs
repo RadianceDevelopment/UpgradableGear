@@ -26,7 +26,7 @@ namespace SoulSang.Items.Accessories
 			// Band of Regen is 1
 			player.lifeRegen+= 7;
 			player.statLifeMax2+= 100;
-			player.potionDelayTime+= 2400;
+			player.potionDelayTime+= 900;
         }
         public override void AddRecipes()
         {

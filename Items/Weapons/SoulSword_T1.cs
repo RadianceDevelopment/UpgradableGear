@@ -31,8 +31,7 @@ namespace SoulSang.Items.Weapons
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.CopperShortsword, 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 5);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 8);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);

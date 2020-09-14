@@ -8,7 +8,7 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Tier I Soul Targeter");
+			DisplayName.SetDefault("Soul Targeter I");
 			Tooltip.SetDefault("Souls that have been fashioned in a way that makes them enhance the bearer's ability to inflict great damage\nGrants +3% Critical Chance");
 		}
 		

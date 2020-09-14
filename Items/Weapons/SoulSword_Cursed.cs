@@ -36,7 +36,7 @@ namespace SoulSang.Items.Weapons
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SoulSword_T10"), 1);
 			recipe.AddIngredient(ItemID.FlaskofCursedFlames, 1);
-			recipe.AddIngredient(ItemID.CursedFlames, 3);
+			recipe.AddIngredient(ItemID.CursedFlame, 3);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 150);
 			recipe.AddTile(TileID.LunarCraftingStation );
 			recipe.SetResult(this);

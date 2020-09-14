@@ -9,7 +9,7 @@ namespace SoulSang.Items
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Feaster");
-			Tooltip.SetDefault("A fish that feasts on monster souls\nAnd sometimes human ones\nDedicated to Xorger128");
+			Tooltip.SetDefault("A fish that feasts on monster souls. And sometimes human ones\nDedicated to Xorger128");
 		}
 
 		public override void SetDefaults() {
@@ -36,3 +36,4 @@ namespace SoulSang.Items
 	}
 }
 // Dedicated to Xorger128, who for some reason loves fishing (also gave me some item ideas)
+// He's still salty about the 1.4 re-balancing, lol

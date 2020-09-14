@@ -8,7 +8,7 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Third Soul Vessel Fragment");
+			DisplayName.SetDefault("Vessel Fragment III");
 			Tooltip.SetDefault("A fragment of something that holds great power over Souls\nOriginates from a far-away land\nIncreases maximum life by 25 when equipped");
 		}
 		
@@ -33,7 +33,7 @@ namespace SoulSang.Items.Accessories
 			recipe.AddIngredient(ItemID.SoulofMight, 5);
 			recipe.AddIngredient(ItemID.SoulofSight, 5);
 			//recipe.AddTile(TileType<SoulForge>());
-			// Thanks to Braycoe#3181 on the TML Discord for giving me the internal ID for Hardmode Forges
+			// Thanks to Braycoe#3181 on the TML Discord for giving me the internal Tile ID for Hardmode Forges
 			// Hardmode Forges
 			recipe.AddTile(133);
 			recipe.SetResult(this);
