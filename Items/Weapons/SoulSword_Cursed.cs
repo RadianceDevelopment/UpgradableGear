@@ -46,8 +46,8 @@ namespace SoulSang.Items.Weapons
 		{
 			// Remember, 60 ticks = 1 second
 			if(Main.rand.NextBool(2)){
-			target.AddBuff(BuffID.CursedInferno, 360);
-			// 6 Seconds^
+			target.AddBuff(BuffID.CursedInferno, 600);
+			// 10 Seconds^
 		  }
 		}
 	}

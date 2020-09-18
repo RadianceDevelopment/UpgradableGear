@@ -46,8 +46,8 @@ namespace SoulSang.Items.Weapons
 		{
 			// Remember, 60 ticks = 1 second
 			if(Main.rand.NextBool(2)){
-			target.AddBuff(BuffID.Ichor, 180);
-			// 3 Seconds^
+			target.AddBuff(BuffID.Ichor, 300);
+			// 5 Seconds^
 		  }
 		}
 	}
