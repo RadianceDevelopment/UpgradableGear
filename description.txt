@@ -1,3 +1,5 @@
+Discord link on the GitHub page!
+
 Soul Sanguisuge is a mod that allows you to gather Monster Souls (which are currently crafted with various mob drops, but I plan to make them actually drop soon™) and convert them into useful gear. It's based on old versions of a mod called Ersion (which has pretty much been abandoned now)
 
 It's intended to be used alongside mods that expand the game past the Moon Lord (such as Calamity and Thorium), or just content mods in general; but can be used by itself. I'm trying to have a good balance when it comes to the game stage items can be made at (e.g the sword can be used from the very beginning to the end of the game)
@@ -7,7 +9,7 @@ Current content:
 
 Recipe for the Slime Staff & a few other vanilla items
 
-An upgradable sword (has 10 levels and 2 optional forms) [note: this is getting changed in v2.0]
+An upgradable sword (has 3 levels and 2 optional "upgraded" forms)
 
 ~20-ish new accessories (most of which are able to be upgraded throughout the game) [and a few are unimplemented so counting was hard, that's why it's an estimate. Sorry.]
 
@@ -18,6 +20,4 @@ A new healing potion past Super
 
 A new food item (gives Well Fed for 7 minutes)
 
-{Disabled in v2.0+} 4 items that can be crafted early on to store your Coins in (because why not?) [mainly to be used with Master Mode, if I can ever update the mod to Terraria 1.4]
-
-You can visit the homepage (it's the GitHub repository) to report issues and find a content wiki (and the to-do list, if it shows up)
+You can visit the homepage (it's the GitHub repository) to report issues and find a content wiki (and the to-do list, if it shows up. Also the Discord server.)

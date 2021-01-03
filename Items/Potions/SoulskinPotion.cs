@@ -44,7 +44,7 @@ namespace SoulSang.Items.Potions
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 6);
 			recipe.AddIngredient(ItemID.IronskinPotion);
-			recipe.AddIngredient(ItemID.SoulofLight);
+			recipe.AddIngredient(ItemID.SoulofLight, 3);
 			recipe.AddTile(TileID.Bottles);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

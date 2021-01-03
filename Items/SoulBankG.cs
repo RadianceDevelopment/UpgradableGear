@@ -10,7 +10,7 @@ namespace SoulSang.Items
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Gold Soul Bank");
-			Tooltip.SetDefault("A bundle of Gold Coins bound to some Souls.\nPersist after death.\nCannot be burned in Lava.\nNote: Mediumcore characters will still drop them, I can't program around that yet.");
+			Tooltip.SetDefault("A bundle of Gold Coins bound to some Souls.\nPersists after death.\nCannot be burned in Lava.\nNote: Mediumcore characters will still drop them, I can't program around that yet.");
 		}
 
 		public override void SetDefaults() 

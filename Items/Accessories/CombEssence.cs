@@ -20,6 +20,7 @@ namespace SoulSang.Items.Accessories
             item.value = Item.sellPrice(1, 0, 0, 0);
             item.rare = 10;
 			item.accessory = true;
+			item.expert = true;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

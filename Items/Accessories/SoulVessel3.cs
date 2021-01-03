@@ -33,7 +33,7 @@ namespace SoulSang.Items.Accessories
 			recipe.AddIngredient(ItemID.SoulofMight, 5);
 			recipe.AddIngredient(ItemID.SoulofSight, 5);
 			//recipe.AddTile(TileType<SoulForge>());
-			// Thanks to Braycoe#3181 on the TML Discord for giving me the internal Tile ID for Hardmode Forges
+			// Thanks to Braycoe#3181 on the TML Discord for giving me the internal Tile ID for Hardmode Forges!
 			// Hardmode Forges
 			recipe.AddTile(133);
 			recipe.SetResult(this);

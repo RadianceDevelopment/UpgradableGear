@@ -9,7 +9,7 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("True Combatant's Essence");
-			Tooltip.SetDefault("The concentrated essence of a true warrior, born from the toil and labour of one\nIncreases all damage by 150%\nGrants +35% Critical Chance\nReduces Mana Cost by 50%\nIncreases Melee Speed by 50%\nGives +10 Minion Slots\nThe souls now sing praises instead of lamenting their fate");
+			Tooltip.SetDefault("The concentrated essence of a true warrior, born from the toil and labour of one\nCan only be wielded by those who prove their worth in combat.\nIncreases all damage by 150%\nGrants +35% Critical Chance\nReduces Mana Cost by 50%\nIncreases Melee Speed by 50%\nGives +10 Minion Slots\nThe souls now sing praises instead of lamenting their fate");
 		}
 		
         public override void SetDefaults()
@@ -20,6 +20,8 @@ namespace SoulSang.Items.Accessories
             item.value = Item.sellPrice(5, 0, 0, 0);
             item.rare = 10;
 			item.accessory = true;
+			item.expert = true;
+			item.expertOnly = true;
         }
 		
         public override void UpdateAccessory(Player player, bool hideVisual)

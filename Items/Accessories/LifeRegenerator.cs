@@ -9,7 +9,7 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Life Regenerator");
-			Tooltip.SetDefault("An ancient item made from 2 relics of the past\nImproves life regeneration and maximum health");
+			Tooltip.SetDefault("An ancient item made from two relics of the past\nImproves life regeneration and maximum health\nMight be cursed?");
 		}
 		
         public override void SetDefaults()
@@ -20,11 +20,12 @@ namespace SoulSang.Items.Accessories
             item.value = Item.sellPrice(1, 5, 0, 0);
             item.rare = 10;
 			item.accessory = true;
+			item.expertOnly = true;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			// Band of Regen is 1
-			player.lifeRegen+= 5;
+			player.lifeRegen+= 10;
 			player.statLifeMax2+= 100;
         }
         public override void AddRecipes()

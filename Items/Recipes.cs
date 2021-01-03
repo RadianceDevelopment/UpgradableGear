@@ -156,6 +156,22 @@ namespace SoulSang.Items
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(ItemID.TurtleLeggings, 1);
 			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.GoldenKey, 3);
+			recipe.AddIngredient(ItemID.ShadowScale, 5);
+			recipe.AddIngredient(ItemID.HellstoneBar, 1);
+			recipe.AddTile(TileID.Anvils);
+			recipe.SetResult(ItemID.ShadowKey, 1);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.GoldenKey, 3);
+			recipe.AddIngredient(ItemID.TissueSample, 7);
+			recipe.AddIngredient(ItemID.HellstoneBar, 1);
+			recipe.AddTile(TileID.Anvils);
+			recipe.SetResult(ItemID.ShadowKey, 1);
+			recipe.AddRecipe();
 		}
 	}
 }

@@ -29,8 +29,8 @@ namespace SoulSang.Items
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 			
-			// Lunar Portal Staff
 			recipe = new ModRecipe(mod);
+			// Lunar Portal Staff
 			recipe.AddIngredient(3569, 1);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);

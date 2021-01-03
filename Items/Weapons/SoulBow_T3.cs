@@ -21,6 +21,7 @@ namespace SoulSang.Items.Weapons
 			item.useAmmo = AmmoID.Arrow;
 			item.autoReuse = false;
 			item.noMelee = true;
+			item.shoot = 1;
 			item.shootSpeed = 6.5f;
 			item.width = 18;
 			item.height = 44;

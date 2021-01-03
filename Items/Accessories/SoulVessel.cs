@@ -9,7 +9,7 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Vessel");
-			Tooltip.SetDefault("Combining 3 Vessel Fragments allows you to imbue the items with the power of Soul\nAn ancient item from a far-away land\nIncreases maximum life by 100 when equipped");
+			Tooltip.SetDefault("Combining 3 Vessel Fragments allows you to imbue the fragments with the power of Soul\nAn ancient item from a far-away land\nIncreases maximum life by 100 when equipped");
 		}
 		
         public override void SetDefaults()
@@ -31,7 +31,7 @@ namespace SoulSang.Items.Accessories
 			recipe.AddIngredient(mod.GetItem("SoulVessel1"), 1);
 			recipe.AddIngredient(mod.GetItem("SoulVessel2"), 1);
 			recipe.AddIngredient(mod.GetItem("SoulVessel3"), 1);
-			recipe.AddIngredient(ItemID.Ectoplasm, 10);
+			recipe.AddIngredient(ItemID.Ectoplasm, 15);
 			//recipe.AddTile(TileType<SoulForge>());
 			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
@@ -40,4 +40,4 @@ namespace SoulSang.Items.Accessories
     }
 }
 // Yeah, this is a Hollow Knight reference and has been all along!
-// So what?!
+// So what?! It's my favourite game of all time!

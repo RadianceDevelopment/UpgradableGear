@@ -43,3 +43,5 @@ namespace SoulSang.Items
 		}
 	}
 }
+
+// Sprite by @masterfulpotato#4037 on the Discord
