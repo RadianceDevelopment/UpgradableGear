@@ -7,7 +7,6 @@ Issue Reporter: https://github.com/vizthex132/SoulSang/issues
 
 Wiki: https://github.com/vizthex123/SoulSang/wiki
 
+Discord: https://discord.gg/NtwzA6X
+
 You can also download the mod here, or on the mod browser: https://github.com/vizthex123/SoulSang/releases
-
-
-Sprites for v3.0 and onwards made by @masterfulpotato#4037 on the project's Discord server
