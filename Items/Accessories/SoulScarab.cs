@@ -9,7 +9,7 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul-Infused Scarab Necklace");
-			Tooltip.SetDefault("A necklace infused with spiritual powers.\nIncreases minion damage and knockback by 30%\nAllows you to summon 3 extra minions");
+			Tooltip.SetDefault("A necklace infused with spiritual powers.\nYou hear distant chanting while you wear it...\nIncreases minion damage and knockback by 30%\nAllows you to summon 3 extra minions");
 		}
 		
         public override void SetDefaults()
@@ -25,7 +25,7 @@ namespace SoulSang.Items.Accessories
         {
 			player.maxMinions+= 3;
 			player.minionDamage += 0.30f;
-			player.minionKB+= 0.30f; //Should be a bit more than the Scarab Necklace
+			player.minionKB+= 0.30f; //A bit more than the Scarab Necklace (+25%)
         }
         public override void AddRecipes()
         {

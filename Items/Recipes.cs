@@ -99,16 +99,6 @@ namespace SoulSang.Items
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.BottledWater);
-			recipe.AddIngredient(ItemID.Deathweed);
-			recipe.AddIngredient(ItemID.Vertebrae);
-			recipe.AddIngredient(ItemID.Cactus, 3);
-			recipe.AddIngredient(ItemID.Stinger, 2);
-			recipe.AddTile(TileID.Bottles);
-			recipe.SetResult(ItemID.ThornsPotion);
-			recipe.AddRecipe();
-			
-			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 10);
 			recipe.AddIngredient(ItemID.Feather, 10);
 			recipe.AddTile(TileID.WorkBenches);
@@ -171,6 +161,16 @@ namespace SoulSang.Items
 			recipe.AddIngredient(ItemID.HellstoneBar, 1);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(ItemID.ShadowKey, 1);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.BottledWater, 2);
+			recipe.AddIngredient(ItemID.Deathweed, 2);
+			recipe.AddIngredient(ItemID.ViciousMushroom, 3);
+			recipe.AddIngredient(ItemID.Cactus, 3);
+			recipe.AddIngredient(ItemID.Stinger, 2);
+			recipe.AddTile(TileID.Bottles);
+			recipe.SetResult(ItemID.ThornsPotion, 2);
 			recipe.AddRecipe();
 		}
 	}

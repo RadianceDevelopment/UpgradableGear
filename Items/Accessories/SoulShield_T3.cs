@@ -17,7 +17,7 @@ namespace SoulSang.Items.Accessories
             item.width = 25;
             item.height = 25;
             item.maxStack = 1;
-            item.value = Item.sellPrice(0, 4, 1, 0);
+            item.value = Item.sellPrice(0, 4, 0, 0);
             item.rare = 4;
 			item.accessory = true;
         }

@@ -8,7 +8,7 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Mage's Essence");
+			DisplayName.SetDefault("Soul Mage's Essence III");
 			Tooltip.SetDefault("You hear the Souls whispering...\nGrants +15% magic damage\nIncreases magical critical chance by 5%\nReduces mana usage by 6%\nCurrent Tier: III");
 		}
 		

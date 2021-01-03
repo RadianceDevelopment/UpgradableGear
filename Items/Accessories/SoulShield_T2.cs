@@ -30,15 +30,6 @@ namespace SoulSang.Items.Accessories
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SoulShield_T1"));
 			recipe.AddIngredient(mod.GetItem("MobSoul"), 30);
-			recipe.AddIngredient(ItemID.Diamond, 2);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-			
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("SoulShield_T1"));
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 30);
 			recipe.AddIngredient(ItemID.DemoniteBar, 4);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.AddTile(TileID.Anvils);

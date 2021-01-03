@@ -8,7 +8,7 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Mage's Essence");
+			DisplayName.SetDefault("Soul Mage's Essence II");
 			Tooltip.SetDefault("The Souls stir, as if trying to converse with you...\nGrants +10% magic damage\nReduces mana usage by 3%\nCurrent Tier: II");
 		}
 		

@@ -8,7 +8,7 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Sniper's Essence");
+			DisplayName.SetDefault("Soul Sniper's Essence III");
 			Tooltip.SetDefault("The humming intensifies...\nGrants +15% ranged damage\nBoosts ranged critical chance by 5%\nCurrent Tier: III");
 		}
 		

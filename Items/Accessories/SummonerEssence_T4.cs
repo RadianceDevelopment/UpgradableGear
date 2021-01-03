@@ -8,7 +8,7 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Summoner's Essence");
+			DisplayName.SetDefault("Soul Summoner's Essence IV");
 			Tooltip.SetDefault("Visions start to appear in your mind...\nGrants +20% minion damage\nGives +3 Minion Slots\nCurrent Tier: IV");
 		}
 		

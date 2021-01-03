@@ -8,7 +8,7 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Summoner's Essence");
+			DisplayName.SetDefault("Soul Summoner's Essence III");
 			Tooltip.SetDefault("The noise grows louder...\nGrants +15% minion damage\nGives +2 Minion Slots\nCurrent Tier: III");
 		}
 		

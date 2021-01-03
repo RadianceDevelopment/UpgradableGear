@@ -8,7 +8,7 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Summoner's Essence");
+			DisplayName.SetDefault("Soul Summoner's Essence V");
 			Tooltip.SetDefault("The visions grow more intense...\nGrants +25% minion damage\nGives +4 Minion Slots\nCurrent Tier: V");
 		}
 		

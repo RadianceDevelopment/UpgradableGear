@@ -8,7 +8,7 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Summoner's Essence");
+			DisplayName.SetDefault("Soul Summoner's Essence II");
 			Tooltip.SetDefault("The Souls seem to be groaning in pain\nGrants +10% minion damage\nGives +1 Minion Slot\nCurrent Tier: II");
 		}
 		

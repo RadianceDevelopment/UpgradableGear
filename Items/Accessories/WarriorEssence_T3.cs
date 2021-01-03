@@ -8,7 +8,7 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Warrior's Essence");
+			DisplayName.SetDefault("Soul Warrior's Essence III");
 			Tooltip.SetDefault("The Essence starts to hum, as if preparing for something...\nGrants +15% melee damage and 10% melee speed\nBoosts melee critical chance by 3%\nCurrent Tier: III");
 		}
 		

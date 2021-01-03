@@ -9,7 +9,7 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Mythic Regenerator");
-			Tooltip.SetDefault("An ancient, legendary item made from 3 relics of the past\nImproves life regeneration and maximum health\nReduces Potion Sickness to 45 seconds");
+			Tooltip.SetDefault("An ancient, legendary item made from 3 relics of the past\nImproves life regeneration and maximum health\nReduces Potion Sickness to 45 seconds\nMight be cursed?");
 		}
 		
         public override void SetDefaults()
@@ -17,9 +17,11 @@ namespace SoulSang.Items.Accessories
             item.width = 25;
             item.height = 25;
             item.maxStack = 1;
-            item.value = Item.sellPrice(1, 20, 0, 0);
+            item.value = Item.sellPrice(1, 25, 0, 0);
             item.rare = 10;
 			item.accessory = true;
+			item.expert = true;
+			item.expertOnly = true;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
