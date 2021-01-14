@@ -17,7 +17,7 @@ namespace SoulSang.Items.Accessories
             item.width = 25;
             item.height = 25;
             item.maxStack = 1;
-            item.value = Item.sellPrice(0, 45, 75, 0);
+            item.value = Item.sellPrice(0, 15, 50, 0);
             item.rare = 1;
 			item.accessory = true;
         }
@@ -31,7 +31,8 @@ namespace SoulSang.Items.Accessories
         {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("ScarabNecklace"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 125);
+			recipe.AddIngredient(mod.GetItem("SoulNecklace_T3"), 1);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 150);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);

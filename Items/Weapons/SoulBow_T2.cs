@@ -14,7 +14,7 @@ namespace SoulSang.Items.Weapons
 
 		public override void SetDefaults() 
 		{
-			item.damage = 9;
+			item.damage = 10;
 			item.knockBack = 3.5f;
 			item.ranged = true;
 			item.UseSound = SoundID.Item5;
@@ -38,7 +38,7 @@ namespace SoulSang.Items.Weapons
 			
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SoulBow_T1"));
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 4);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 5);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

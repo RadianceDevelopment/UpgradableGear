@@ -37,7 +37,7 @@ namespace SoulSang.Items.Weapons
 		{
 			
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 8);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 10);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

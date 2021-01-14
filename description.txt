@@ -7,7 +7,7 @@ It's intended to be used alongside mods that expand the game past the Moon Lord 
 
 Current content:
 
-Recipe for the Slime Staff & a few other vanilla items
+Recipe for several vanilla items
 
 An upgradable sword (has 3 levels and 2 optional "upgraded" forms)
 

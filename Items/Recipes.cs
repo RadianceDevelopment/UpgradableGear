@@ -30,14 +30,14 @@ namespace SoulSang.Items
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 25);
 			recipe.AddIngredient(ItemID.CursedFlame, 5);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(ItemID.Ichor, 2);
 			recipe.AddRecipe();
 			
 			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 25);
 			recipe.AddIngredient(ItemID.Ichor, 5);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(ItemID.CursedFlame, 2);
@@ -171,6 +171,32 @@ namespace SoulSang.Items
 			recipe.AddIngredient(ItemID.Stinger, 2);
 			recipe.AddTile(TileID.Bottles);
 			recipe.SetResult(ItemID.ThornsPotion, 2);
+			recipe.AddRecipe();
+
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.Feather, 25);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 50);
+			recipe.AddTile(TileID.MythrilAnvil);
+			recipe.SetResult(ItemID.GiantHarpyFeather, 1);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.RecallPotion, 1);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 5);
+			recipe.AddIngredient(ItemID.Blinkroot, 3);
+			recipe.AddIngredient(ItemID.Deathweed, 1);
+			recipe.AddTile(TileID.Bottles);
+			recipe.SetResult(ItemID.TeleportationPotion, 1);
+			recipe.AddRecipe();
+			
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.RecallPotion, 4);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 25);
+			recipe.AddIngredient(ItemID.Blinkroot, 6);
+			recipe.AddIngredient(ItemID.Deathweed, 3);
+			recipe.AddIngredient(ItemID.Gravestone, 1);
+			recipe.AddTile(TileID.Bottles);
+			recipe.SetResult(ItemID.WormholePotion, 2);
 			recipe.AddRecipe();
 		}
 	}

@@ -9,12 +9,12 @@ namespace SoulSang.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Bow III");
-			Tooltip.SetDefault("The bow begans to shutter slightly");
+			Tooltip.SetDefault("The bow begans to shudder slightly");
 	    }
 
 		public override void SetDefaults() 
 		{
-			item.damage = 11;
+			item.damage = 12;
 			item.knockBack = 3.7f;
 			item.ranged = true;
 			item.UseSound = SoundID.Item5;
@@ -38,7 +38,7 @@ namespace SoulSang.Items.Weapons
 			
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.GetItem("SoulBow_T2"));
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 6);
+			recipe.AddIngredient(mod.GetItem("MobSoul"), 10);
 			//recipe.AddTile(TileType<SoulInfuser>());
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
