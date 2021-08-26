@@ -9,60 +9,54 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Sage's Essence");
-			Tooltip.SetDefault("The concentrated essence of a true warrior, born from the toil and labour of one\nCan only be wielded by those who prove their worth in combat.\nIncreases all damage by 150%\nGrants +35% Critical Chance\nReduces Mana Cost by 50%\nIncreases Melee Speed by 50%\nGives +10 Minion Slots\nThe souls now sing praises instead of lamenting their fate");
+			Tooltip.SetDefault("The concentrated essence of a true warrior, born from the toil and labour of one\nCan only be wielded by those who prove their worth in combat.\nIncreases all damage by 75%\nGrants +20% Critical Chance\nReduces Mana Cost by 30%\n+35% Melee Speed\n+10 Minion Slots\nThe souls now sing praises instead of lamenting their fate");
 		}
 		
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 30;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(5, 0, 0, 0);
-            item.rare = 10;
-			item.accessory = true;
-			item.expert = true;
-			item.expertOnly = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+            Item.rare = 10;
+			Item.expert = true;
+			Item.accessory = true;
+			Item.expertOnly = true;
+			Item.value = Item.sellPrice(gold: 25);
         }
 		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.magicDamage+= 1.5f;
-			player.meleeDamage+= 1.5f;
-			player.rangedDamage+= 1.5f;
-			player.minionDamage+= 1.5f;
-		
-			player.thrownDamage+= 1.5f;
+			player.magicDamage+= 0.75f;
+			player.meleeDamage+= 0.75f;
+			player.rangedDamage+= 0.75f;
+			player.minionDamage+= 0.75f;
 			
-			player.magicCrit+= 35;
-			player.meleeCrit+= 35;
-			player.rangedCrit+= 35;
+			player.magicCrit+= 20;
+			player.meleeCrit+= 20;
+			player.rangedCrit+= 20;
 			
-			player.thrownCrit+= 35;
-			
-			player.manaCost-= 0.50f;
-			player.meleeSpeed+= 0.50f;
+			player.manaCost-= 0.30f;
+			player.meleeSpeed+= 0.35f;
 			player.maxMinions+= 10;
         }
 		
         public override void AddRecipes()
         {
-			
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MasterEssence"), 1);
-			recipe.AddIngredient(mod.GetItem("SoulTargeter_T3"), 1);
-			recipe.AddIngredient(mod.GetItem("FinalMagicToken"), 1);
-			recipe.AddIngredient(mod.GetItem("FinalMeleeToken"), 1);
-			recipe.AddIngredient(mod.GetItem("FinalRangedToken"), 1);
-			recipe.AddIngredient(mod.GetItem("FinalSummonerToken"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 500);
-			recipe.AddIngredient(ItemID.LunarBar, 10);
-			recipe.AddIngredient(ItemID.FragmentNebula, 25);
-			recipe.AddIngredient(ItemID.FragmentSolar, 25);
-			recipe.AddIngredient(ItemID.FragmentVortex, 25);
-			recipe.AddIngredient(ItemID.FragmentStardust, 25);
-			recipe.AddTile(TileID.LunarCraftingStation);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient(mod.GetItem("MasterEssence"), 1)
+				.AddIngredient(mod.GetItem("SoulTargeter_T3"), 1)
+				.AddIngredient(mod.GetItem("FinalMagicToken"), 1)
+				.AddIngredient(mod.GetItem("FinalMeleeToken"), 1)
+				.AddIngredient(mod.GetItem("FinalRangedToken"), 1)
+				.AddIngredient(mod.GetItem("FinalSummonerToken"), 1)
+				.AddIngredient(mod.GetItem("MobSoul"), 500)
+				.AddIngredient(ItemID.LunarBar, 10)
+				.AddIngredient(ItemID.FragmentNebula, 25)
+				.AddIngredient(ItemID.FragmentSolar, 25)
+				.AddIngredient(ItemID.FragmentVortex, 25)
+				.AddIngredient(ItemID.FragmentStardust, 25)
+				.AddTile(TileID.LunarCraftingStation)
+				.Register();
         }
     }
 }

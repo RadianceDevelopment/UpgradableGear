@@ -9,17 +9,17 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Mage's Essence II");
-			Tooltip.SetDefault("The Souls stir, as if trying to converse with you...\nGrants +10% magic damage\nReduces mana usage by 3%\nCurrent Tier: II");
+			Tooltip.SetDefault("The Souls stir, as if trying to converse with you...\nGrants +10% Magic Damage\nReduces mana usage by 3%\nCurrent Tier: II");
 		}
 		
         public override void SetDefaults()
         {
-            item.width = 20;
-            item.height = 20;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(0, 0, 25, 0);
-            item.rare = 2;
-			item.accessory = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+            Item.rare = 2;
+			Item.accessory = true;
+			Item.value = Item.sellPrice(copper: 0);
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
@@ -28,23 +28,19 @@ namespace SoulSang.Items.Accessories
         }
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MageEssence_T1"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 10);
-			recipe.AddIngredient(ItemID.Sapphire, 3);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient(mod.GetItem("MageEssence_T1"), 1)
+				.AddIngredient(mod.GetItem("MobSoul"), 10)
+				.AddIngredient(ItemID.Sapphire, 3)
+				.AddTile(TileID.Anvils)
+				.Register();
 			
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MageEssence_T1"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 10);
-			recipe.AddIngredient(ItemID.Diamond, 1);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			resultItem.CreateRecipe(1)
+				.AddIngredient(mod.GetItem("MageEssence_T1"), 1)
+				.AddIngredient(mod.GetItem("MobSoul"), 10)
+				.AddIngredient(ItemID.Diamond, 1)
+				.AddTile(TileID.Anvils)
+				.Register();
         }
     }
 }

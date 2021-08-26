@@ -14,12 +14,12 @@ namespace SoulSang.Items.Accessories
 		
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 30;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(0, 0, 2, 0);
-            item.rare = 0;
-			item.accessory = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+            Item.rare = 0;
+			Item.accessory = true;
+			Item.value = Item.buyPrice(silver: 2);
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
@@ -28,13 +28,11 @@ namespace SoulSang.Items.Accessories
         }
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 100);
-			recipe.AddIngredient(ItemID.Chain, 5);
-			//recipe.AddTile(TileType<SoulForge>());
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient(mod.GetItem("MobSoul"), 100)
+				.AddIngredient(ItemID.Chain, 5)
+				.AddTile(TileID.Anvils)
+				.Register();
         }
     }
 }

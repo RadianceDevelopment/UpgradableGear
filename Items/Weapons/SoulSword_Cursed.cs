@@ -9,45 +9,44 @@ namespace SoulSang.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Cursed Soul Sword");
-			Tooltip.SetDefault("You've transformed the sword into a more specialized one.\nInflicts Cursed Flames for 6 seconds 50% of the time");
+			Tooltip.SetDefault("You've transformed the sword into a more specialized one.\nInflicts Cursed Flames for 5 seconds 50% of the time");
 	    }
 
 		public override void SetDefaults() 
 		{
-			item.damage = 33;
-			item.knockBack = 6;
-			item.crit = 8;
+			Item.damage = 33;
+			Item.knockBack = 6;
+			Item.crit = 8;
 			// Remember that Item.crit adds to the base 4%
-			item.melee = true;
-			item.width = 70;
-			item.height = 85;
-			item.useTime = 10;
-			item.useAnimation = 15;
-			item.useStyle = 1;
-			item.rare = 4;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-			item.value = Item.sellPrice(2, 50, 0, 0);
+			Item.DamageType = DamageClass.Melee;
+			Item.width = 70;
+			Item.height = 85;
+			Item.useTime = 10;
+			Item.useAnimation = 15;
+			Item.useStyle = 1;
+			Item.rare = 4;
+			Item.UseSound = SoundID.Item1;
+			Item.expert = true;
+			Item.autoReuse = true;
+			Item.value = Item.sellPrice(silver: 80);
 		}
 
 		public override void AddRecipes()
 		{
-			
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("SoulSword_T2"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 150);
-			recipe.AddIngredient(ItemID.CursedFlame, 10);
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient(mod.GetItem("SoulSword_T2"), 1)
+				.AddIngredient(mod.GetItem("MobSoul"), 150)
+				.AddIngredient(ItemID.CursedFlame, 10)
+				.AddTile(TileID.MythrilAnvil)
+				.Register();
 		}
 		
 	    public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
 		{
 			// Remember, 60 ticks = 1 second
 			if(Main.rand.NextBool(2)){
-			target.AddBuff(BuffID.CursedInferno, 600);
-			// 10 Seconds^
+			target.AddBuff(BuffID.CursedInferno, 300);
+			// 5 Seconds^
 		  }
 		}
 	}

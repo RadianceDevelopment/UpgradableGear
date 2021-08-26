@@ -26,8 +26,6 @@ namespace SoulSang.Items.Accessories
 			player.magicCrit+= 3;
 			player.meleeCrit+= 3;
 			player.rangedCrit+= 3;
-			
-			player.thrownCrit+= 3;
         }
         public override void AddRecipes()
         {

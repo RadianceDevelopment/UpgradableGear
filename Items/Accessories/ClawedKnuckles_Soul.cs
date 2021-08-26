@@ -14,36 +14,34 @@ namespace SoulSang.Items.Accessories
 		
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 30;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(0, 7, 50, 0);
-            item.rare = 5;
-			item.accessory = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+            Item.rare = 5;
+			Item.accessory = true;
+			Item.value = Item.sellPrice(gold: 10);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			player.statDefense+= 5;
 			player.meleeSpeed+= 0.20f;
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.FleshKnuckles);
-			recipe.AddIngredient(ItemID.FeralClaws);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 100);
-			//recipe.AddTile(TileType<SoulForge>());
-			recipe.AddTile(TileID.TinkerersWorkbench);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient(ItemID.FleshKnuckles)
+				.AddIngredient(ItemID.FeralClaws)
+				.AddIngredient(mod.GetItem("MobSoul"), 100)
+				.AddTile(TileID.TinkerersWorkbench)
+				.Register();
 			
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("ClawedKnuckles"));
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 100);
-			//recipe.AddTile(TileType<SoulForge>());
-			recipe.AddTile(TileID.TinkerersWorkbench);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			resultItem.CreateRecipe(1)
+				.AddIngredient(mod.GetItem("ClawedKnuckles"))
+				.AddIngredient(mod.GetItem("MobSoul"), 100)
+				.AddTile(TileID.TinkerersWorkbench)
+				.Register();
         }
     }
 }

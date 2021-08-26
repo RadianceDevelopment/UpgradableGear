@@ -9,31 +9,32 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Clawed Knuckles");
-			Tooltip.SetDefault("+4 Defense\nIncreases melee speed by 12%\nA set of claws that have fleshy knuckles embedded into them\nCombining the two seems to prevent the rancid smell of flesh from attracting creatures");
+			Tooltip.SetDefault("+4 Defense\n+12% Melee Speed\nA set of claws that have fleshy knuckles embedded into them\nCombining the two seems to prevent the rancid smell of flesh from attracting creatures");
 		}
 		
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 30;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(0, 5, 0, 0);
-            item.rare = 5;
-			item.accessory = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+            Item.rare = 5;
+			Item.accessory = true;
+			Item.value = Item.sellPrice(gold: 9);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			player.statDefense+= 4;
 			player.meleeSpeed+= 0.12f;
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.FleshKnuckles);
-			recipe.AddIngredient(ItemID.FeralClaws);
-			recipe.AddTile(TileID.TinkerersWorkbench);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient(ItemID.FleshKnuckles)
+				.AddIngredient(ItemID.FeralClaws)
+				.AddTile(TileID.TinkerersWorkbench)
+				.Register();
         }
     }
 }

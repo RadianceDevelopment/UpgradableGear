@@ -15,29 +15,28 @@ namespace SoulSang.Items.Potions
 
         public override void SetDefaults()
         {
-            item.width = 40;
-            item.height = 40;
-            item.useStyle = ItemUseStyleID.EatingUsing;
-            item.useAnimation = 15;
-            item.useTime = 15;
-            item.useTurn = true;
-            item.UseSound = SoundID.Item2; //Should be a food chomp
-            item.maxStack = 40;
-            item.consumable = true;
-            item.rare = 0;
-			item.value = Item.sellPrice(0, 0, 0, 20);
-            item.buffType = BuffID.WellFed; //Should be the low-tier one when (if) mod is ported to 1.4
-            item.buffTime = 25200; //7 Mins
+            Item.width = 40;
+            Item.height = 40;
+            Item.useStyle = ItemUseStyleID.EatingUsing;
+            Item.useAnimation = 15;
+            Item.useTime = 15;
+            Item.useTurn = true;
+            Item.UseSound = SoundID.Item2; //Should be a food chomp
+            Item.maxStack = 40;
+            Item.consumable = true;
+            Item.rare = 0;
+			Item.value = Item.sellPrice(0, 0, 0, 20);
+            Item.buffType = BuffID.WellFed; //Should be the low-tier one when (if) mod is ported to 1.4
+            Item.buffTime = 25200; //7 Mins
 		}	
 	    
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
-			// Cooking Pot
-			recipe.AddTile(96);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient(mod.GetItem("MobSoul"), 20)
+				// Cooking Pot
+				.AddTile(96)
+				.Register();
 		}
     }
 }

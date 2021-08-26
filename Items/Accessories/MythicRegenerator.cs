@@ -14,31 +14,32 @@ namespace SoulSang.Items.Accessories
 		
         public override void SetDefaults()
         {
-            item.width = 25;
-            item.height = 25;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(1, 25, 0, 0);
-            item.rare = 10;
-			item.accessory = true;
-			item.expert = true;
-			item.expertOnly = true;
+            Item.width = 25;
+            Item.height = 25;
+            Item.maxStack = 1;
+            Item.rare = 10;
+			Item.expert = true;
+			Item.accessory = true;
+			Item.expertOnly = true;
+			Item.value = Item.sellPrice(gold: 5);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			// Band of Regen is 1
 			player.lifeRegen+= 7;
 			player.statLifeMax2+= 100;
-			// Reduces potion sickness to 45 seconds. Seems like I can't make it do 40 seconds.
 			player.potionDelayTime+= -900;
+			// Reduces potion sickness to 45 seconds. Seems like I can't make it do 40 seconds.
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("LifeRegenerator"), 1);
-			recipe.AddIngredient(ItemID.CharmofMyths, 1);
-			recipe.AddTile(TileID.TinkerersWorkbench);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient(mod.GetItem("LifeRegenerator"), 1)
+				.AddIngredient(ItemID.CharmofMyths, 1)
+				.AddTile(TileID.TinkerersWorkbench)
+				.Register();
         }
     }
 }

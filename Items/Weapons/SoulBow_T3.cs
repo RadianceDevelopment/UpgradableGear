@@ -14,35 +14,32 @@ namespace SoulSang.Items.Weapons
 
 		public override void SetDefaults() 
 		{
-			item.damage = 12;
-			item.knockBack = 3.7f;
-			item.ranged = true;
-			item.UseSound = SoundID.Item5;
-			item.useAmmo = AmmoID.Arrow;
-			item.autoReuse = false;
-			item.noMelee = true;
-			item.shoot = 1;
-			item.shootSpeed = 6.5f;
-			item.width = 18;
-			item.height = 44;
-			item.useTime = 23;
-			item.useAnimation = 20;
-			item.useStyle = 5;
-			item.rare = 1;
-			item.value = Item.sellPrice(0, 0, 0, 37);
-			
+			Item.damage = 12;
+			Item.knockBack = 3.7f;
+			Item.DamageType = DamageClass.Ranged;
+			Item.UseSound = SoundID.Item5;
+			Item.useAmmo = AmmoID.Arrow;
+			Item.useStyle = ItemUseStyleID.Shoot;
+			Item.useAnimation = 20;
+			Item.autoReuse = false;
+			Item.noMelee = true;
+			Item.shoot = 1;
+			Item.shootSpeed = 6.5f;
+			Item.width = 18;
+			Item.height = 44;
+			Item.useTime = 22;
+			Item.useAnimation = 20;
+			Item.rare = 1;
+			Item.value = Item.sellPrice(copper: 0);
 		}
 
 		public override void AddRecipes()
 		{
-			
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("SoulBow_T2"));
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 10);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient(mod.GetItem("SoulBow_T2"))
+				.AddIngredient(mod.GetItem("MobSoul"), 10)
+				.AddTile(TileID.Anvils)
+				.Register();
 		}
 	}
 }

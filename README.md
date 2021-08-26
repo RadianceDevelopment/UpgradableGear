@@ -9,4 +9,4 @@ Wiki: https://github.com/vizthex123/SoulSang/wiki
 
 Discord: https://discord.gg/NtwzA6X
 
-You can also download the mod here, or on the mod browser: https://github.com/vizthex123/SoulSang/releases
+You can also download the mod here, or on the mod browser: https://github.com/vizthex123/SoulSang/releases 

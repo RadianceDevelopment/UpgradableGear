@@ -14,29 +14,27 @@ namespace SoulSang.Items.Weapons
 
 		public override void SetDefaults() 
 		{
-			item.damage = 10;
-			item.knockBack = 2;
-			item.melee = true;
-			item.width = 20;
-			item.height = 20;
-			item.scale = 0.67f;
-			item.useTime = 27;
-			item.useAnimation = 20;
-			item.useStyle = 1;
-			item.rare = 0;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = false;
-			item.value = Item.sellPrice(0, 0, 1, 0);
+			Item.damage = 11;
+			Item.knockBack = 2;
+			Item.DamageType = DamageClass.Melee;
+			Item.width = 20;
+			Item.height = 20;
+			Item.scale = 0.67f;
+			Item.useTime = 27;
+			Item.useAnimation = 20;
+			Item.useStyle = 1;
+			Item.rare = 0;
+			Item.autoReuse = false;
+			Item.UseSound = SoundID.Item1;
+			Item.value = Item.sellPrice(copper: 0);
 		}
 
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 12);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.WorkBenches);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient(mod.GetItem("MobSoul"), 15)
+				.AddTile(TileID.WorkBenches)
+				.Register();
 		}
 	}
 }

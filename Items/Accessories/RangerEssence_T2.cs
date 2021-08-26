@@ -9,42 +9,40 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Sniper's Essence II");
-			Tooltip.SetDefault("The Essence starts to hum...\nGrants +10% ranged damage\nBoosts ranged critical chance by 3%\nCurrent Tier: II");
+			Tooltip.SetDefault("The Essence starts to hum...\nGrants +10% Ranged Damage\nBoosts ranged critical chance by 3%\nCurrent Tier: II");
 		}
 		
         public override void SetDefaults()
         {
-            item.width = 20;
-            item.height = 20;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(0, 0, 25, 0);
-            item.rare = 2;
-			item.accessory = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+            Item.rare = 2;
+			Item.accessory = true;
+			Item.value = Item.sellPrice(copper: 0);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.rangedDamage+= 0.10f;
+			Player.GetDamage(DamageClass.Ranged) += 0.10f;
 			player.rangedCrit+= 3;
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("RangerEssence_T1"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 10);
-			recipe.AddIngredient(ItemID.Emerald, 3);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient(mod.GetItem("RangerEssence_T1"), 1)
+				.AddIngredient(mod.GetItem("MobSoul"), 10)
+				.AddIngredient(ItemID.Emerald, 3)
+				.AddTile(TileID.Anvils)
+				.Register();
 			
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("RangerEssence_T1"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 10);
-			recipe.AddIngredient(ItemID.Diamond, 1);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			resultItem.CreateRecipe(1)
+				.AddIngredient(mod.GetItem("RangerEssence_T1"), 1)
+				.AddIngredient(mod.GetItem("MobSoul"), 10)
+				.AddIngredient(ItemID.Diamond, 1)
+				.AddTile(TileID.Anvils)
+				.Register();
         }
     }
 }

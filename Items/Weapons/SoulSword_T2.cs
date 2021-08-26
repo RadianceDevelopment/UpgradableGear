@@ -9,36 +9,41 @@ namespace SoulSang.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Sword II");
-			Tooltip.SetDefault("The sword pulses with energy");
+			Tooltip.SetDefault("The sword pulses with energy...");
 		}
 
 		public override void SetDefaults() 
 		{
-			item.damage = 25;
-			item.knockBack = 3;
-			item.melee = true;
-			item.width = 25;
-			item.height = 25;
-			item.scale = 0.70f;
-			item.useTime = 25;
-			item.useAnimation = 20;
-			item.useStyle = 1;
-			item.rare = 1;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = false;
-			item.value = Item.sellPrice(0, 0, 1, 75);
+			Item.damage = 25;
+			Item.knockBack = 3;
+			Item.DamageType = DamageClass.Melee;
+			Item.width = 25;
+			Item.height = 25;
+			Item.scale = 0.70f;
+			Item.useTime = 25;
+			Item.useAnimation = 20;
+			Item.useStyle = 1;
+			Item.rare = 1;
+			Item.autoReuse = false;
+			Item.UseSound = SoundID.Item1;
+			Item.value = Item.sellPrice(silver: 50);
 		}
 
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("SoulSword_T1"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 8);
-			recipe.AddIngredient(ItemID.Ruby, 4);
-			//recipe.AddTile(TileID.SoulInfuser);
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient(mod.GetItem("SoulSword_T1"), 1)
+				.AddIngredient(mod.GetItem("MobSoul"), 20)
+				.AddIngredient(ItemID.Ruby, 5)
+				.AddTile(TileID.Anvils)
+				.Register();
+				
+			resultItem.CreateRecipe(1)
+				.AddIngredient(mod.GetItem("SoulSword_T1"), 1)
+				.AddIngredient(mod.GetItem("MobSoul"), 20)
+				.AddIngredient(ItemID.Diamond, 1)
+				.AddTile(TileID.Anvils)
+				.Register();
 		}
 	}
 }

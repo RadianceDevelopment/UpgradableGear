@@ -14,34 +14,32 @@ namespace SoulSang.Items.Weapons
 
 		public override void SetDefaults() 
 		{
-			item.damage = 10;
-			item.knockBack = 3.5f;
-			item.ranged = true;
-			item.UseSound = SoundID.Item5;
-			item.useAmmo = AmmoID.Arrow;
-			item.autoReuse = false;
-			item.noMelee = true;
-			item.shoot = 1;
-			item.shootSpeed = 6.5f;
-			item.width = 18;
-			item.height = 44;
-			item.useTime = 25;
-			item.useAnimation = 20;
-			item.useStyle = 5;
-			item.rare = 0;
-			item.value = Item.sellPrice(0, 0, 0, 15);
-			
+			Item.damage = 10;
+			Item.knockBack = 3.5f;
+			Item.DamageType = DamageClass.Ranged;
+			Item.UseSound = SoundID.Item5;
+			Item.useAmmo = AmmoID.Arrow;
+			Item.useStyle = ItemUseStyleID.Shoot;
+			Item.useAnimation = 20;
+			Item.autoReuse = false;
+			Item.noMelee = true;
+			Item.shoot = 1;
+			Item.shootSpeed = 6.5f;
+			Item.width = 18;
+			Item.height = 44;
+			Item.useTime = 24;
+			Item.useAnimation = 20;
+			Item.rare = 0;
+			Item.value = Item.sellPrice(copper: 0);
 		}
 
 		public override void AddRecipes()
 		{
-			
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("SoulBow_T1"));
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 5);
-			recipe.AddTile(TileID.WorkBenches);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient(mod.GetItem("SoulBow_T1"))
+				.AddIngredient(mod.GetItem("MobSoul"), 5)
+				.AddTile(TileID.WorkBenches)
+				.Register();
 		}
 	}
 }

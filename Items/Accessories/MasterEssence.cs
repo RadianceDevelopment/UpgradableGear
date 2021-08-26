@@ -9,18 +9,18 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Master's Essence");
-			Tooltip.SetDefault("The concentrated essence of a great warrior.\nGrants +50% to all damage\nGrants +20% Critical Chance\nReduces Mana Cost by 25%\nIncreases Melee Speed by 30%\nGives +8 Minion Slots\nCurrent Tier: X");
+			Tooltip.SetDefault("The concentrated essence of a great warrior.\nGrants +50% to all damage\nGrants +15% Critical Chance\nReduces Mana Cost by 20%\n+25% Melee Speed\n+8 Minion Slots\nCurrent Tier: X");
 		}
 		
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 30;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(1, 0, 0, 0);
-            item.rare = 10;
-			item.accessory = true;
-			item.expert = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+            Item.rare = 10;
+			Item.accessory = true;
+			Item.expert = true;
+			Item.value = Item.sellPrice(copper: 6000); // Should be about 6 gold or so
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
@@ -28,31 +28,26 @@ namespace SoulSang.Items.Accessories
 			player.meleeDamage+= 0.50f;
 			player.rangedDamage+= 0.50f;
 			player.minionDamage+= 0.50f;
-		
-			player.thrownDamage+= 0.50f;
-			
-			player.magicCrit+= 20;
-			player.meleeCrit+= 20;
-			player.rangedCrit+= 20;
-			
-			player.thrownCrit+= 20;
-			
-			player.manaCost-= 0.25f;
-			player.meleeSpeed+= 0.30f;
+					
+			player.magicCrit+= 15;
+			player.meleeCrit+= 15;
+			player.rangedCrit+= 15;
+						
+			player.manaCost-= 0.20f;
+			player.meleeSpeed+= 0.25;
 			player.maxMinions+= 8;
         }
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MageEssence_T5"), 1);
-			recipe.AddIngredient(mod.GetItem("RangerEssence_T5"), 1);
-			recipe.AddIngredient(mod.GetItem("SummonerEssence_T6"), 1);
-			recipe.AddIngredient(mod.GetItem("WarriorEssence_T5"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 250);
-			recipe.AddIngredient(ItemID.LunarBar, 5);
-			recipe.AddTile(TileID.LunarCraftingStation);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient(mod.GetItem("MageEssence_T5"), 1)
+				.AddIngredient(mod.GetItem("RangerEssence_T5"), 1)
+				.AddIngredient(mod.GetItem("SummonerEssence_T6"), 1)
+				.AddIngredient(mod.GetItem("WarriorEssence_T5"), 1)
+				.AddIngredient(mod.GetItem("MobSoul"), 250)
+				.AddIngredient(ItemID.LunarBar, 5)
+				.AddTile(TileID.LunarCraftingStation)
+				.Register();
         }
     }
 }

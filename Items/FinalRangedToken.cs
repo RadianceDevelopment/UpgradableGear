@@ -14,27 +14,25 @@ namespace SoulSang.Items
 
 		public override void SetDefaults() 
 		{
-			item.width = 40;
-			item.height = 40;
-			item.value = 0;
-			item.rare = 11;
-			item.maxStack = 999;
+			Item.width = 20;
+			Item.height = 20;
+			Item.rare = 11;
+			Item.maxStack = 999;
+			Item.value = Item.buyPrice(copper: 0);
 		}
 
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.SDMG, 1);
-			recipe.AddTile(TileID.LunarCraftingStation);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+			    .AddIngredient(ItemID.SDMG, 1)
+				.AddTile(TileID.LunarCraftingStation)
+				.Register();
 			
 			// Celebration
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(3546, 1);
-			recipe.AddTile(TileID.LunarCraftingStation);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			resultItem.CreateRecipe()
+				.AddIngredient(3546, 1)
+				.AddTile(TileID.LunarCraftingStation)
+				.Register();
 		}
 	}
 }

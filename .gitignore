@@ -1,4 +1,4 @@
-SwordProgression.txt
-Note.txt
+*.txt
+*.xcf
 obj/*
 .vs/*

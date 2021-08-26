@@ -13,12 +13,12 @@ namespace SoulSang.Items
 		}
 
 		public override void SetDefaults() {
-			item.questItem = true;
-			item.maxStack = 1;
-			item.width = 25;
-			item.height = 25;
-			item.uniqueStack = true;
-			item.rare = ItemRarityID.Quest;
+			Item.questItem = true;
+			Item.maxStack = 1;
+			Item.width = 25;
+			Item.height = 25;
+			Item.uniqueStack = true;
+			Item.rare = ItemRarityID.Quest;
 		}
 
 		public override bool IsQuestFish() {
@@ -35,5 +35,5 @@ namespace SoulSang.Items
 		}
 	}
 }
-// Dedicated to Xorger128, who for some reason loves fishing (also gave me some item ideas)
+// Dedicated to Xorger128, who for some reason loves fishing (also gave me some Item ideas)
 // He's still salty about the 1.4 re-balancing, lol

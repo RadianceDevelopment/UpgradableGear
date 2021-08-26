@@ -4,12 +4,12 @@ using Terraria.ModLoader;
 
 namespace SoulSang.Items.Accessories
 {
-	public class ScarabNecklace : ModItem
+	public class SoulRegenerator : ModItem
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Scarab Necklace");
-			Tooltip.SetDefault("A necklace combined with a scroll of power\nSure to bring the wearer great skill with their summons.\nIncreases minion damage and knockback by 20%\n+2 Max Minions");
+			DisplayName.SetDefault("Soul Regenerator");
+			Tooltip.SetDefault("An ancient item made from two relics of the past\nImproves life regeneration and maximum health");
 		}
 		
         public override void SetDefaults()
@@ -17,23 +17,22 @@ namespace SoulSang.Items.Accessories
             Item.width = 25;
             Item.height = 25;
             Item.maxStack = 1;
-            Item.rare = 1;
+            Item.rare = 10;
 			Item.accessory = true;
-			Item.value = Item.buyPrice(gold: 10);
+			Item.expertOnly = true;
+			Item.value = Item.sellPrice(platinum: 1);
         }
-		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.maxMinions+= 2;
-			player.minionDamage += 0.20f;
-			player.minionKB+= 0.25f; // Should be a bit more than the Hercules Beetle
+			// Band of Regen is 1
+			player.lifeRegen+= 10;
+			player.statLifeMax2+= 75;
         }
-		
         public override void AddRecipes()
         {
 			CreateRecipe(1)
-				.AddIngredient(ItemID.PapyrusScarab, 1)
-				.AddIngredient(ItemID.PygmyNecklace, 1)
+				.AddIngredient(mod.GetItem("SoulVessel"), 1)
+				.AddIngredient(mod.GetItem("SoulRegen"), 1)
 				.AddTile(TileID.TinkerersWorkbench)
 				.Register();
         }
