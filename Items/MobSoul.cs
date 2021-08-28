@@ -16,15 +16,15 @@ namespace SoulSang.Items
 		{
 			Item.width = 20;
 			Item.height = 20;
-			Item.rare = 0;
 			Item.maxStack = 9999;
+            Item.rare = ItemRarityID.White;
 			Item.value = Item.sellPrice(copper: 0);
 		}
 
 		public override void AddRecipes() 
 		{
 			CreateRecipe(1)
-				.AddIngredient(ItemID.Gel, 2)
+				.AddIngredient(ItemID.Gel, 3)
 				.AddTile(TileID.WorkBenches)
 				.Register();
 			
@@ -87,9 +87,9 @@ namespace SoulSang.Items
 				.AddIngredient(ItemID.PinkGel, 2)
 				.AddTile(TileID.WorkBenches)
 				.Register();
-			// Not quite sure how souls are in the cloth, but oh well
+			
 			CreateRecipe(12)
-				.AddIngredient(ItemID.TatteredCloth, 1)
+				.AddIngredient(ItemID.TatteredCloth, 1) // Not quite sure how souls are in the cloth, but oh well. Maybe it got caught there after the guy died and became a zombie?
 				.AddTile(TileID.WorkBenches)
 				.Register();
 			
@@ -108,10 +108,9 @@ namespace SoulSang.Items
 				.AddTile(TileID.MythrilAnvil)
 				.Register();
 			
-			CreateRecipe(15)
+			CreateRecipe(10)
 				.AddIngredient(ItemID.BeetleHusk, 1)
-				// Lihzahrd Furnace
-				.AddTile(303)
+				.AddTile(303) // Lihzahrd Furnace
 				.Register();
 				
 			CreateRecipe(50)
@@ -121,8 +120,7 @@ namespace SoulSang.Items
 			
 			CreateRecipe(75)
 				.AddIngredient(ItemID.LizardEgg, 1)
-				// Lihzahrd Furnace
-				.AddTile(303)
+				.AddTile(303) // Lihzahrd Furnace
 				.Register();
 		}
 	}

@@ -15,14 +15,14 @@ namespace SoulSang.Items.Weapons
 		public override void SetDefaults() 
 		{
 			Item.damage = 33;
-			Item.knockBack = 2;
+			Item.knockBack = 5;
 			Item.crit = 6;
 			// Remember that Item.crit adds to the base 4%
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 70;
 			Item.height = 85;
 			Item.scale = 0.75f;
-			Item.useTime = 12;
+			Item.useTime = 15;
 			Item.useAnimation = 15;
 			Item.useStyle = 1;
 			Item.autoReuse = true;

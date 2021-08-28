@@ -10,8 +10,8 @@ namespace SoulSang.Items.Potions
 	{
         public override void SetStaticDefaults()
         {
-			DisplayName.SetDefault("Soul Hunter Potion");
-            Tooltip.SetDefault("Increases droprate of Monster Souls by 25% (for 5 mins)");
+			DisplayName.SetDefault("Soul Stealer's Potion");
+            Tooltip.SetDefault("Increases droprate of Monster Souls by 25% (for 5 mins)\nStacks to 20");
         }
 
         public override void SetDefaults()
@@ -23,12 +23,12 @@ namespace SoulSang.Items.Potions
             item.useTime = 15;
             item.useTurn = true;
             item.UseSound = SoundID.Item3;
-            item.maxStack = 30;
+            item.maxStack = 20;
             item.consumable = true;
             item.rare = 3;
-            item.value = Item.buyPrice(gold: 1);
             item.buffType = BuffType<Buffs.ExampleDefenseBuff>(); //Specify an existing buff to be applied when used.
             item.buffTime = 5400; //The amount of time the buff declared in item.buffType will last in ticks. 5400/60 is 90, so this buff will last 90 seconds.
+			Item.value = Item.sellPrice(copper: 0);
         }
     }
 }

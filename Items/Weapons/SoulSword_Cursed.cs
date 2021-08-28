@@ -9,7 +9,7 @@ namespace SoulSang.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Cursed Soul Sword");
-			Tooltip.SetDefault("You've transformed the sword into a more specialized one.\nInflicts Cursed Flames for 5 seconds 50% of the time");
+			Tooltip.SetDefault("You've transformed the sword into a more specialized one.\nInflicts Cursed Inferno for 5 seconds 50% of the time");
 	    }
 
 		public override void SetDefaults() 

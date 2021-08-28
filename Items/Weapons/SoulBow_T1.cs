@@ -24,11 +24,11 @@ namespace SoulSang.Items.Weapons
 			Item.autoReuse = false;
 			Item.noMelee = true;
 			Item.shoot = 1;
-			Item.shootSpeed = 6.3f;
+			Item.shootSpeed = 6;
 			Item.width = 18;
 			Item.height = 44;
 			Item.useTime = 26;
-			Item.rare = 0;
+            Item.rare = ItemRarityID.White;
 			Item.value = Item.sellPrice(copper: 0);
 		}
 

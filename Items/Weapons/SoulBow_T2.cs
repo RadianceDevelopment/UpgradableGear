@@ -9,13 +9,13 @@ namespace SoulSang.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Bow II");
-			Tooltip.SetDefault("A bow infused with more souls");
+			Tooltip.SetDefault("The bow begans to shudder slightly...");
 	    }
 
 		public override void SetDefaults() 
 		{
 			Item.damage = 10;
-			Item.knockBack = 3.5f;
+			Item.knockBack = 4;
 			Item.DamageType = DamageClass.Ranged;
 			Item.UseSound = SoundID.Item5;
 			Item.useAmmo = AmmoID.Arrow;
@@ -29,7 +29,7 @@ namespace SoulSang.Items.Weapons
 			Item.height = 44;
 			Item.useTime = 24;
 			Item.useAnimation = 20;
-			Item.rare = 0;
+            Item.rare = ItemRarityID.Blue;
 			Item.value = Item.sellPrice(copper: 0);
 		}
 

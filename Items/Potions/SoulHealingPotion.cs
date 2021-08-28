@@ -9,7 +9,6 @@ namespace SoulSang.Items.Potions
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Soul Healing Potion");
-			Tooltip.SetDefault("Stacks to 40");
 		}
 
 		public override void SetDefaults() {
@@ -21,11 +20,12 @@ namespace SoulSang.Items.Potions
 			Item.useTime = 18;
 			Item.useTurn = true;
 			Item.UseSound = SoundID.Item3;
-			Item.maxStack = 40;
+			Item.maxStack = 30;
 			Item.consumable = true;
 			Item.rare = 7;
-			Item.healLife = 350;
+			Item.healLife = 325;
 			Item.potion = true;
+			Item.value = Item.sellPrice(silver: 30);
 		}
 		
 		public override void AddRecipes() 

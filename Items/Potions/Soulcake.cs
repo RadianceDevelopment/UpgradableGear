@@ -25,9 +25,9 @@ namespace SoulSang.Items.Potions
             Item.maxStack = 20;
             Item.consumable = true;
             Item.rare = 0;
-			Item.value = Item.sellPrice(0, 0, 0, 20);
             Item.buffType = BuffID.WellFed;
             Item.buffTime = 25200; // 7 mins
+			Item.value = Item.sellPrice(copper: 0);
 		}	
 	    
 		public override void AddRecipes() 

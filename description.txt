@@ -10,6 +10,7 @@ Current content:
 A new Luck potion! (Grants it for 30 minutes)
 
 An upgradable sword (has 3 levels and 2 specialized forms)
+- Inflicts some debuffs (Cursed Inferno and Ichor) once upgraded
 
 An upgradable bow (has 3 levels)
 
@@ -18,10 +19,10 @@ An upgradable bow (has 3 levels)
 2 new buffs
 - 2 potions that activate the new buffs
 
-A new healing potion past Super (heals 350)
+A new healing potion past Super (heals 325)
 
 A new food item (gives Well Fed for 7 minutes)
 
-And a quest fish (not sure why you'd try to catch it though...)
+And a quest fish (not sure why you'd want to catch it though...)
 
 You can visit the homepage (it's the GitHub repository) to report issues and find a content wiki (and the to-do list, if it shows up. Also the Discord server).

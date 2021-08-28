@@ -9,13 +9,13 @@ namespace SoulSang.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Bow III");
-			Tooltip.SetDefault("The bow begans to shudder slightly");
+			Tooltip.SetDefault("With a fierce twang, the bow recoils against you...");
 	    }
 
 		public override void SetDefaults() 
 		{
-			Item.damage = 12;
-			Item.knockBack = 3.7f;
+			Item.damage = 15;
+			Item.knockBack = 4;
 			Item.DamageType = DamageClass.Ranged;
 			Item.UseSound = SoundID.Item5;
 			Item.useAmmo = AmmoID.Arrow;
@@ -24,13 +24,13 @@ namespace SoulSang.Items.Weapons
 			Item.autoReuse = false;
 			Item.noMelee = true;
 			Item.shoot = 1;
-			Item.shootSpeed = 6.5f;
-			Item.width = 18;
-			Item.height = 44;
-			Item.useTime = 22;
+			Item.shootSpeed = 7;
+			Item.width = 20;
+			Item.height = 46;
+			Item.useTime = 20;
 			Item.useAnimation = 20;
-            Item.rare = ItemRarityID.Blue;
-			Item.value = Item.sellPrice(copper: 0);
+            Item.rare = ItemRarityID.Green;
+			Item.value = Item.sellPrice(silver: 30);
 		}
 
 		public override void AddRecipes()
@@ -38,6 +38,7 @@ namespace SoulSang.Items.Weapons
 			CreateRecipe(1)
 				.AddIngredient<SoulBow_T2>(1)
 				.AddIngredient<MobSoul>(10)
+				.AddIngredient(ItemID.Diamond, 1)
 				.AddTile(TileID.Anvils)
 				.Register();
 		}

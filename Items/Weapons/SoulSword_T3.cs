@@ -9,7 +9,7 @@ namespace SoulSang.Items.Weapons
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("True Soul Sword");
-			Tooltip.SetDefault("The sword has reached its zenith\nInflicts Cursed Flames and Ichor 50% of the time.");
+			Tooltip.SetDefault("The sword has reached its zenith\nInflicts Cursed Inferno for 7 seconds and Ichor for 5 seconds 50% of the time.");
 		}
 		// Be sure to make this shoot the ghost orb!
 		public override void SetDefaults() 
@@ -19,10 +19,10 @@ namespace SoulSang.Items.Weapons
 			Item.crit = 1;
 			// Remember that Item.crit adds to the base 4%
 			Item.DamageType = DamageClass.Melee;
-			Item.width = 30;
-			Item.height = 30;
+			Item.width = 90;
+			Item.height = 100;
 			Item.scale = 0.85f;
-			Item.useTime = 5;
+			Item.useTime = 10;
 			Item.useAnimation = 20;
 			Item.useStyle = 1;
 			Item.autoReuse = true;
@@ -36,7 +36,7 @@ namespace SoulSang.Items.Weapons
 			CreateRecipe(1)
 				.AddIngredient<SoulSword_Cursed>(1)
 				.AddIngredient<SoulSword_Ichor>(1)
-				.AddIngredient<MobSoul>(12)
+				.AddIngredient<MobSoul>(24)
 				.AddIngredient(ItemID.LunarBar, 5)
 				.AddTile(TileID.LunarCraftingStation)
 				.Register();

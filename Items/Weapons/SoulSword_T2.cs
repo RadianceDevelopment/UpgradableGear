@@ -16,6 +16,8 @@ namespace SoulSang.Items.Weapons
 		{
 			Item.damage = 25;
 			Item.knockBack = 3;
+			Item.crit = 2;
+			// Remember that Item.crit adds to the base 4%
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 25;
 			Item.height = 25;
@@ -40,7 +42,7 @@ namespace SoulSang.Items.Weapons
 				
 			CreateRecipe(1)
 				.AddIngredient<SoulSword_T1>(1)
-				.AddIngredient<MobSoul>(20)
+				.AddIngredient<MobSoul>(6)
 				.AddIngredient(ItemID.Diamond, 1)
 				.AddTile(TileID.Anvils)
 				.Register();

@@ -10,7 +10,7 @@ namespace SoulSang.Items.Potions
         public override void SetStaticDefaults()
         {
 			DisplayName.SetDefault("Necromantic Luck Potion");
-            Tooltip.SetDefault("Changes one's Luck\nGained through unsavoury means.");
+            Tooltip.SetDefault("Changes one's Luck\nGained through unsavoury means...");
         }
 
         public override void SetDefaults()
@@ -32,8 +32,8 @@ namespace SoulSang.Items.Potions
 	    
 		public override void AddRecipes() 
 		{
-			CreateRecipe(1)
-				.AddIngredient<MobSoul>(5)
+			CreateRecipe(2)
+				.AddIngredient<MobSoul>(10)
 				.AddIngredient(4477) // Lesser Luck Potion
 				.AddIngredient(4478) // Luck Potion
 				.AddIngredient(4479) // Greater Luck Potion

@@ -14,7 +14,7 @@ namespace SoulSang.Items.Weapons
 
 		public override void SetDefaults() 
 		{
-			Item.damage = 11;
+			Item.damage = 12;
 			Item.knockBack = 2;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 20;
