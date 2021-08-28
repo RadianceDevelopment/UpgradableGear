@@ -10,34 +10,33 @@ namespace SoulSang.Items.Potions
         public override void SetStaticDefaults()
         {
 			DisplayName.SetDefault("Soulcake");
-            Tooltip.SetDefault("Minor increase to all stats\nStacks to 40");
+            Tooltip.SetDefault("Minor increase to all stats\nStacks to 20");
         }
 
         public override void SetDefaults()
         {
-            item.width = 40;
-            item.height = 40;
-            item.useStyle = ItemUseStyleID.EatingUsing;
-            item.useAnimation = 15;
-            item.useTime = 15;
-            item.useTurn = true;
-            item.UseSound = SoundID.Item2; //Should be a food chomp
-            item.maxStack = 40;
-            item.consumable = true;
-            item.rare = 0;
-			item.value = Item.sellPrice(0, 0, 0, 20);
-            item.buffType = BuffID.WellFed; //Should be the low-tier one when (if) mod is ported to 1.4
-            item.buffTime = 25200; //7 Mins
+            Item.width = 20;
+            Item.height = 20;
+            Item.useStyle = ItemUseStyleID.EatFood;
+            Item.useAnimation = 15;
+            Item.useTime = 15;
+            Item.useTurn = true;
+            Item.UseSound = SoundID.Item2; // Should be a food chomp
+            Item.maxStack = 20;
+            Item.consumable = true;
+            Item.rare = 0;
+			Item.value = Item.sellPrice(0, 0, 0, 20);
+            Item.buffType = BuffID.WellFed;
+            Item.buffTime = 25200; // 7 mins
 		}	
 	    
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
-			// Cooking Pot
-			recipe.AddTile(96);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<MobSoul>(10)
+				// Cooking Pot
+				.AddTile(96)
+				.Register();
 		}
     }
 }

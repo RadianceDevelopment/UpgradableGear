@@ -9,34 +9,34 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Mage's Essence IV");
-			Tooltip.SetDefault("The whispers grow into audible voices...\nGrants +20% magic damage\nIncreases magical critical chance by 8%\nReduces mana usage by 10%\nCurrent Tier: IV");
+			Tooltip.SetDefault("The whispers grow into audible voices...\nGrants +20% Magic Damage\nIncreases magical critical chance by 6%\nReduces mana usage by 6%\nCurrent Tier: IV");
 		}
 		
         public override void SetDefaults()
         {
-            item.width = 20;
-            item.height = 20;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(0, 12, 0, 0);
-            item.rare = 6;
-			item.accessory = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+			Item.accessory = true;
+            Item.rare = ItemRarityID.Yellow;
+			Item.value = Item.sellPrice(gold: 5, silver: 50);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.magicDamage+= 0.20f;
-			player.magicCrit+= 8;
-			player.manaCost-= 0.10f;
+			player.GetDamage(DamageClass.Magic) += 0.20f;
+			player.GetCritChance(DamageClass.Magic) += 5;
+			player.manaCost -= 0.08f;
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MageEssence_T3"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
-			recipe.AddIngredient(ItemID.SpectreBar, 4);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<MageEssence_T3>(1)
+				.AddIngredient<MobSoul>(225)
+				.AddIngredient(ItemID.SpectreBar, 4)
+				.AddTile(TileID.MythrilAnvil)
+				.Register();
         }
     }
 }

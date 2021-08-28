@@ -1,3 +1,4 @@
+/*
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -14,11 +15,11 @@ namespace SoulSang.Items
 
 		public override void SetDefaults() 
 		{
-			item.width = 40;
-			item.height = 40;
-			item.rare = 0;
-			item.maxStack = 1;
-			item.value = Item.sellPrice(0, 0, 0, 0);
+			Item.width = 20;
+			Item.height = 20;
+			Item.rare = 0;
+			Item.maxStack = 1;
+			Item.value = Item.sellPrice(copper: 0);
 		}
 		public override void AddRecipes() 
 		{
@@ -201,3 +202,4 @@ namespace SoulSang.Items
 		}
 	}
 }
+*/

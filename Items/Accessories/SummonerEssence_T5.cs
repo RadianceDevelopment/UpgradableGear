@@ -8,34 +8,35 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Summoner's Essence V");
-			Tooltip.SetDefault("The visions grow more intense...\nGrants +25% minion damage\nGives +4 Minion Slots\nCurrent Tier: V");
+			DisplayName.SetDefault("True Soul Summoner's Essence");
+			Tooltip.SetDefault("The visions manifest as all manner of familiar, and settle after a short fight.\nGrants +25% minion damage\nIncreases minion knockback by 10%\nGives +4 Minion Slots\nCurrent Tier: V");
 		}
 		
         public override void SetDefaults()
         {
-            item.width = 20;
-            item.height = 20;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(0, 10, 0, 0);
-            item.rare = 7;
-			item.accessory = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+			Item.accessory = true;
+            Item.rare = ItemRarityID.Cyan;
+			Item.value = Item.sellPrice(gold: 6, silver: 25); // Might be slightly off
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.minionDamage+= 0.25f;
-			player.maxMinions+= 4;
+			player.GetDamage(DamageClass.Summon) += 0.25f;
+			player.minionKB += 0.10f;
+			player.maxMinions += 4;
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("SummonerEssence_T4"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 36);
-			recipe.AddIngredient(ItemID.BeetleHusk, 5);
-			//recipe.AddTile(TileType<SoulForge>());
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<SummonerEssence_T4>(1)
+				.AddIngredient<MobSoul>(500)
+				.AddIngredient(ItemID.BeetleHusk, 5)
+				.AddTile(TileID.MythrilAnvil)
+				.Register();
         }
     }
 }

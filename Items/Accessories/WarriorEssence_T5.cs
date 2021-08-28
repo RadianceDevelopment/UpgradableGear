@@ -9,33 +9,34 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("True Soul Warrior's Essence");
-			Tooltip.SetDefault("The Essence twists and convulses, then reveals its true form\nGrants +25% melee damage and +20% melee speed\nBoosts melee critical chance by 10%\nCurrent Tier: V");
+			Tooltip.SetDefault("The Essence twists and convulses, then reveals its true form\nGrants +25% melee damage and +20% melee speed\nBoosts melee critical chance by 8%\nCurrent Tier: V");
 		}
 		
         public override void SetDefaults()
         {
-            item.width = 20;
-            item.height = 20;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(0, 25, 0, 0);
-            item.rare = 9;
-			item.accessory = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+			Item.accessory = true;
+            Item.rare = ItemRarityID.Cyan;
+			Item.value = Item.sellPrice(gold: 7, silver: 20);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.meleeDamage+= 0.25f;
+			player.GetDamage(DamageClass.Melee) += 0.25f;
+			player.GetCritChance(DamageClass.Melee) += 8;
 			player.meleeSpeed+= 0.20f;
-			player.meleeCrit+= 10;
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("WarriorEssence_T4"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 25);
-			recipe.AddIngredient(ItemID.FragmentSolar, 5);
-			recipe.AddTile(TileID.LunarCraftingStation);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<WarriorEssence_T4>(1)
+				.AddIngredient<MobSoul>(500)
+				.AddIngredient(ItemID.FragmentSolar, 5)
+				.AddTile(TileID.LunarCraftingStation)
+				.Register();
         }
     }
 }

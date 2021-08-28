@@ -5,7 +5,7 @@ namespace SoulSang.Buffs
 {
     public class Soulspeed : ModBuff
     {
-        public override void SetDefaults()
+        public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Soulpeed");
             Description.SetDefault("40% increased movement speed");

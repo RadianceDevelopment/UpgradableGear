@@ -9,35 +9,33 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Necklace III");
-			Tooltip.SetDefault("A necklace infused with Souls.\nBound to increase ones' spritual affinity.\nMore Souls have been focused into the central gem.\nIncreases minion damage by 25%\nIncreases minion knockback by 15%\nIncreases max minions by 2");
+			Tooltip.SetDefault("A necklace infused with Souls.\nBound to increase ones' spritual affinity.\nMore Souls have been focused into the central gem.\n+25% Minion Damage\nIncreases minion knockback by 10%\n+1 Max Minion");
 		}
 		
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 30;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(0, 4, 0, 0);
-            item.rare = 0;
-			item.accessory = true;
+            Item.width = 30;
+            Item.height = 30;
+            Item.maxStack = 1;
+			Item.accessory = true;
+            Item.rare = ItemRarityID.White;
+			Item.value = Item.sellPrice(silver: 2);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
+			player.GetDamage(DamageClass.Summon) += 0.15f;
+			player.minionKB+= 0.10f;
 			player.maxMinions+= 1;
-			player.minionDamage += 0.25f;
-			player.minionKB+= 0.15f; 
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 100);
-			recipe.AddIngredient(mod.GetItem("SoulNecklace_T2"), 1);
-			//recipe.AddTile(TileType<SoulForge>());
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<MobSoul>(100)
+				.AddIngredient<SoulNecklace_T2>(1)
+				.AddTile(TileID.Anvils)
+				.Register();
         }
     }
 }
-// Yeah, this is a Hollow Knight reference and has been all along!
-// So what?! It's my favourite game of all time!

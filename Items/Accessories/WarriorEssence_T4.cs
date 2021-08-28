@@ -14,38 +14,29 @@ namespace SoulSang.Items.Accessories
 		
         public override void SetDefaults()
         {
-            item.width = 20;
-            item.height = 20;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(0, 12, 0, 0);
-            item.rare = 6;
-			item.accessory = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+			Item.accessory = true;
+            Item.rare = ItemRarityID.Lime;
+			Item.value = Item.sellPrice(gold: 6, silver: 20);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.meleeDamage+= 0.20f;
+			player.GetDamage(DamageClass.Melee) += 0.20f;
+			player.GetCritChance(DamageClass.Melee) += 5;
 			player.meleeSpeed+= 0.15f;
-			player.meleeCrit+= 5;
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("WarriorEssence_T3"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
-			recipe.AddIngredient(ItemID.ShroomiteBar, 4);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-			
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("WarriorEssence_T3"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 20);
-			recipe.AddIngredient(ItemID.SpectreBar, 8);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<WarriorEssence_T3>(1)
+				.AddIngredient<MobSoul>(225)
+				.AddIngredient(ItemID.ChlorophyteBar, 5) //1006
+				.AddTile(TileID.MythrilAnvil)
+				.Register();
         }
     }
 }

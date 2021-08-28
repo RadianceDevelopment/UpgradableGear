@@ -9,42 +9,41 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Summoner's Essence IV");
-			Tooltip.SetDefault("Visions start to appear in your mind...\nGrants +20% minion damage\nGives +3 Minion Slots\nCurrent Tier: IV");
+			Tooltip.SetDefault("Visions start to appear in your mind...\nGrants +20% minion damage\nIncreases minion knockback by 7%\nGives +3 Minion Slots\nCurrent Tier: IV");
 		}
 		
         public override void SetDefaults()
         {
-            item.width = 20;
-            item.height = 20;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(0, 7, 50, 0);
-            item.rare = 4;
-			item.accessory = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+			Item.accessory = true;
+            Item.rare = ItemRarityID.LightRed;
+			Item.value = Item.sellPrice(gold: 3, silver: 75);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.minionDamage+= 0.20f;
-			player.maxMinions+= 3;
+			player.GetDamage(DamageClass.Summon) += 0.20f;
+			player.minionKB += 0.07f;
+			player.maxMinions += 3;
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("SummonerEssence_T3"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 24);
-			recipe.AddIngredient(ItemID.MythrilBar, 5);
-			//recipe.AddTile(TileType<SoulForge>());
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<SummonerEssence_T3>(1)
+				.AddIngredient<MobSoul>(225)
+				.AddIngredient(ItemID.MythrilBar, 5)
+				.AddTile(TileID.MythrilAnvil)
+				.Register();
 			
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("SummonerEssence_T3"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 35);
-			recipe.AddIngredient(ItemID.OrichalcumBar, 5);
-			//recipe.AddTile(TileType<SoulForge>());
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<SummonerEssence_T3>(1)
+				.AddIngredient<MobSoul>(225)
+				.AddIngredient(ItemID.OrichalcumBar, 5)
+				.AddTile(TileID.MythrilAnvil)
+				.Register();
         }
     }
 }

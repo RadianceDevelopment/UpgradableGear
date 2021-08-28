@@ -4,12 +4,12 @@ using Terraria.ModLoader;
 
 namespace SoulSang.Items.Accessories
 {
-	public class SoulNecklace_T1 : ModItem
+	public class SoulRegenerator : ModItem
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Necklace I");
-			Tooltip.SetDefault("A necklace infused with Souls.\nBound to increase ones' spritual affinity.\n+5% Minion Damage\nIncreases minion knockback by 5%");
+			DisplayName.SetDefault("Soul Regenerator");
+			Tooltip.SetDefault("An ancient item made from two relics of the past\nImproves life regeneration and maximum health");
 		}
 		
         public override void SetDefaults()
@@ -18,21 +18,24 @@ namespace SoulSang.Items.Accessories
             Item.height = 20;
             Item.maxStack = 1;
 			Item.accessory = true;
-            Item.rare = ItemRarityID.White;
-			Item.value = Item.sellPrice(silver: 2);
+            Item.rare = ItemRarityID.Cyan;
+			Item.value = Item.sellPrice(gold: 20);
         }
 		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.GetDamage(DamageClass.Summon) += 0.05f;
+			// Band of Regen is 1
+			player.lifeRegen+= 6;
+			player.statLifeMax2+= 125;
         }
 		
         public override void AddRecipes()
         {
 			CreateRecipe(1)
-				.AddIngredient<MobSoul>(25)
-				.AddIngredient(ItemID.Chain, 5)
-				.AddTile(TileID.Anvils)
+				.AddIngredient<SoulVessel>(1)
+				.AddIngredient<BasicSoulRegen>(1)
+				.AddIngredient(ItemID.HallowedBar, 3)
+				.AddTile(TileID.TinkerersWorkbench)
 				.Register();
         }
     }

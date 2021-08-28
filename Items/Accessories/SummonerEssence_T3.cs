@@ -9,33 +9,34 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Summoner's Essence III");
-			Tooltip.SetDefault("The noise grows louder...\nGrants +15% minion damage\nGives +2 Minion Slots\nCurrent Tier: III");
+			Tooltip.SetDefault("The noise grows louder...\nGrants +15% minion damage\nIncreases minion knockback by 5%\nGives +2 Minion Slots\nCurrent Tier: III");
 		}
 		
         public override void SetDefaults()
         {
-            item.width = 20;
-            item.height = 20;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(0, 4, 25, 0);
-            item.rare = 3;
-			item.accessory = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+			Item.accessory = true;
+            Item.rare = ItemRarityID.Orange;
+			Item.value = Item.sellPrice(gold: 1, silver: 55);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.minionDamage+= 0.15f;
-			player.maxMinions+= 2;
+			player.GetDamage(DamageClass.Summon) += 0.15f;
+			player.minionKB += 0.05f;
+			player.maxMinions += 2;
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("SummonerEssence_T2"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 18);
-			recipe.AddIngredient(ItemID.HellstoneBar, 3);
-			//recipe.AddTile(TileType<SoulForge>());
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<SummonerEssence_T2>(1)
+				.AddIngredient<MobSoul>(75)
+				.AddIngredient(ItemID.HellstoneBar, 3)
+				.AddTile(TileID.Anvils)
+				.Register();
         }
     }
 }

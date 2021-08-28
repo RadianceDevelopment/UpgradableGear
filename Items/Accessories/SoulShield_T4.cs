@@ -14,27 +14,27 @@ namespace SoulSang.Items.Accessories
 		
         public override void SetDefaults()
         {
-            item.width = 25;
-            item.height = 25;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(0, 15, 0, 0);
-            item.rare = 10;
-			item.accessory = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+			Item.accessory = true;
+            Item.rare = ItemRarityID.Red;
+			Item.value = Item.sellPrice(gold: 11, silver: 50);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			player.statDefense+= 12;
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("SoulShield_T3"));
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 100);
-			recipe.AddIngredient(ItemID.LunarBar, 5);
-			//recipe.AddTile(TileType<SoulForge>());
-			recipe.AddTile(TileID.LunarCraftingStation);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<SoulShield_T3>(1)
+				.AddIngredient<MobSoul>(100)
+				.AddIngredient(ItemID.LunarBar, 5)
+				.AddTile(TileID.LunarCraftingStation)
+				.Register();
         }
     }
 }

@@ -9,55 +9,47 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Targeter II");
-			Tooltip.SetDefault("You've added more Souls into the housing to double the efficiency\nGrants +6% Critical Chance");
+			Tooltip.SetDefault("You've added more Souls into the housing to double the efficiency\nGrants +6% Critical Chance\nMight do something extra...");
 		}
 		
         public override void SetDefaults()
         {
-            item.width = 25;
-            item.height = 25;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(0, 3, 0, 0);
-            item.rare = 4;
-			item.accessory = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+			Item.accessory = true;
+            Item.rare = ItemRarityID.Orange;
+			Item.value = Item.sellPrice(gold: 2, silver: 65);
         }
+
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.magicCrit+= 6;
-			player.meleeCrit+= 6;
-			player.rangedCrit+= 6;
+			player.GetCritChance(DamageClass.Magic) += 6;
+			player.GetCritChance(DamageClass.Melee) += 6;
+			player.GetCritChance(DamageClass.Ranged) += 6;
 			
-			player.thrownCrit+= 6;
-			/*
-			player.magicDamage+= 0.07f;
-			player.meleeDamage+= 0.07f;
-			player.rangedDamage+= 0.07f;
-			player.minionDamage+= 0.07f;
-		
-			player.thrownDamage+= 0.07f;
-			*/
+			player.GetDamage(DamageClass.Magic) += 0.07f;
+			player.GetDamage(DamageClass.Melee) += 0.07f;
+			player.GetDamage(DamageClass.Ranged) += 0.07f;
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("SoulTargeter_T1"));
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 45);
-			recipe.AddIngredient(ItemID.HellstoneBar, 5);
-			recipe.AddIngredient(ItemID.CobaltBar, 4);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<SoulTargeter_T1>(1)
+				.AddIngredient<MobSoul>(45)
+				.AddIngredient(ItemID.HellstoneBar, 5)
+				.AddIngredient(ItemID.CobaltBar, 3)
+				.AddTile(TileID.Anvils)
+				.Register();
 			
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("SoulTargeter_T1"));
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 45);
-			recipe.AddIngredient(ItemID.HellstoneBar, 5);
-			recipe.AddIngredient(ItemID.PalladiumBar, 4);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<SoulTargeter_T1>(1)
+				.AddIngredient<MobSoul>(45)
+				.AddIngredient(ItemID.HellstoneBar, 5)
+				.AddIngredient(ItemID.PalladiumBar, 3)
+				.AddTile(TileID.Anvils)
+				.Register();
         }
     }
 }

@@ -14,25 +14,25 @@ namespace SoulSang.Items.Accessories
 		
         public override void SetDefaults()
         {
-            item.width = 20;
-            item.height = 20;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(0, 0, 0, 60);
-            item.rare = 0;
-			item.accessory = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+			Item.accessory = true;
+            Item.rare = ItemRarityID.White;
+			Item.value = Item.sellPrice(copper: 0);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.minionDamage+= 0.05f;
+			player.GetDamage(DamageClass.Summon) += 0.05f;
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 8);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.WorkBenches);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<MobSoul>(10)
+				.AddTile(TileID.WorkBenches)
+				.Register();
         }
     }
 }
