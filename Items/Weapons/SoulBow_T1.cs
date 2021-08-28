@@ -14,33 +14,30 @@ namespace SoulSang.Items.Weapons
 
 		public override void SetDefaults() 
 		{
-			item.damage = 8;
-			item.knockBack = 3;
-			item.ranged = true;
-			item.UseSound = SoundID.Item5;
-			item.useAmmo = AmmoID.Arrow;
-			item.autoReuse = false;
-			item.noMelee = true;
-			item.shoot = 1;
-			item.shootSpeed = 6.3f;
-			item.width = 18;
-			item.height = 44;
-			item.useTime = 26;
-			item.useAnimation = 20;
-			item.useStyle = 5;
-			item.rare = 0;
-			item.value = Item.sellPrice(0, 0, 0, 7);
-			
+			Item.damage = 8;
+			Item.knockBack = 3;
+			Item.DamageType = DamageClass.Ranged;
+			Item.UseSound = SoundID.Item5;
+			Item.useAmmo = AmmoID.Arrow;
+			Item.useStyle = ItemUseStyleID.Shoot;
+			Item.useAnimation = 20;
+			Item.autoReuse = false;
+			Item.noMelee = true;
+			Item.shoot = 1;
+			Item.shootSpeed = 6.3f;
+			Item.width = 18;
+			Item.height = 44;
+			Item.useTime = 26;
+			Item.rare = 0;
+			Item.value = Item.sellPrice(copper: 0);
 		}
 
 		public override void AddRecipes()
 		{
-			
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 10);
-			recipe.AddTile(TileID.WorkBenches);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<MobSoul>(10)
+				.AddTile(TileID.WorkBenches)
+				.Register();
 		}
 	}
 }

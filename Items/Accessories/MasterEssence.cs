@@ -9,50 +9,60 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Master's Essence");
-			Tooltip.SetDefault("The concentrated essence of a great warrior.\nGrants +50% to all damage\nGrants +20% Critical Chance\nReduces Mana Cost by 25%\nIncreases Melee Speed by 30%\nGives +8 Minion Slots\nCurrent Tier: X");
+			Tooltip.SetDefault("The concentrated essence of a great fighter.\nGrants +50% to all damage\nGrants +15% Critical Chance\nReduces Mana Cost by 20%\n+25% Melee Speed\nIncreases minion knockback by 15%\n+8 Minion Slots\nCurrent Tier: X");
 		}
 		
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 30;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(1, 0, 0, 0);
-            item.rare = 10;
-			item.accessory = true;
-			item.expert = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+			Item.accessory = true;
+            Item.rare = ItemRarityID.Red;
+			Item.value = Item.sellPrice(gold: 25);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.magicDamage+= 0.50f;
-			player.meleeDamage+= 0.50f;
-			player.rangedDamage+= 0.50f;
-			player.minionDamage+= 0.50f;
-		
-			player.thrownDamage+= 0.50f;
+			player.GetDamage(DamageClass.Magic) += 0.50f;
+			player.GetDamage(DamageClass.Melee) += 0.50f;
+			player.GetDamage(DamageClass.Ranged) += 0.50f;
+			player.GetDamage(DamageClass.Summon) += 0.50f;
+					
+			player.GetCritChance(DamageClass.Magic) += 15;
+			player.GetCritChance(DamageClass.Melee) += 15;
+			player.GetCritChance(DamageClass.Ranged) += 15;
 			
-			player.magicCrit+= 20;
-			player.meleeCrit+= 20;
-			player.rangedCrit+= 20;
-			
-			player.thrownCrit+= 20;
-			
-			player.manaCost-= 0.25f;
-			player.meleeSpeed+= 0.30f;
-			player.maxMinions+= 8;
+			player.manaCost -= 0.20f;
+			player.meleeSpeed += 0.25f;
+			player.minionKB += 0.15f;
+			player.maxMinions += 8;
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MageEssence_T5"), 1);
-			recipe.AddIngredient(mod.GetItem("RangerEssence_T5"), 1);
-			recipe.AddIngredient(mod.GetItem("SummonerEssence_T6"), 1);
-			recipe.AddIngredient(mod.GetItem("WarriorEssence_T5"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 250);
-			recipe.AddIngredient(ItemID.LunarBar, 5);
-			recipe.AddTile(TileID.LunarCraftingStation);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<MageEssence_T5>(1)  // 6 Gold 50 Silver
+				.AddIngredient<RangerEssence_T5>(1) // 6 Gold 55 Silver
+				.AddIngredient<SummonerEssence_T5>(1) // 6 Gold 25 Silver
+				.AddIngredient<WarriorEssence_T5>(1) // 7 Gold 20 Silver
+				.AddIngredient<MobSoul>(1000)
+				.AddIngredient(ItemID.LunarBar, 1)
+				.AddTile(TileID.LunarCraftingStation)
+				.Register();
+				// Might remove this alt recipe later
+			CreateRecipe(1)
+				.AddIngredient<MageEssence_T5>(1)  // 6 Gold 50 Silver
+				.AddIngredient<RangerEssence_T5>(1) // 6 Gold 55 Silver
+				.AddIngredient<SummonerEssence_T5>(1) // 6 Gold 25 Silver
+				.AddIngredient<WarriorEssence_T5>(1) // 7 Gold 20 Silver
+				.AddIngredient<MobSoul>(1500)
+				.AddIngredient(ItemID.FragmentNebula, 50) //# All frags add 3 gold (+12 total)
+				.AddIngredient(ItemID.FragmentSolar, 50)
+				.AddIngredient(ItemID.FragmentVortex, 50)
+				.AddIngredient(ItemID.FragmentStardust, 50)
+				.AddTile(TileID.LunarCraftingStation)
+				.Register();
         }
     }
 }

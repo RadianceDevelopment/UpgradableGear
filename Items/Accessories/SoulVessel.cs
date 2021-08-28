@@ -9,35 +9,36 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Vessel");
-			Tooltip.SetDefault("Combining 3 Vessel Fragments allows you to imbue the fragments with the power of Soul\nAn ancient item from a far-away land\nIncreases maximum life by 100 when equipped");
+			Tooltip.SetDefault("Combining 3 Vessel Fragments allows you to imbue the fragments with the power of Soul\nAn ancient Item from a far-away land\nIncreases maximum life by 100 when equipped");
 		}
 		
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 30;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(1, 0, 0, 0);
-            item.rare = 10;
-			item.accessory = true;
+            Item.width = 30;
+            Item.height = 30;
+            Item.maxStack = 1;
+			Item.accessory = true;
+            Item.rare = ItemRarityID.Yellow;
+			Item.value = Item.sellPrice(gold: 15);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			player.statLifeMax2+= 100;
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("SoulVessel1"), 1);
-			recipe.AddIngredient(mod.GetItem("SoulVessel2"), 1);
-			recipe.AddIngredient(mod.GetItem("SoulVessel3"), 1);
-			recipe.AddIngredient(ItemID.Ectoplasm, 15);
-			//recipe.AddTile(TileType<SoulForge>());
-			recipe.AddTile(TileID.TinkerersWorkbench);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<SoulVessel1>(1)
+				.AddIngredient<SoulVessel2>(1)
+				.AddIngredient<SoulVessel3>(1)
+				.AddIngredient<MobSoul>(125)
+				.AddIngredient(ItemID.Ectoplasm, 10)
+				.AddTile(TileID.MythrilAnvil)
+				.Register();
         }
     }
 }
-// Yeah, this is a Hollow Knight reference and has been all along!
-// So what?! It's my favourite game of all time!
+// It's a Hollow Knight reference?
+// *Always has been*

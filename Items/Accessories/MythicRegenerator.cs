@@ -8,37 +8,38 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Mythic Regenerator");
-			Tooltip.SetDefault("An ancient, legendary item made from 3 relics of the past\nImproves life regeneration and maximum health\nReduces Potion Sickness to 45 seconds\nMight be cursed?");
+			DisplayName.SetDefault("Mythical Soul Regenerator");
+			Tooltip.SetDefault("An ancient, legendary item made from long forgotten relics\nImproves life regeneration and maximum health\nReduces Potion Sickness to 30 seconds\nMight be cursed?");
 		}
 		
         public override void SetDefaults()
         {
-            item.width = 25;
-            item.height = 25;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(1, 25, 0, 0);
-            item.rare = 10;
-			item.accessory = true;
-			item.expert = true;
-			item.expertOnly = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+			Item.accessory = true;
+			Item.expertOnly = true;
+            Item.rare = ItemRarityID.Purple;
+			Item.value = Item.sellPrice(gold: 30);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			// Band of Regen is 1
-			player.lifeRegen+= 7;
-			player.statLifeMax2+= 100;
-			// Reduces potion sickness to 45 seconds. Seems like I can't make it do 40 seconds.
-			player.potionDelayTime+= -900;
+			player.lifeRegen += 8;
+			player.statLifeMax2 += 150;
+			player.potionDelayTime -= 1800;
+			// Reduces potion sickness to 30 seconds.
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("LifeRegenerator"), 1);
-			recipe.AddIngredient(ItemID.CharmofMyths, 1);
-			recipe.AddTile(TileID.TinkerersWorkbench);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<SoulRegenerator>(1)
+				.AddIngredient(ItemID.CharmofMyths, 1)
+				.AddIngredient(ItemID.LunarBar, 3)
+				.AddTile(TileID.LunarCraftingStation)
+				.Register();
         }
     }
 }

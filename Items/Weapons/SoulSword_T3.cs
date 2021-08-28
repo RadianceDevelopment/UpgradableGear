@@ -8,47 +8,46 @@ namespace SoulSang.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Sword III");
-			Tooltip.SetDefault("The sword has reached its zenith");
+			DisplayName.SetDefault("True Soul Sword");
+			Tooltip.SetDefault("The sword has reached its zenith\nInflicts Cursed Flames and Ichor 50% of the time.");
 		}
 		// Be sure to make this shoot the ghost orb!
 		public override void SetDefaults() 
 		{
-			item.damage = 200;
-			item.knockBack = 10;
-			item.melee = true;
-			item.autoReuse = true;
-			item.width = 30;
-			item.height = 30;
-			item.scale = 0.73f;
-			item.useTime = 5;
-			item.useAnimation = 20;
-			item.useStyle = 1;
-			item.rare = 11;
-			item.UseSound = SoundID.Item1;
-			item.value = Item.sellPrice(0, 5, 0, 0);
-			item.expert = true;
+			Item.damage = 200;
+			Item.knockBack = 5;
+			Item.crit = 1;
+			// Remember that Item.crit adds to the base 4%
+			Item.DamageType = DamageClass.Melee;
+			Item.width = 30;
+			Item.height = 30;
+			Item.scale = 0.85f;
+			Item.useTime = 5;
+			Item.useAnimation = 20;
+			Item.useStyle = 1;
+			Item.autoReuse = true;
+            Item.rare = ItemRarityID.Purple;
+			Item.UseSound = SoundID.Item1;
+			Item.value = Item.sellPrice(gold: 8, silver: 82, copper: 50);
 		}
 
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("SoulSword_Cursed"), 1);
-			recipe.AddIngredient(mod.GetItem("SoulSword_Ichor"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 380);
-			recipe.AddIngredient(ItemID.LunarBar, 4);
-			//recipe.AddTile(TileID.SoulInfuser);
-			recipe.AddTile(TileID.LunarCraftingStation);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<SoulSword_Cursed>(1)
+				.AddIngredient<SoulSword_Ichor>(1)
+				.AddIngredient<MobSoul>(12)
+				.AddIngredient(ItemID.LunarBar, 5)
+				.AddTile(TileID.LunarCraftingStation)
+				.Register();
 		}
 		
 		 public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
 		{
 			// Remember, 60 ticks = 1 second
 			if(Main.rand.NextBool(2)){
-			target.AddBuff(BuffID.Ichor, 300);
-			// 5 Seconds^
+			target.AddBuff(BuffID.CursedInferno, 420); // Nice!
+			// 7 Seconds^
 		  }
 			// Remember, 60 ticks = 1 second
 			if(Main.rand.NextBool(2)){

@@ -15,39 +15,37 @@ namespace SoulSang.Items.Potions
 
         public override void SetDefaults()
         {
-            item.width = 20;
-            item.height = 25;
-			item.scale = 0.50f;
-            item.useStyle = ItemUseStyleID.EatingUsing;
-            item.useAnimation = 15;
-            item.useTime = 15;
-            item.useTurn = true;
-            item.UseSound = SoundID.Item3;
-            item.maxStack = 40;
-            item.consumable = true;
-            item.rare = 1;
-			item.value = Item.sellPrice(0, 0, 4, 5);
-            item.buffType = BuffType<Buffs.Soulskin>();
-            item.buffTime = 18000; //5 Mins
+            Item.width = 20;
+            Item.height = 25;
+			Item.scale = 0.50f;
+			Item.useStyle = ItemUseStyleID.EatFood;
+            Item.useAnimation = 15;
+            Item.useTime = 15;
+            Item.useTurn = true;
+            Item.UseSound = SoundID.Item3;
+            Item.maxStack = 40;
+            Item.consumable = true;
+            Item.rare = ItemRarityID.Blue;
+            Item.buffType = BuffType<Buffs.Soulskin>();
+            Item.buffTime = 18000; // 5 mins
+			Item.value = Item.sellPrice(silver: 5);
 		}	
 	    
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 6);
-			recipe.AddIngredient(ItemID.IronskinPotion);
-			recipe.AddIngredient(ItemID.SoulofNight);
-			recipe.AddTile(TileID.Bottles);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<MobSoul>(6)
+				.AddIngredient(ItemID.IronskinPotion)
+				.AddIngredient(ItemID.SoulofNight)
+				.AddTile(TileID.Bottles)
+				.Register();
 			
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 6);
-			recipe.AddIngredient(ItemID.IronskinPotion);
-			recipe.AddIngredient(ItemID.SoulofLight, 3);
-			recipe.AddTile(TileID.Bottles);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<MobSoul>(6)
+				.AddIngredient(ItemID.IronskinPotion)
+				.AddIngredient(ItemID.SoulofLight, 3)
+				.AddTile(TileID.Bottles)
+				.Register();
 		}
     }
 }

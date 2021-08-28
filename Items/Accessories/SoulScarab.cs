@@ -8,35 +8,35 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul-Infused Scarab Necklace");
-			Tooltip.SetDefault("A necklace infused with spiritual powers.\nYou hear distant chanting while you wear it...\nIncreases minion damage and knockback by 30%\nAllows you to summon 3 extra minions");
+			DisplayName.SetDefault("Scarab-Soul Necklace");
+			Tooltip.SetDefault("A necklace infused with spiritual powers.\nYou hear distant chanting while you wear it...\nIncreases minion damage and knockback by 25%\n+3 Max Minions");
 		}
 		
         public override void SetDefaults()
         {
-            item.width = 25;
-            item.height = 25;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(0, 15, 50, 0);
-            item.rare = 1;
-			item.accessory = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+			Item.accessory = true;
+            Item.rare = ItemRarityID.Green;
+			Item.value = Item.sellPrice(gold: 10);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
+			player.GetDamage(DamageClass.Summon) += 0.25f;
+			player.minionKB+= 0.25f; // A bit more than the Scarab Necklace (+20%)
 			player.maxMinions+= 3;
-			player.minionDamage += 0.30f;
-			player.minionKB+= 0.30f; //A bit more than the Scarab Necklace (+25%)
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("ScarabNecklace"), 1);
-			recipe.AddIngredient(mod.GetItem("SoulNecklace_T3"), 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 150);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.TinkerersWorkbench);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<ScarabNecklace>(1)
+				.AddIngredient<SoulNecklace_T3>(1)
+				.AddIngredient<MobSoul>(100)
+				.AddTile(TileID.TinkerersWorkbench)
+				.Register();
         }
     }
 }

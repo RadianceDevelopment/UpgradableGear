@@ -5,7 +5,7 @@ namespace SoulSang.Buffs
 {
     public class Soulskin : ModBuff
     {
-        public override void SetDefaults()
+        public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Soulskin");
             Description.SetDefault("+12 defense");
