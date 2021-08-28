@@ -1,4 +1,6 @@
-.txt
-.xcf
+SwordProgression.txt
+Note.txt
+todo.txt
+*.xcf
 obj/*
 .vs/*
