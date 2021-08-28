@@ -25,23 +25,23 @@ namespace SoulSang.Items.Potions
             Item.UseSound = SoundID.Item3;
             Item.maxStack = 40;
             Item.consumable = true;
-            Item.rare = 1;
-			Item.value = Item.sellPrice(0, 0, 4, 5);
+            Item.rare = ItemRarityID.Blue;
             Item.buffType = BuffType<Buffs.Soulskin>();
-            Item.buffTime = 18000; //5 Mins
+            Item.buffTime = 18000; // 5 mins
+			Item.value = Item.sellPrice(silver: 5);
 		}	
 	    
 		public override void AddRecipes() 
 		{
 			CreateRecipe(1)
-				.AddIngredient(mod.GetItem("MobSoul"), 6)
+				.AddIngredient<MobSoul>(6)
 				.AddIngredient(ItemID.IronskinPotion)
 				.AddIngredient(ItemID.SoulofNight)
 				.AddTile(TileID.Bottles)
 				.Register();
 			
-			resultItem.CreateRecipe(1)
-				.AddIngredient(mod.GetItem("MobSoul"), 6)
+			CreateRecipe(1)
+				.AddIngredient<MobSoul>(6)
 				.AddIngredient(ItemID.IronskinPotion)
 				.AddIngredient(ItemID.SoulofLight, 3)
 				.AddTile(TileID.Bottles)

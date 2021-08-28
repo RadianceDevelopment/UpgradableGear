@@ -8,37 +8,37 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Mythic Regenerator");
-			Tooltip.SetDefault("An ancient, legendary item made from 3 relics of the past\nImproves life regeneration and maximum health\nReduces Potion Sickness to 45 seconds\nMight be cursed?");
+			DisplayName.SetDefault("Mythical Soul Regenerator");
+			Tooltip.SetDefault("An ancient, legendary item made from long forgotten relics\nImproves life regeneration and maximum health\nReduces Potion Sickness to 30 seconds\nMight be cursed?");
 		}
 		
         public override void SetDefaults()
         {
-            Item.width = 25;
-            Item.height = 25;
+            Item.width = 20;
+            Item.height = 20;
             Item.maxStack = 1;
-            Item.rare = 10;
-			Item.expert = true;
 			Item.accessory = true;
 			Item.expertOnly = true;
-			Item.value = Item.sellPrice(gold: 5);
+            Item.rare = ItemRarityID.Purple;
+			Item.value = Item.sellPrice(gold: 30);
         }
 		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			// Band of Regen is 1
-			player.lifeRegen+= 7;
-			player.statLifeMax2+= 100;
-			player.potionDelayTime+= -900;
-			// Reduces potion sickness to 45 seconds. Seems like I can't make it do 40 seconds.
+			player.lifeRegen += 8;
+			player.statLifeMax2 += 150;
+			player.potionDelayTime -= 1800;
+			// Reduces potion sickness to 30 seconds.
         }
 		
         public override void AddRecipes()
         {
 			CreateRecipe(1)
-				.AddIngredient(mod.GetItem("LifeRegenerator"), 1)
+				.AddIngredient<SoulRegenerator>(1)
 				.AddIngredient(ItemID.CharmofMyths, 1)
-				.AddTile(TileID.TinkerersWorkbench)
+				.AddIngredient(ItemID.LunarBar, 3)
+				.AddTile(TileID.LunarCraftingStation)
 				.Register();
         }
     }

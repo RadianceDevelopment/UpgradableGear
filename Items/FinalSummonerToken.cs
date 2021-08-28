@@ -9,7 +9,7 @@ namespace SoulSang.Items
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Final Summoner Token");
-			Tooltip.SetDefault("Placeholder Item used to craft the True Combatant's Essence");
+			Tooltip.SetDefault("Placeholder Item used to craft the Soul Sage's Essence");
 		}
 
 		public override void SetDefaults() 
@@ -29,7 +29,7 @@ namespace SoulSang.Items
 				.Register();
 			
 			// Lunar Portal Staff
-			resultItem.CreateRecipe()
+			CreateRecipe(1)
 				.AddIngredient(3569, 1)
 				.AddTile(TileID.LunarCraftingStation)
 				.Register();

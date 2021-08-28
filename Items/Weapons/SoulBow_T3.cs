@@ -29,15 +29,15 @@ namespace SoulSang.Items.Weapons
 			Item.height = 44;
 			Item.useTime = 22;
 			Item.useAnimation = 20;
-			Item.rare = 1;
+            Item.rare = ItemRarityID.Blue;
 			Item.value = Item.sellPrice(copper: 0);
 		}
 
 		public override void AddRecipes()
 		{
 			CreateRecipe(1)
-				.AddIngredient(mod.GetItem("SoulBow_T2"))
-				.AddIngredient(mod.GetItem("MobSoul"), 10)
+				.AddIngredient<SoulBow_T2>(1)
+				.AddIngredient<MobSoul>(10)
 				.AddTile(TileID.Anvils)
 				.Register();
 		}

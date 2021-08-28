@@ -14,25 +14,27 @@ namespace SoulSang.Items.Accessories
 		
         public override void SetDefaults()
         {
-            Item.width = 25;
-            Item.height = 25;
+            Item.width = 20;
+            Item.height = 20;
             Item.maxStack = 1;
-            Item.rare = 10;
 			Item.accessory = true;
-			Item.expertOnly = true;
-			Item.value = Item.sellPrice(platinum: 1);
+            Item.rare = ItemRarityID.Cyan;
+			Item.value = Item.sellPrice(gold: 20);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			// Band of Regen is 1
-			player.lifeRegen+= 10;
-			player.statLifeMax2+= 75;
+			player.lifeRegen+= 6;
+			player.statLifeMax2+= 125;
         }
+		
         public override void AddRecipes()
         {
 			CreateRecipe(1)
-				.AddIngredient(mod.GetItem("SoulVessel"), 1)
-				.AddIngredient(mod.GetItem("SoulRegen"), 1)
+				.AddIngredient<SoulVessel>(1)
+				.AddIngredient<BasicSoulRegen>(1)
+				.AddIngredient(ItemID.HallowedBar, 3)
 				.AddTile(TileID.TinkerersWorkbench)
 				.Register();
         }

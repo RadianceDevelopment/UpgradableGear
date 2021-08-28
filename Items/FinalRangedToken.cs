@@ -9,7 +9,7 @@ namespace SoulSang.Items
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Final Ranged Token");
-			Tooltip.SetDefault("Placeholder item used to craft the True Combatant's Essence");
+			Tooltip.SetDefault("Placeholder item used to craft the Soul Sage's Essence");
 		}
 
 		public override void SetDefaults() 
@@ -29,7 +29,7 @@ namespace SoulSang.Items
 				.Register();
 			
 			// Celebration
-			resultItem.CreateRecipe()
+			CreateRecipe(1)
 				.AddIngredient(3546, 1)
 				.AddTile(TileID.LunarCraftingStation)
 				.Register();

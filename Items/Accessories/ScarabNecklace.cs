@@ -14,19 +14,19 @@ namespace SoulSang.Items.Accessories
 		
         public override void SetDefaults()
         {
-            Item.width = 25;
-            Item.height = 25;
+            Item.width = 20;
+            Item.height = 20;
             Item.maxStack = 1;
-            Item.rare = 1;
 			Item.accessory = true;
-			Item.value = Item.buyPrice(gold: 10);
+            Item.rare = ItemRarityID.Blue;
+			Item.value = Item.sellPrice(gold: 9);
         }
 		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
+			player.GetDamage(DamageClass.Summon) += 0.20f;
+			player.minionKB+= 0.20f; // Should be a bit more than (or equal to) the Hercules Beetle
 			player.maxMinions+= 2;
-			player.minionDamage += 0.20f;
-			player.minionKB+= 0.25f; // Should be a bit more than the Hercules Beetle
         }
 		
         public override void AddRecipes()

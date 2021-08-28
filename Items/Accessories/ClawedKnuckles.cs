@@ -17,8 +17,8 @@ namespace SoulSang.Items.Accessories
             Item.width = 20;
             Item.height = 20;
             Item.maxStack = 1;
-            Item.rare = 5;
 			Item.accessory = true;
+            Item.rare = ItemRarityID.Pink;
 			Item.value = Item.sellPrice(gold: 9);
         }
 		

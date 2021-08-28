@@ -17,20 +17,20 @@ namespace SoulSang.Items.Accessories
             Item.width = 20;
             Item.height = 20;
             Item.maxStack = 1;
-            Item.rare = 0;
 			Item.accessory = true;
+            Item.rare = ItemRarityID.White;
 			Item.value = Item.sellPrice(copper: 0);
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			Player.GetDamage(DamageClass.Melee) += 0.05f;
+			player.GetDamage(DamageClass.Melee) += 0.05f;
         }
 		
         public override void AddRecipes()
         {
 			CreateRecipe(1)
-				.AddIngredient(mod.GetItem("MobSoul"), 10)
+				.AddIngredient<MobSoul>(10)
 				.AddTile(TileID.WorkBenches)
 				.Register();
         }

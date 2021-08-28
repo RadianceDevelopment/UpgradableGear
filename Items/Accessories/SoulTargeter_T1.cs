@@ -14,27 +14,27 @@ namespace SoulSang.Items.Accessories
 		
         public override void SetDefaults()
         {
-            item.width = 25;
-            item.height = 25;
-            item.maxStack = 1;
-            item.value = Item.sellPrice(0, 0, 0, 25);
-            item.rare = 1;
-			item.accessory = true;
+            Item.width = 20;
+            Item.height = 20;
+            Item.maxStack = 1;
+			Item.accessory = true;
+            Item.rare = ItemRarityID.White;
+			Item.value = Item.sellPrice(copper: 0);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.magicCrit+= 3;
-			player.meleeCrit+= 3;
-			player.rangedCrit+= 3;
+			player.GetCritChance(DamageClass.Magic) += 3;
+			player.GetCritChance(DamageClass.Melee) += 3;
+			player.GetCritChance(DamageClass.Ranged) += 3;
         }
+		
         public override void AddRecipes()
         {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 30);
-			//recipe.AddTile(TileType<SoulInfuser>());
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			CreateRecipe(1)
+				.AddIngredient<MobSoul>(30)
+				.AddTile(TileID.Anvils)
+				.Register();
         }
     }
 }

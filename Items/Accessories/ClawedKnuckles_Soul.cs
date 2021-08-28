@@ -33,13 +33,13 @@ namespace SoulSang.Items.Accessories
 			CreateRecipe(1)
 				.AddIngredient(ItemID.FleshKnuckles)
 				.AddIngredient(ItemID.FeralClaws)
-				.AddIngredient(mod.GetItem("MobSoul"), 100)
+				.AddIngredient<MobSoul>(100)
 				.AddTile(TileID.TinkerersWorkbench)
 				.Register();
 			
-			resultItem.CreateRecipe(1)
-				.AddIngredient(mod.GetItem("ClawedKnuckles"))
-				.AddIngredient(mod.GetItem("MobSoul"), 100)
+			CreateRecipe(1)
+				.AddIngredient<ClawedKnuckles>(1)
+				.AddIngredient<MobSoul>(100)
 				.AddTile(TileID.TinkerersWorkbench)
 				.Register();
         }

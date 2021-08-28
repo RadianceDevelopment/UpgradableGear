@@ -26,21 +26,21 @@ namespace SoulSang.Items.Weapons
 			Item.rare = 1;
 			Item.autoReuse = false;
 			Item.UseSound = SoundID.Item1;
-			Item.value = Item.sellPrice(silver: 50);
+			Item.value = Item.sellPrice(gold: 1, silver: 12, copper: 50);
 		}
 
 		public override void AddRecipes() 
 		{
 			CreateRecipe(1)
-				.AddIngredient(mod.GetItem("SoulSword_T1"), 1)
-				.AddIngredient(mod.GetItem("MobSoul"), 20)
+				.AddIngredient<SoulSword_T1>(1)
+				.AddIngredient<MobSoul>(6)
 				.AddIngredient(ItemID.Ruby, 5)
 				.AddTile(TileID.Anvils)
 				.Register();
 				
-			resultItem.CreateRecipe(1)
-				.AddIngredient(mod.GetItem("SoulSword_T1"), 1)
-				.AddIngredient(mod.GetItem("MobSoul"), 20)
+			CreateRecipe(1)
+				.AddIngredient<SoulSword_T1>(1)
+				.AddIngredient<MobSoul>(20)
 				.AddIngredient(ItemID.Diamond, 1)
 				.AddTile(TileID.Anvils)
 				.Register();

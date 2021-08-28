@@ -35,7 +35,7 @@ namespace SoulSang.Items.Weapons
 		public override void AddRecipes()
 		{
 			CreateRecipe(1)
-				.AddIngredient(mod.GetItem("MobSoul"), 10)
+				.AddIngredient<MobSoul>(10)
 				.AddTile(TileID.WorkBenches)
 				.Register();
 		}

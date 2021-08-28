@@ -17,29 +17,29 @@ namespace SoulSang.Items.Accessories
             Item.width = 20;
             Item.height = 20;
             Item.maxStack = 1;
-            Item.rare = 2;
 			Item.accessory = true;
+            Item.rare = ItemRarityID.Blue;
 			Item.value = Item.sellPrice(silver: 50);
         }
 		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			Player.GetDamage(DamageClass.Melee) += 0.10f;
+			player.GetDamage(DamageClass.Melee) += 0.10f;
 			player.meleeSpeed+= 0.05f;
         }
 		
         public override void AddRecipes()
         {
 			CreateRecipe(1)
-				.AddIngredient(mod.GetItem("WarriorEssence_T1"), 1)
-				.AddIngredient(mod.GetItem("MobSoul"), 10)
+				.AddIngredient<WarriorEssence_T1>(1)
+				.AddIngredient<MobSoul>(25)
 				.AddIngredient(ItemID.Ruby, 3)
 				.AddTile(TileID.Anvils)
 				.Register();
 			
-			resultItem.CreateRecipe(1)
-				.AddIngredient(mod.GetItem("WarriorEssence_T1"), 1)
-				.AddIngredient(mod.GetItem("MobSoul"), 10)
+			CreateRecipe(1)
+				.AddIngredient<WarriorEssence_T1>(1)
+				.AddIngredient<MobSoul>(25)
 				.AddIngredient(ItemID.Diamond, 1)
 				.AddTile(TileID.Anvils)
 				.Register();

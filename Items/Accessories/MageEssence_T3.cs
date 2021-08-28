@@ -9,7 +9,7 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Mage's Essence III");
-			Tooltip.SetDefault("You hear the Souls whispering...\nGrants +15% Magic Damage\nIncreases magical critical chance by 5%\nReduces mana usage by 6%\nCurrent Tier: III");
+			Tooltip.SetDefault("You hear the Souls whispering...\nGrants +15% Magic Damage\nIncreases magical critical chance by 4%\nReduces mana usage by 4%\nCurrent Tier: III");
 		}
 		
         public override void SetDefaults()
@@ -17,21 +17,23 @@ namespace SoulSang.Items.Accessories
             Item.width = 20;
             Item.height = 20;
             Item.maxStack = 1;
-            Item.rare = 4;
 			Item.accessory = true;
-			Item.value = Item.sellPrice(copper: 0);
+            Item.rare = ItemRarityID.Orange;
+			Item.value = Item.sellPrice(gold: 1, silver: 50);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			player.magicDamage+= 0.15f;
-			player.manaCost-= 0.06f;
-			player.magicCrit+= 5;
+			player.GetDamage(DamageClass.Magic) += 0.15f;
+			player.GetCritChance(DamageClass.Magic) += 3;
+			player.manaCost-= 0.04f;
         }
+		
         public override void AddRecipes()
         {
 			CreateRecipe(1)
-				.AddIngredient(mod.GetItem("MageEssence_T2"), 1)
-				.AddIngredient(mod.GetItem("MobSoul"), 15)
+				.AddIngredient<MageEssence_T2>(1)
+				.AddIngredient<MobSoul>(75)
 				.AddIngredient(ItemID.HellstoneBar, 3)
 				.AddTile(TileID.Anvils)
 				.Register();

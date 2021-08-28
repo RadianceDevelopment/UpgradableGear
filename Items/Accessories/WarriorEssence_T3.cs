@@ -17,23 +17,23 @@ namespace SoulSang.Items.Accessories
             Item.width = 20;
             Item.height = 20;
             Item.maxStack = 1;
-            Item.rare = 4;
 			Item.accessory = true;
-			Item.value = Item.sellPrice(copper: 12000);
+            Item.rare = ItemRarityID.Orange;
+			Item.value = Item.sellPrice(gold: 1, silver: 70);
         }
 		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			Player.GetDamage(DamageClass.Melee) += 0.15f;
+			player.GetDamage(DamageClass.Melee) += 0.15f;
+			player.GetCritChance(DamageClass.Melee) += 3;
 			player.meleeSpeed+= 0.10f;
-			player.meleeCrit+= 3;
         }
 		
         public override void AddRecipes()
         {
 			CreateRecipe(1)
-				.AddIngredient(mod.GetItem("WarriorEssence_T2"), 1)
-				.AddIngredient(mod.GetItem("MobSoul"), 15)
+				.AddIngredient<WarriorEssence_T2>(1)
+				.AddIngredient<MobSoul>(75)
 				.AddIngredient(ItemID.HellstoneBar, 3)
 				.AddTile(TileID.Anvils)
 				.Register();

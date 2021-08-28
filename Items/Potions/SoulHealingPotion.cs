@@ -32,7 +32,7 @@ namespace SoulSang.Items.Potions
 		{
 			CreateRecipe(4)
 				.AddIngredient(ItemID.SuperHealingPotion, 4)
-				.AddIngredient(mod.GetItem("MobSoul"), 40)
+				.AddIngredient<MobSoul>(40)
 				.AddTile(TileID.Bottles)
 				.Register();
 		}

@@ -15,27 +15,28 @@ namespace SoulSang.Items.Weapons
 		public override void SetDefaults() 
 		{
 			Item.damage = 200;
-			Item.knockBack = 10;
+			Item.knockBack = 5;
+			Item.crit = 1;
+			// Remember that Item.crit adds to the base 4%
 			Item.DamageType = DamageClass.Melee;
-			Item.autoReuse = true;
 			Item.width = 30;
 			Item.height = 30;
-			Item.scale = 0.73f;
+			Item.scale = 0.85f;
 			Item.useTime = 5;
 			Item.useAnimation = 20;
 			Item.useStyle = 1;
-			Item.rare = 11;
-			Item.expert = true;
+			Item.autoReuse = true;
+            Item.rare = ItemRarityID.Purple;
 			Item.UseSound = SoundID.Item1;
-			Item.value = Item.sellPrice(gold: 6);
+			Item.value = Item.sellPrice(gold: 8, silver: 82, copper: 50);
 		}
 
 		public override void AddRecipes() 
 		{
 			CreateRecipe(1)
-				.AddIngredient(mod.GetItem("SoulSword_Cursed"), 1)
-				.AddIngredient(mod.GetItem("SoulSword_Ichor"), 1)
-				.AddIngredient(mod.GetItem("MobSoul"), 250)
+				.AddIngredient<SoulSword_Cursed>(1)
+				.AddIngredient<SoulSword_Ichor>(1)
+				.AddIngredient<MobSoul>(12)
 				.AddIngredient(ItemID.LunarBar, 5)
 				.AddTile(TileID.LunarCraftingStation)
 				.Register();

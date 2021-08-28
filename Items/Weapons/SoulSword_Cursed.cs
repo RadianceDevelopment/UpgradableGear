@@ -14,28 +14,28 @@ namespace SoulSang.Items.Weapons
 
 		public override void SetDefaults() 
 		{
-			Item.damage = 33;
-			Item.knockBack = 6;
+			Item.damage = 30;
+			Item.knockBack = 3;
 			Item.crit = 8;
 			// Remember that Item.crit adds to the base 4%
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 70;
 			Item.height = 85;
+			Item.scale = 0.75f;
 			Item.useTime = 10;
 			Item.useAnimation = 15;
 			Item.useStyle = 1;
-			Item.rare = 4;
-			Item.UseSound = SoundID.Item1;
-			Item.expert = true;
 			Item.autoReuse = true;
+            Item.rare = ItemRarityID.Orange;
+			Item.UseSound = SoundID.Item1;
 			Item.value = Item.sellPrice(silver: 80);
 		}
 
 		public override void AddRecipes()
 		{
 			CreateRecipe(1)
-				.AddIngredient(mod.GetItem("SoulSword_T2"), 1)
-				.AddIngredient(mod.GetItem("MobSoul"), 150)
+				.AddIngredient<SoulSword_T2>(1)
+				.AddIngredient<MobSoul>(150)
 				.AddIngredient(ItemID.CursedFlame, 10)
 				.AddTile(TileID.MythrilAnvil)
 				.Register();

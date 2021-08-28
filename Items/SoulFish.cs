@@ -13,11 +13,10 @@ namespace SoulSang.Items
 		}
 
 		public override void SetDefaults() {
-			Item.questItem = true;
+			Item.width = 20;
+			Item.height = 20;
 			Item.maxStack = 1;
-			Item.width = 25;
-			Item.height = 25;
-			Item.uniqueStack = true;
+			Item.questItem = true;
 			Item.rare = ItemRarityID.Quest;
 		}
 
@@ -30,7 +29,7 @@ namespace SoulSang.Items
 		}
 
 		public override void AnglerQuestChat(ref string description, ref string catchLocation) {
-			description = "I've heard stories of a fish made out of souls! That sounds cool, so go get me one!";
+			description = "I've heard stories of a fish that eats your soul! That sounds super cool, so go get me one!";
 			catchLocation = "Caught anywhere";
 		}
 	}

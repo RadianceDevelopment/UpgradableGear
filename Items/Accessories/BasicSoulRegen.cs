@@ -14,23 +14,33 @@ namespace SoulSang.Items.Accessories
 		
         public override void SetDefaults()
         {
-            Item.width = 25;
-            Item.height = 25;
+            Item.width = 20;
+            Item.height = 20;
             Item.maxStack = 1;
-            Item.rare = 1;
 			Item.accessory = true;
+            Item.rare = ItemRarityID.Blue;
 			Item.value = Item.sellPrice(gold: 1);
         }
+		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			// Band of Regen is 1
 			player.lifeRegen+= 3;
         }
+		
         public override void AddRecipes()
         {
 			CreateRecipe(1)
 				.AddIngredient(ItemID.BandofRegeneration, 1)
-				.AddIngredient(GetItem("MobSoul"), 25)
+				.AddIngredient<MobSoul>(25)
+				.AddIngredient(ItemID.GoldBar, 2)
+				.AddTile(TileID.Anvils)
+				.Register();
+				
+			CreateRecipe(1)
+				.AddIngredient(ItemID.BandofRegeneration, 1)
+				.AddIngredient<MobSoul>(25)
+				.AddIngredient(ItemID.PlatinumBar, 2)
 				.AddTile(TileID.Anvils)
 				.Register();
         }
