@@ -25,7 +25,7 @@ namespace SoulSang.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			player.statDefense+= 4;
-			player.meleeSpeed+= 0.12f;
+			player.GetAttackSpeed(DamageClass.Melee)+= 0.12f;
         }
 		
         public override void AddRecipes()

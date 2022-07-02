@@ -9,7 +9,7 @@ namespace SoulSang.Items.Accessories
 		public override void SetStaticDefaults() 
 		{
 			DisplayName.SetDefault("Soul Shield IV");
-			Tooltip.SetDefault("+12 Defense\nMonster souls that have been forced to protect you\nYou've compressed even more souls in, and realize that adding anymore will likely make the vessel inside the shield burst");
+			Tooltip.SetDefault("+12 Defense\nMonster souls that have been forced to protect you\nYou've compressed even more souls into this, and realize that adding anymore will likely make the shield's soul vessel");
 		}
 		
         public override void SetDefaults()

@@ -35,8 +35,8 @@ namespace SoulSang.Items.Accessories
 			player.GetCritChance(DamageClass.Ranged) += 25;
 			
 			player.manaCost -= 0.30f;
-			player.meleeSpeed += 0.35f;
-			player.minionKB += 0.20f;
+			player.GetAttackSpeed(DamageClass.Melee) += 0.35f;
+			player.GetKnockback(DamageClass.Summon).Base += 0.20f;
 			player.maxMinions += 10;
         }
 		

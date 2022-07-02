@@ -26,7 +26,7 @@ namespace SoulSang.Items.Accessories
         {
 			player.GetDamage(DamageClass.Melee) += 0.15f;
 			player.GetCritChance(DamageClass.Melee) += 3;
-			player.meleeSpeed+= 0.10f;
+			player.GetAttackSpeed(DamageClass.Melee)+= 0.10f;
         }
 		
         public override void AddRecipes()

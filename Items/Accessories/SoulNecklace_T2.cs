@@ -25,7 +25,7 @@ namespace SoulSang.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			player.GetDamage(DamageClass.Summon) += 0.10f;
-			player.minionKB+= 0.05f;
+			player.GetKnockback(DamageClass.Summon).Base+= 0.05f;
         }
 		
         public override void AddRecipes()

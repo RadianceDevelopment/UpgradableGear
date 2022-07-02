@@ -31,6 +31,7 @@ namespace SoulSang.Items.Accessories
 			player.GetDamage(DamageClass.Magic) += 0.10f;
 			player.GetDamage(DamageClass.Melee) += 0.10f;
 			player.GetDamage(DamageClass.Ranged) += 0.10f;
+			player.GetDamage(DamageClass.Summon) += 0.10f;
         }
 		
         public override void AddRecipes()

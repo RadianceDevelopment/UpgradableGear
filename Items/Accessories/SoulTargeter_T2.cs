@@ -28,10 +28,11 @@ namespace SoulSang.Items.Accessories
 			player.GetCritChance(DamageClass.Melee) += 6;
 			player.GetCritChance(DamageClass.Ranged) += 6;
 			
-			player.GetDamage(DamageClass.Magic) += 0.07f;
-			player.GetDamage(DamageClass.Melee) += 0.07f;
-			player.GetDamage(DamageClass.Ranged) += 0.07f;
-        }
+			player.GetDamage(DamageClass.Magic) += 0.05f;
+			player.GetDamage(DamageClass.Melee) += 0.05f;
+			player.GetDamage(DamageClass.Ranged) += 0.05f;
+			player.GetDamage(DamageClass.Summon) += 0.05f;
+		}
 		
         public override void AddRecipes()
         {

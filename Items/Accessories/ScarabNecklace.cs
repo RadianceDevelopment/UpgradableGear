@@ -25,7 +25,7 @@ namespace SoulSang.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			player.GetDamage(DamageClass.Summon) += 0.20f;
-			player.minionKB+= 0.20f; // Should be a bit more than (or equal to) the Hercules Beetle
+			player.GetKnockback(DamageClass.Summon).Base+= 0.20f; // Should be a bit more than (or equal to) the Hercules Beetle
 			player.maxMinions+= 2;
         }
 		

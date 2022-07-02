@@ -25,7 +25,7 @@ namespace SoulSang.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			player.GetDamage(DamageClass.Summon) += 0.25f;
-			player.minionKB+= 0.25f; // A bit more than the Scarab Necklace (+20%)
+			player.GetKnockback(DamageClass.Summon).Base+= 0.25f; // A bit more than the Scarab Necklace (+20%)
 			player.maxMinions+= 3;
         }
 		
