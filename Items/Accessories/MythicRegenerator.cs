@@ -8,8 +8,6 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Mythical Soul Regenerator");
-			Tooltip.SetDefault("An ancient, legendary item made from long forgotten relics\nImproves life regeneration and maximum health\nReduces Potion Sickness to 30 seconds\nMight be cursed?");
 		}
 		
         public override void SetDefaults()
@@ -25,23 +23,24 @@ namespace SoulSang.Items.Accessories
 		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			// Band of Regen is 1
+			// Band of Regen is 2
 			player.lifeRegen += 8;
 			player.statLifeMax2 += 150;
-			player.potionDelayTime -= 1800;
-			// Reduces potion sickness to 30 seconds.
+			player.potionDelayTime -= 1800; // Reduces potion sickness to 30 seconds.
         }
 		
         public override void AddRecipes()
         {
 			CreateRecipe(1)
 				.AddIngredient<SoulRegenerator>(1)
-				.AddIngredient(ItemID.CharmofMyths, 1)
+				.AddIngredient(ItemID.CharmofMyths)
 				.AddIngredient(ItemID.LunarBar, 3)
-				.AddTile(TileID.LunarCraftingStation)
+                .AddIngredient(ItemID.Sapphire, 2)
+                .AddTile(TileID.TinkerersWorkbench)
 				.Register();
         }
     }
 }
-// Thanks to absoluteAquarian#5189 on the TML Discord for giving me the potion delay code
-// Thanks to Trivaxy#6867 for helping me fix the potion delay code
+// Thanks to absoluteaquarian for giving me the potion delay code
+// Thanks to trivaxy for helping me fix the potion delay code
+// (Those are their names on the TML discord)

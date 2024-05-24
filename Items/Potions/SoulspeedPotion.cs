@@ -9,8 +9,8 @@ namespace SoulSang.Items.Potions
 	{
         public override void SetStaticDefaults()
         {
-			DisplayName.SetDefault("Soulspeed Potion");
-            Tooltip.SetDefault("Increases movement speed by 40%\nStacks to 20");
+			// DisplayName.SetDefault("Soulspeed Potion");
+            // Tooltip.SetDefault("Increases movement speed by 40%\nStacks to 20");
         }
 
         public override void SetDefaults()
@@ -29,19 +29,19 @@ namespace SoulSang.Items.Potions
             Item.buffType = BuffType<Buffs.Soulspeed>();
             Item.buffTime = 14400; // 4 mins
 			Item.value = Item.sellPrice(silver: 5);
-		}	
+		}
 	    
 		public override void AddRecipes() 
 		{
 			CreateRecipe(1)
-				.AddIngredient<MobSoul>(6)
+				.AddIngredient<StraySoul>(6)
 				.AddIngredient(ItemID.SwiftnessPotion)
-				.AddIngredient(ItemID.SoulofNight)
+				.AddIngredient(ItemID.SoulofNight, 2)
 				.AddTile(TileID.Bottles)
 				.Register();
 			
 			CreateRecipe(1)
-				.AddIngredient<MobSoul>(6)
+				.AddIngredient<StraySoul>(6)
 				.AddIngredient(ItemID.SwiftnessPotion)
 				.AddIngredient(ItemID.SoulofLight, 2)
 				.AddTile(TileID.Bottles)

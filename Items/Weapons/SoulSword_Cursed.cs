@@ -8,8 +8,8 @@ namespace SoulSang.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Cursed Soul Sword");
-			Tooltip.SetDefault("You've transformed the sword into a more specialized one.\nInflicts Cursed Inferno for 5 seconds 50% of the time");
+			// DisplayName.SetDefault("Cursed Soul Sword");
+			// Tooltip.SetDefault("You've transformed the sword into a more specialized one.\nInflicts Cursed Inferno for 5 seconds 50% of the time");
 	    }
 
 		public override void SetDefaults() 
@@ -35,13 +35,13 @@ namespace SoulSang.Items.Weapons
 		{
 			CreateRecipe(1)
 				.AddIngredient<SoulSword_T2>(1)
-				.AddIngredient<MobSoul>(150)
+				.AddIngredient<StraySoul>(150)
 				.AddIngredient(ItemID.CursedFlame, 10)
 				.AddTile(TileID.MythrilAnvil)
 				.Register();
 		}
 		
-	    public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+	    public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			// Remember, 60 ticks = 1 second
 			if(Main.rand.NextBool(2)){

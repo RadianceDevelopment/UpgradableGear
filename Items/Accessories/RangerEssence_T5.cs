@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("True Soul Sniper's Essence");
-			Tooltip.SetDefault("The essence convulses for a moment, shoots a salvo of ectoplasm, then reveals its true form\nGrants +25% Ranged Damage\nBoosts ranged critical chance by 8%\nCurrent Tier: V");
+			// DisplayName.SetDefault("True Soul Sniper's Essence");
+			// Tooltip.SetDefault("The essence convulses for a moment, shoots a salvo of ectoplasm, then reveals its true form\nGrants +25% Ranged Damage\nBoosts ranged critical chance by 8%\nCurrent Tier: V");
 		}
 		
         public override void SetDefaults()
@@ -25,7 +25,7 @@ namespace SoulSang.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			player.GetDamage(DamageClass.Ranged) += 0.25f;
-			player.GetCritChance(DamageClass.Ranged) += 8;
+			player.GetCritChance(DamageClass.Ranged) += 10;
 			// Add 20% reduced ammo usage
         }
 		
@@ -33,8 +33,8 @@ namespace SoulSang.Items.Accessories
         {
 			CreateRecipe(1)
 				.AddIngredient<RangerEssence_T4>(1)
-				.AddIngredient<MobSoul>(500)
-				.AddIngredient(ItemID.FragmentVortex, 5)
+				.AddIngredient<StraySoul>(500)
+				.AddIngredient(ItemID.FragmentVortex, 10)
 				.AddTile(TileID.LunarCraftingStation)
 				.Register();
         }

@@ -8,8 +8,8 @@ namespace SoulSang.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Bow II");
-			Tooltip.SetDefault("The bow begans to shudder slightly...");
+			// DisplayName.SetDefault("Soul Bow II");
+			// Tooltip.SetDefault("The bow begans to shudder slightly...");
 	    }
 
 		public override void SetDefaults() 
@@ -37,7 +37,7 @@ namespace SoulSang.Items.Weapons
 		{
 			CreateRecipe(1)
 				.AddIngredient<SoulBow_T1>(1)
-				.AddIngredient<MobSoul>(5)
+				.AddIngredient<StraySoul>(5)
 				.AddTile(TileID.WorkBenches)
 				.Register();
 		}

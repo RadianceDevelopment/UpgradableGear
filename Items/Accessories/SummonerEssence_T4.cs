@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Summoner's Essence IV");
-			Tooltip.SetDefault("Visions start to appear in your mind...\nGrants +20% minion damage\nIncreases minion knockback by 7%\nGives +3 Minion Slots\nCurrent Tier: IV");
+			// DisplayName.SetDefault("Soul Summoner's Essence IV");
+			// Tooltip.SetDefault("Visions start to appear in your mind...\nGrants +20% minion damage\nIncreases minion knockback by 7%\nGives +3 Minion Slots\nCurrent Tier: IV");
 		}
 		
         public override void SetDefaults()
@@ -33,14 +33,14 @@ namespace SoulSang.Items.Accessories
         {
 			CreateRecipe(1)
 				.AddIngredient<SummonerEssence_T3>(1)
-				.AddIngredient<MobSoul>(225)
+				.AddIngredient<StraySoul>(225)
 				.AddIngredient(ItemID.MythrilBar, 5)
 				.AddTile(TileID.MythrilAnvil)
 				.Register();
 			
 			CreateRecipe(1)
 				.AddIngredient<SummonerEssence_T3>(1)
-				.AddIngredient<MobSoul>(225)
+				.AddIngredient<StraySoul>(225)
 				.AddIngredient(ItemID.OrichalcumBar, 5)
 				.AddTile(TileID.MythrilAnvil)
 				.Register();

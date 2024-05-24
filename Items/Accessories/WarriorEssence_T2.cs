@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Warrior's Essence II");
-			Tooltip.SetDefault("The Essence begins to pulsate...\nGrants +10% melee damage and 5% melee speed\nCurrent Tier: II");
+			// DisplayName.SetDefault("Soul Warrior's Essence II");
+			// Tooltip.SetDefault("The Essence begins to pulsate...\nGrants +10% melee damage and 5% melee speed\nCurrent Tier: II");
 		}
 		
         public override void SetDefaults()
@@ -32,14 +32,14 @@ namespace SoulSang.Items.Accessories
         {
 			CreateRecipe(1)
 				.AddIngredient<WarriorEssence_T1>(1)
-				.AddIngredient<MobSoul>(25)
+				.AddIngredient<StraySoul>(25)
 				.AddIngredient(ItemID.Ruby, 3)
 				.AddTile(TileID.Anvils)
 				.Register();
 			
 			CreateRecipe(1)
 				.AddIngredient<WarriorEssence_T1>(1)
-				.AddIngredient<MobSoul>(25)
+				.AddIngredient<StraySoul>(25)
 				.AddIngredient(ItemID.Diamond, 1)
 				.AddTile(TileID.Anvils)
 				.Register();

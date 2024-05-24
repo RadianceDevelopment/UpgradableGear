@@ -33,6 +33,6 @@ namespace SoulSang.Items.Potions
     }
 }
 
-This will increase the droprate of Monster Souls when (if) I add them
+This will increase the droprate of Monster Souls if I ever figure out how to do that
 
 */

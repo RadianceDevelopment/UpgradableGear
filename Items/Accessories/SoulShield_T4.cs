@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Shield IV");
-			Tooltip.SetDefault("+12 Defense\nMonster souls that have been forced to protect you\nYou've compressed even more souls into this, and realize that adding anymore will likely make the shield's soul vessel");
+			// DisplayName.SetDefault("Soul Shield IV");
+			// Tooltip.SetDefault("+12 Defense\nMonster souls that have been forced to protect you\nYou've compressed even more souls into this, and realize that adding anymore will likely make the shield's soul vessel");
 		}
 		
         public override void SetDefaults()
@@ -31,7 +31,7 @@ namespace SoulSang.Items.Accessories
         {
 			CreateRecipe(1)
 				.AddIngredient<SoulShield_T3>(1)
-				.AddIngredient<MobSoul>(100)
+				.AddIngredient<StraySoul>(100)
 				.AddIngredient(ItemID.LunarBar, 5)
 				.AddTile(TileID.LunarCraftingStation)
 				.Register();

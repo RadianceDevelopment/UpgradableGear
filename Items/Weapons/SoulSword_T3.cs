@@ -8,8 +8,8 @@ namespace SoulSang.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("True Soul Sword");
-			Tooltip.SetDefault("The sword has reached its zenith\nInflicts Cursed Inferno for 7 seconds and Ichor for 5 seconds 50% of the time.");
+			// DisplayName.SetDefault("True Soul Sword");
+			// Tooltip.SetDefault("The sword has reached its zenith\nInflicts Cursed Inferno for 7 seconds and Ichor for 5 seconds 50% of the time.");
 		}
 		// Be sure to make this shoot the ghost orb!
 		public override void SetDefaults() 
@@ -36,13 +36,13 @@ namespace SoulSang.Items.Weapons
 			CreateRecipe(1)
 				.AddIngredient<SoulSword_Cursed>(1)
 				.AddIngredient<SoulSword_Ichor>(1)
-				.AddIngredient<MobSoul>(24)
+				.AddIngredient<StraySoul>(24)
 				.AddIngredient(ItemID.LunarBar, 5)
 				.AddTile(TileID.LunarCraftingStation)
 				.Register();
 		}
 		
-		 public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+		 public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			// Remember, 60 ticks = 1 second
 			if(Main.rand.NextBool(2)){

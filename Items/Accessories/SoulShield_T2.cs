@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Shield II");
-			Tooltip.SetDefault("+4 Defense\nMonster souls that have been forced to protect you\nYou've added more souls into the mix, improving the defense provided");
+			// DisplayName.SetDefault("Soul Shield II");
+			// Tooltip.SetDefault("+4 Defense\nMonster souls that have been forced to protect you\nYou've added more souls into the mix, improving the defense provided");
 		}
 		
         public override void SetDefaults()
@@ -31,14 +31,14 @@ namespace SoulSang.Items.Accessories
         {
 			CreateRecipe(1)
 				.AddIngredient<SoulShield_T1>(1)
-				.AddIngredient<MobSoul>(35)
+				.AddIngredient<StraySoul>(35)
 				.AddIngredient(ItemID.DemoniteBar, 5)
 				.AddTile(TileID.Anvils)
 				.Register();
 			
 			CreateRecipe(1)
 				.AddIngredient<SoulShield_T1>(1)
-				.AddIngredient<MobSoul>(35)
+				.AddIngredient<StraySoul>(35)
 				.AddIngredient(ItemID.CrimtaneBar, 5)
 				.AddTile(TileID.Anvils)
 				.Register();

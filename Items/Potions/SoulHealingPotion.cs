@@ -8,7 +8,7 @@ namespace SoulSang.Items.Potions
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Soul Healing Potion");
+			// DisplayName.SetDefault("Soul Healing Potion");
 		}
 
 		public override void SetDefaults() {
@@ -16,14 +16,14 @@ namespace SoulSang.Items.Potions
 			Item.height = 26;
 			Item.scale = 0.50f;
 			Item.useStyle = ItemUseStyleID.EatFood;
-			Item.useAnimation = 20;
+            Item.UseSound = SoundID.Item3;
+            Item.useAnimation = 20;
 			Item.useTime = 18;
 			Item.useTurn = true;
-			Item.UseSound = SoundID.Item3;
 			Item.maxStack = 30;
 			Item.consumable = true;
 			Item.rare = 7;
-			Item.healLife = 325;
+			Item.healLife = 300;
 			Item.potion = true;
 			Item.value = Item.sellPrice(silver: 30);
 		}
@@ -32,10 +32,10 @@ namespace SoulSang.Items.Potions
 		{
 			CreateRecipe(4)
 				.AddIngredient(ItemID.SuperHealingPotion, 4)
-				.AddIngredient<MobSoul>(40)
+				.AddIngredient<StraySoul>(50)
 				.AddTile(TileID.Bottles)
 				.Register();
 		}
 	}
 }
-// Idea by a friend of mine, Xorger128
+// Idea by a former friend of mine, Xorger128

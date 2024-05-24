@@ -8,8 +8,6 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Rudimentary Soul Regenerator");
-			Tooltip.SetDefault("An ancient device thought to improve the users' ability to regenerate lost pieces of their Soul.\nIncreases life regen when equipped");
 		}
 		
         public override void SetDefaults()
@@ -24,24 +22,24 @@ namespace SoulSang.Items.Accessories
 		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			// Band of Regen is 1
-			player.lifeRegen+= 3;
+			// Band of Regen is 2
+			player.lifeRegen+= 4;
         }
 		
         public override void AddRecipes()
         {
 			CreateRecipe(1)
-				.AddIngredient(ItemID.BandofRegeneration, 1)
-				.AddIngredient<MobSoul>(25)
-				.AddIngredient(ItemID.GoldBar, 2)
-				.AddTile(TileID.Anvils)
+				.AddIngredient(ItemID.BandofRegeneration)
+				.AddIngredient<StraySoul>(35)
+				.AddIngredient(ItemID.GoldBar, 3)
+				.AddTile(TileID.TinkerersWorkbench)
 				.Register();
 				
 			CreateRecipe(1)
-				.AddIngredient(ItemID.BandofRegeneration, 1)
-				.AddIngredient<MobSoul>(25)
-				.AddIngredient(ItemID.PlatinumBar, 2)
-				.AddTile(TileID.Anvils)
+				.AddIngredient(ItemID.BandofRegeneration)
+				.AddIngredient<StraySoul>(35)
+				.AddIngredient(ItemID.PlatinumBar, 3)
+				.AddTile(TileID.TinkerersWorkbench)
 				.Register();
         }
     }

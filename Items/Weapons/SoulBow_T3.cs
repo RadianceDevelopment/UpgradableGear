@@ -8,8 +8,8 @@ namespace SoulSang.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Bow III");
-			Tooltip.SetDefault("With a fierce twang, the bow recoils against you...");
+			// DisplayName.SetDefault("Soul Bow III");
+			// Tooltip.SetDefault("With a fierce twang, the bow recoils against you...");
 	    }
 
 		public override void SetDefaults() 
@@ -37,7 +37,7 @@ namespace SoulSang.Items.Weapons
 		{
 			CreateRecipe(1)
 				.AddIngredient<SoulBow_T2>(1)
-				.AddIngredient<MobSoul>(10)
+				.AddIngredient<StraySoul>(10)
 				.AddIngredient(ItemID.Diamond, 1)
 				.AddTile(TileID.Anvils)
 				.Register();

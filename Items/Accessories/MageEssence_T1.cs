@@ -8,15 +8,13 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Mage's Essence");
-			Tooltip.SetDefault("Monster Souls that are forced to obey your magical commands\nGrants +5% Magic Damage\nCurrent Tier: I");
 		}
 		
         public override void SetDefaults()
         {
             Item.width = 20;
             Item.height = 20;
-            Item.maxStack = 0;
+            Item.maxStack = 1;
 			Item.accessory = true;
             Item.rare = ItemRarityID.White;
 			Item.value = Item.sellPrice(copper: 0);
@@ -30,7 +28,7 @@ namespace SoulSang.Items.Accessories
         public override void AddRecipes()
         {
 			CreateRecipe(1)
-				.AddIngredient<MobSoul>(10)
+				.AddIngredient<StraySoul>(15)
 				.AddTile(TileID.WorkBenches)
 				.Register();
         }

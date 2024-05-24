@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("True Soul Summoner's Essence");
-			Tooltip.SetDefault("The visions manifest as all manner of familiar, and settle after a short fight.\nGrants +25% minion damage\nIncreases minion knockback by 10%\nGives +4 Minion Slots\nCurrent Tier: V");
+			// DisplayName.SetDefault("True Soul Summoner's Essence");
+			// Tooltip.SetDefault("The visions manifest as all manner of familiar, and settle after a short fight.\nGrants +25% minion damage\nIncreases minion knockback by 10%\nGives +4 Minion Slots\nCurrent Tier: V");
 		}
 		
         public override void SetDefaults()
@@ -33,9 +33,9 @@ namespace SoulSang.Items.Accessories
         {
 			CreateRecipe(1)
 				.AddIngredient<SummonerEssence_T4>(1)
-				.AddIngredient<MobSoul>(500)
-				.AddIngredient(ItemID.BeetleHusk, 5)
-				.AddTile(TileID.MythrilAnvil)
+				.AddIngredient<StraySoul>(500)
+                .AddIngredient(ItemID.FragmentStardust, 10)
+                .AddTile(TileID.LunarCraftingStation)
 				.Register();
         }
     }

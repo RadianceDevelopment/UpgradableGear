@@ -8,8 +8,8 @@ namespace SoulSang.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Sword I");
-			Tooltip.SetDefault("Monster Essence concentrated into a blade.\nCan be infused with Souls and other materials to increase its power");
+			// DisplayName.SetDefault("Soul Sword I");
+			// Tooltip.SetDefault("Monster Essence concentrated into a blade.\nCan be infused with Souls and other materials to increase its power");
 		}
 
 		public override void SetDefaults() 
@@ -32,7 +32,7 @@ namespace SoulSang.Items.Weapons
 		public override void AddRecipes() 
 		{
 			CreateRecipe(1)
-				.AddIngredient<MobSoul>(12)
+				.AddIngredient<StraySoul>(12)
 				.AddTile(TileID.WorkBenches)
 				.Register();
 		}

@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Summoner's Essence II");
-			Tooltip.SetDefault("The Souls seem to be groaning in pain\nGrants +10% minion damage\nGives +1 Minion Slot\nCurrent Tier: II");
+			// DisplayName.SetDefault("Soul Summoner's Essence II");
+			// Tooltip.SetDefault("The Souls seem to be groaning in pain\nGrants +10% minion damage\nGives +1 Minion Slot\nCurrent Tier: II");
 		}
 		
         public override void SetDefaults()
@@ -32,14 +32,14 @@ namespace SoulSang.Items.Accessories
         {
 			CreateRecipe(1)
 				.AddIngredient<SummonerEssence_T1>(1)
-				.AddIngredient<MobSoul>(25)
+				.AddIngredient<StraySoul>(40)
 				.AddIngredient(ItemID.Amethyst, 3)
 				.AddTile(TileID.Anvils)
 				.Register();
 			
 			CreateRecipe(1)
 				.AddIngredient<SummonerEssence_T1>(1)
-				.AddIngredient<MobSoul>(25)
+				.AddIngredient<StraySoul>(25)
 				.AddIngredient(ItemID.Diamond, 1)
 				.AddTile(TileID.Anvils)
 				.Register();

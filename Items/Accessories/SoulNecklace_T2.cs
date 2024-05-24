@@ -8,8 +8,6 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Necklace II");
-			Tooltip.SetDefault("A necklace infused with Souls.\nBound to increase ones' spritual affinity.\nMore Souls have been focused into the central gem.\n+10% Minion Damage\nIncreases minion knockback by 10%");
 		}
 		
         public override void SetDefaults()
@@ -18,23 +16,33 @@ namespace SoulSang.Items.Accessories
             Item.height = 30;
             Item.maxStack = 1;
 			Item.accessory = true;
-            Item.rare = ItemRarityID.White;
+            Item.rare = ItemRarityID.Blue;
 			Item.value = Item.sellPrice(silver: 2);
         }
 		
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			player.GetDamage(DamageClass.Summon) += 0.10f;
-			player.GetKnockback(DamageClass.Summon).Base+= 0.05f;
+			player.GetKnockback(DamageClass.Summon).Base += 0.05f;
         }
 		
         public override void AddRecipes()
         {
 			CreateRecipe(1)
-				.AddIngredient<MobSoul>(50)
+				.AddIngredient<StraySoul>(50)
 				.AddIngredient<SoulNecklace_T1>(1)
-				.AddTile(TileID.Anvils)
+                .AddIngredient(ItemID.DemoniteBar, 2)
+                .AddIngredient(ItemID.Sapphire)
+                .AddTile(TileID.Anvils)
 				.Register();
+
+            CreateRecipe(1)
+                .AddIngredient<StraySoul>(50)
+                .AddIngredient<SoulNecklace_T1>(1)
+                .AddIngredient(ItemID.CrimtaneBar, 2)
+                .AddIngredient(ItemID.Sapphire)
+                .AddTile(TileID.Anvils)
+                .Register();
         }
     }
 }

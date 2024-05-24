@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Targeter III");
-			Tooltip.SetDefault("You've crammed as many souls as possible into this thing to double its efficiency, yet again\nGrants +12% Critical Chance\nMight do something extra...");
+			// DisplayName.SetDefault("Soul Targeter III");
+			// Tooltip.SetDefault("You've crammed as many souls as possible into this thing to double its efficiency, yet again\nGrants +12% Critical Chance\nMight do something extra...");
 		}
 		
         public override void SetDefaults()
@@ -38,7 +38,7 @@ namespace SoulSang.Items.Accessories
         {
 			CreateRecipe(1)
 				.AddIngredient<SoulTargeter_T2>(1)
-				.AddIngredient<MobSoul>(60)
+				.AddIngredient<StraySoul>(60)
 				.AddIngredient(ItemID.SpectreBar, 5)
 				.AddIngredient(ItemID.ShroomiteBar, 5)
 				.AddTile(TileID.MythrilAnvil)

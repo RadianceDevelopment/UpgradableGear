@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Summoner's Essence");
-			Tooltip.SetDefault("Monster Souls that have been compressed and forced to obey your commands\nGrants +5% minion damage\nCurrent Tier: I");
+			// DisplayName.SetDefault("Soul Summoner's Essence");
+			// Tooltip.SetDefault("Monster Souls that have been compressed and forced to obey your commands\nGrants +5% minion damage\nCurrent Tier: I");
 		}
 		
         public override void SetDefaults()
@@ -30,7 +30,7 @@ namespace SoulSang.Items.Accessories
         public override void AddRecipes()
         {
 			CreateRecipe(1)
-				.AddIngredient<MobSoul>(10)
+				.AddIngredient<StraySoul>(10)
 				.AddTile(TileID.WorkBenches)
 				.Register();
         }

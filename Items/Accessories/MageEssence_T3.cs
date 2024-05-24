@@ -8,8 +8,6 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Mage's Essence III");
-			Tooltip.SetDefault("You hear the Souls whispering...\nGrants +15% Magic Damage\nIncreases magical critical chance by 4%\nReduces mana usage by 4%\nCurrent Tier: III");
 		}
 		
         public override void SetDefaults()
@@ -33,9 +31,9 @@ namespace SoulSang.Items.Accessories
         {
 			CreateRecipe(1)
 				.AddIngredient<MageEssence_T2>(1)
-				.AddIngredient<MobSoul>(75)
+				.AddIngredient<StraySoul>(75)
 				.AddIngredient(ItemID.HellstoneBar, 3)
-				.AddTile(TileID.Anvils)
+				.AddTile(TileID.TinkerersWorkbench)
 				.Register();
         }
     }

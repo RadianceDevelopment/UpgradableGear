@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Vessel Fragment I");
-			Tooltip.SetDefault("A fragment of something that holds great power over Souls\nOriginates from a far-away land\nIncreases maximum life by 5 when equipped");
+			// DisplayName.SetDefault("Vessel Fragment I");
+			// Tooltip.SetDefault("A fragment of something that holds great power over Souls\nOriginates from a far-away land\nIncreases maximum life by 5 when equipped");
 		}
 		
         public override void SetDefaults()
@@ -30,7 +30,7 @@ namespace SoulSang.Items.Accessories
         public override void AddRecipes()
         {
 			CreateRecipe(1)
-				.AddIngredient<MobSoul>(25)
+				.AddIngredient<StraySoul>(25)
 				.AddTile(TileID.Furnaces)
 				.Register();
         }

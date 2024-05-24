@@ -1,3 +1,4 @@
+/*
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -8,8 +9,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Clawed Knuckles");
-			Tooltip.SetDefault("+4 Defense\n+12% Melee Speed\nA set of claws that have fleshy knuckles embedded into them\nCombining the two seems to prevent the rancid smell of flesh from attracting creatures");
+			// DisplayName.SetDefault("Clawed Knuckles");
+			// Tooltip.SetDefault("+4 Defense\n+12% Melee Speed\nA set of claws that have fleshy knuckles embedded into them\nCombining the two seems to prevent the rancid smell of flesh from attracting creatures");
 		}
 		
         public override void SetDefaults()
@@ -38,3 +39,4 @@ namespace SoulSang.Items.Accessories
         }
     }
 }
+*/

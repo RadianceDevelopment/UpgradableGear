@@ -1,0 +1,318 @@
+Items: {
+	SoulSword_T3: {
+		DisplayName: Soul Sword_ T3
+		Tooltip: ""
+	}
+
+	SoulSword_T2: {
+		Tooltip: ""
+		DisplayName: Soul Sword_ T2
+	}
+
+	SoulSword_T1: {
+		Tooltip: ""
+		DisplayName: Soul Sword_ T1
+	}
+
+	SoulSword_Ichor: {
+		Tooltip: ""
+		DisplayName: Soul Sword_ Ichor
+	}
+
+	SoulSword_Cursed: {
+		Tooltip: ""
+		DisplayName: Soul Sword_ Cursed
+	}
+
+	SoulBow_T3: {
+		Tooltip: ""
+		DisplayName: Soul Bow_ T3
+	}
+
+	SoulBow_T2: {
+		Tooltip: ""
+		DisplayName: Soul Bow_ T2
+	}
+
+	SoulBow_T1: {
+		Tooltip: ""
+		DisplayName: Soul Bow_ T1
+	}
+
+	SoulspeedPotion: {
+		Tooltip: ""
+		DisplayName: Soulspeed Potion
+	}
+
+	SoulskinPotion: {
+		Tooltip: ""
+		DisplayName: Soulskin Potion
+	}
+
+	SoulHealingPotion: {
+		Tooltip: ""
+		DisplayName: Soul Healing Potion
+	}
+
+	Soulcake: {
+		Tooltip: ""
+		DisplayName: Soulcake
+	}
+
+	NecroLuckPotion: {
+		Tooltip: ""
+		DisplayName: Necro Luck Potion
+	}
+
+	MobSoul: {
+		Tooltip: ""
+		DisplayName: Mob Soul
+	}
+
+	FinalSummonerToken: {
+		Tooltip: ""
+		DisplayName: Final Summoner Token
+	}
+
+	FinalRangedToken: {
+		Tooltip: ""
+		DisplayName: Final Ranged Token
+	}
+
+	FinalMeleeToken: {
+		Tooltip: ""
+		DisplayName: Final Melee Token
+	}
+
+	FinalMagicToken: {
+		Tooltip: ""
+		DisplayName: Final Magic Token
+	}
+
+	WarriorEssence_T5: {
+		Tooltip: ""
+		DisplayName: Warrior Essence_ T5
+	}
+
+	WarriorEssence_T4: {
+		Tooltip: ""
+		DisplayName: Warrior Essence_ T4
+	}
+
+	WarriorEssence_T3: {
+		Tooltip: ""
+		DisplayName: Warrior Essence_ T3
+	}
+
+	WarriorEssence_T2: {
+		Tooltip: ""
+		DisplayName: Warrior Essence_ T2
+	}
+
+	WarriorEssence_T1: {
+		Tooltip: ""
+		DisplayName: Warrior Essence_ T1
+	}
+
+	SummonerEssence_T5: {
+		Tooltip: ""
+		DisplayName: Summoner Essence_ T5
+	}
+
+	SummonerEssence_T4: {
+		Tooltip: ""
+		DisplayName: Summoner Essence_ T4
+	}
+
+	SummonerEssence_T3: {
+		Tooltip: ""
+		DisplayName: Summoner Essence_ T3
+	}
+
+	SummonerEssence_T2: {
+		Tooltip: ""
+		DisplayName: Summoner Essence_ T2
+	}
+
+	SummonerEssence_T1: {
+		Tooltip: ""
+		DisplayName: Summoner Essence_ T1
+	}
+
+	SoulVessel3: {
+		Tooltip: ""
+		DisplayName: Soul Vessel3
+	}
+
+	SoulVessel2: {
+		Tooltip: ""
+		DisplayName: Soul Vessel2
+	}
+
+	SoulVessel1: {
+		Tooltip: ""
+		DisplayName: Soul Vessel1
+	}
+
+	SoulVessel: {
+		Tooltip: ""
+		DisplayName: Soul Vessel
+	}
+
+	SoulTargeter_T3: {
+		Tooltip: ""
+		DisplayName: Soul Targeter_ T3
+	}
+
+	SoulTargeter_T2: {
+		Tooltip: ""
+		DisplayName: Soul Targeter_ T2
+	}
+
+	SoulTargeter_T1: {
+		Tooltip: ""
+		DisplayName: Soul Targeter_ T1
+	}
+
+	SoulShield_T4: {
+		Tooltip: ""
+		DisplayName: Soul Shield_ T4
+	}
+
+	SoulShield_T3: {
+		Tooltip: ""
+		DisplayName: Soul Shield_ T3
+	}
+
+	SoulShield_T2: {
+		Tooltip: ""
+		DisplayName: Soul Shield_ T2
+	}
+
+	SoulShield_T1: {
+		Tooltip: ""
+		DisplayName: Soul Shield_ T1
+	}
+
+	SoulScarab: {
+		Tooltip: ""
+		DisplayName: Soul Scarab
+	}
+
+	SoulRegenerator: {
+		Tooltip: ""
+		DisplayName: Soul Regenerator
+	}
+
+	SoulNecklace_T3: {
+		Tooltip: ""
+		DisplayName: Soul Necklace_ T3
+	}
+
+	SoulNecklace_T2: {
+		Tooltip: ""
+		DisplayName: Soul Necklace_ T2
+	}
+
+	SoulNecklace_T1: {
+		Tooltip: ""
+		DisplayName: Soul Necklace_ T1
+	}
+
+	ScarabNecklace: {
+		Tooltip: ""
+		DisplayName: Scarab Necklace
+	}
+
+	SageEssence: {
+		Tooltip: ""
+		DisplayName: Sage Essence
+	}
+
+	RangerEssence_T5: {
+		Tooltip: ""
+		DisplayName: Ranger Essence_ T5
+	}
+
+	RangerEssence_T4: {
+		Tooltip: ""
+		DisplayName: Ranger Essence_ T4
+	}
+
+	RangerEssence_T3: {
+		Tooltip: ""
+		DisplayName: Ranger Essence_ T3
+	}
+
+	RangerEssence_T2: {
+		Tooltip: ""
+		DisplayName: Ranger Essence_ T2
+	}
+
+	RangerEssence_T1: {
+		Tooltip: ""
+		DisplayName: Ranger Essence_ T1
+	}
+
+	MythicRegenerator: {
+		Tooltip: ""
+		DisplayName: Mythic Regenerator
+	}
+
+	MasterEssence: {
+		Tooltip: ""
+		DisplayName: Master Essence
+	}
+
+	MageEssence_T5: {
+		Tooltip: ""
+		DisplayName: Mage Essence_ T5
+	}
+
+	MageEssence_T4: {
+		Tooltip: ""
+		DisplayName: Mage Essence_ T4
+	}
+
+	MageEssence_T3: {
+		Tooltip: ""
+		DisplayName: Mage Essence_ T3
+	}
+
+	MageEssence_T2: {
+		Tooltip: ""
+		DisplayName: Mage Essence_ T2
+	}
+
+	MageEssence_T1: {
+		Tooltip: ""
+		DisplayName: Mage Essence_ T1
+	}
+
+	ClawedKnuckles_Soul: {
+		Tooltip: ""
+		DisplayName: Clawed Knuckles_ Soul
+	}
+
+	ClawedKnuckles: {
+		Tooltip: ""
+		DisplayName: Clawed Knuckles
+	}
+
+	BasicSoulRegen: {
+		Tooltip: ""
+		DisplayName: Basic Soul Regen
+	}
+}
+
+Buffs: {
+	Soulspeed: {
+		Description: Mods.SoulSang.Buffs.Soulspeed.Description
+		DisplayName: Soulspeed
+	}
+
+	Soulskin: {
+		Description: Mods.SoulSang.Buffs.Soulskin.Description
+		DisplayName: Soulskin
+	}
+}

@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Vessel");
-			Tooltip.SetDefault("Combining 3 Vessel Fragments allows you to imbue the fragments with the power of Soul\nAn ancient Item from a far-away land\nIncreases maximum life by 100 when equipped");
+			// DisplayName.SetDefault("Soul Vessel");
+			// Tooltip.SetDefault("Combining 3 Vessel Fragments allows you to imbue the fragments with the power of Soul\nAn ancient Item from a far-away land\nIncreases maximum life by 100 when equipped");
 		}
 		
         public override void SetDefaults()
@@ -33,9 +33,9 @@ namespace SoulSang.Items.Accessories
 				.AddIngredient<SoulVessel1>(1)
 				.AddIngredient<SoulVessel2>(1)
 				.AddIngredient<SoulVessel3>(1)
-				.AddIngredient<MobSoul>(125)
+				.AddIngredient<StraySoul>(150)
 				.AddIngredient(ItemID.Ectoplasm, 10)
-				.AddTile(TileID.MythrilAnvil)
+				.AddTile(TileID.TinkerersWorkbench)
 				.Register();
         }
     }

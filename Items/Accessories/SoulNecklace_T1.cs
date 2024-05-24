@@ -8,8 +8,6 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Necklace I");
-			Tooltip.SetDefault("A necklace infused with Souls.\nBound to increase ones' spritual affinity.\n+5% Minion Damage\nIncreases minion knockback by 5%");
 		}
 		
         public override void SetDefaults()
@@ -30,9 +28,9 @@ namespace SoulSang.Items.Accessories
         public override void AddRecipes()
         {
 			CreateRecipe(1)
-				.AddIngredient<MobSoul>(25)
-				.AddIngredient(ItemID.Chain, 5)
-				.AddTile(TileID.Anvils)
+				.AddIngredient<StraySoul>(25)
+				.AddIngredient(ItemID.Chain)
+				.AddTile(TileID.Tables)
 				.Register();
         }
     }

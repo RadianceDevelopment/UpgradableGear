@@ -1,5 +1,5 @@
 displayName = Soul Sanguisuge
 author = vizthex
-version = 4.2
+version = 1.3
 homepage = https://github.com/vizthex123/SoulSang
 buildIgnore = .gitignore, .git, .md, .txt, .xcf

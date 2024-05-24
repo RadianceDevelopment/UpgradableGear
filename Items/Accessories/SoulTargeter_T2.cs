@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Targeter II");
-			Tooltip.SetDefault("You've added more Souls into the housing to double the efficiency\nGrants +6% Critical Chance\nMight do something extra...");
+			// DisplayName.SetDefault("Soul Targeter II");
+			// Tooltip.SetDefault("You've added more Souls into the housing to double the efficiency\nGrants +6% Critical Chance\nMight do something extra...");
 		}
 		
         public override void SetDefaults()
@@ -38,7 +38,7 @@ namespace SoulSang.Items.Accessories
         {
 			CreateRecipe(1)
 				.AddIngredient<SoulTargeter_T1>(1)
-				.AddIngredient<MobSoul>(45)
+				.AddIngredient<StraySoul>(45)
 				.AddIngredient(ItemID.HellstoneBar, 5)
 				.AddIngredient(ItemID.CobaltBar, 3)
 				.AddTile(TileID.Anvils)
@@ -46,7 +46,7 @@ namespace SoulSang.Items.Accessories
 			
 			CreateRecipe(1)
 				.AddIngredient<SoulTargeter_T1>(1)
-				.AddIngredient<MobSoul>(45)
+				.AddIngredient<StraySoul>(45)
 				.AddIngredient(ItemID.HellstoneBar, 5)
 				.AddIngredient(ItemID.PalladiumBar, 3)
 				.AddTile(TileID.Anvils)

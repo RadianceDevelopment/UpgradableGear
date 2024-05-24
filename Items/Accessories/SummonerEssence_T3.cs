@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Summoner's Essence III");
-			Tooltip.SetDefault("The noise grows louder...\nGrants +15% minion damage\nIncreases minion knockback by 5%\nGives +2 Minion Slots\nCurrent Tier: III");
+			// DisplayName.SetDefault("Soul Summoner's Essence III");
+			// Tooltip.SetDefault("The noise grows louder...\nGrants +15% minion damage\nIncreases minion knockback by 5%\nGives +2 Minion Slots\nCurrent Tier: III");
 		}
 		
         public override void SetDefaults()
@@ -33,9 +33,9 @@ namespace SoulSang.Items.Accessories
         {
 			CreateRecipe(1)
 				.AddIngredient<SummonerEssence_T2>(1)
-				.AddIngredient<MobSoul>(75)
+				.AddIngredient<StraySoul>(75)
 				.AddIngredient(ItemID.HellstoneBar, 3)
-				.AddTile(TileID.Anvils)
+				.AddTile(TileID.TinkerersWorkbench)
 				.Register();
         }
     }

@@ -9,8 +9,8 @@ namespace SoulSang.Items.Potions
 	{
         public override void SetStaticDefaults()
         {
-			DisplayName.SetDefault("Soulskin Potion");
-            Tooltip.SetDefault("Increases defense by 12\nStacks to 20");
+			// DisplayName.SetDefault("Soulskin Potion");
+            // Tooltip.SetDefault("Increases defense by 12\nStacks to 20");
         }
 
         public override void SetDefaults()
@@ -34,14 +34,14 @@ namespace SoulSang.Items.Potions
 		public override void AddRecipes() 
 		{
 			CreateRecipe(1)
-				.AddIngredient<MobSoul>(6)
+				.AddIngredient<StraySoul>(6)
 				.AddIngredient(ItemID.IronskinPotion)
 				.AddIngredient(ItemID.SoulofNight)
 				.AddTile(TileID.Bottles)
 				.Register();
 			
 			CreateRecipe(1)
-				.AddIngredient<MobSoul>(6)
+				.AddIngredient<StraySoul>(6)
 				.AddIngredient(ItemID.IronskinPotion)
 				.AddIngredient(ItemID.SoulofLight, 3)
 				.AddTile(TileID.Bottles)

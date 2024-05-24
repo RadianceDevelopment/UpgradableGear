@@ -117,7 +117,7 @@ namespace SoulSang.Tiles
 			recipe.AddIngredient(ItemID.WorkBench, 1);
 			//recipe.AddRecipeGroup("UpgradableGear:IronAnvil");
 			recipe.AddIngredient(ItemID.IronAnvil, 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 10);
+			recipe.AddIngredient(mod.GetItem("StraySoul"), 10);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
@@ -126,7 +126,7 @@ namespace SoulSang.Tiles
 			recipe.AddIngredient(ItemID.WorkBench, 1);
 			//recipe.AddRecipeGroup("UpgradableGear:IronAnvil");
 			recipe.AddIngredient(ItemID.LeadAnvil, 1);
-			recipe.AddIngredient(mod.GetItem("MobSoul"), 10);
+			recipe.AddIngredient(mod.GetItem("StraySoul"), 10);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -8,8 +8,6 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Mage's Essence II");
-			Tooltip.SetDefault("The Souls stir, as if trying to converse with you...\nGrants +10% Magic Damage\nReduces mana usage by 3%\nCurrent Tier: II");
 		}
 		
         public override void SetDefaults()
@@ -19,7 +17,7 @@ namespace SoulSang.Items.Accessories
             Item.maxStack = 1;
 			Item.accessory = true;
             Item.rare = ItemRarityID.Blue;
-			Item.value = Item.sellPrice(silver: 30);
+			Item.value = Item.sellPrice(silver: 35);
         }
 		
         public override void UpdateAccessory(Player player, bool hideVisual)
@@ -32,14 +30,14 @@ namespace SoulSang.Items.Accessories
         {
 			CreateRecipe(1)
 				.AddIngredient<MageEssence_T1>(1)
-				.AddIngredient<MobSoul>(25)
+				.AddIngredient<StraySoul>(40)
 				.AddIngredient(ItemID.Sapphire, 3)
 				.AddTile(TileID.Anvils)
 				.Register();
 			
 			CreateRecipe(1)
 				.AddIngredient<MageEssence_T1>(1)
-				.AddIngredient<MobSoul>(25)
+				.AddIngredient<StraySoul>(25)
 				.AddIngredient(ItemID.Diamond, 1)
 				.AddTile(TileID.Anvils)
 				.Register();

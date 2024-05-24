@@ -1,16 +1,15 @@
-/*
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.ItemDropRules;
 
 namespace SoulSang.Global
 {
-    public class SoulSangNPC : GlobalNPC {
-	   
-public override void NPCLoot()
+	public class MyGlobalNPC : GlobalNPC
 	{
-	Item.NewItem(npc.getRect(), mod.ItemType("MobSoul"));
+		public override void ModifyGlobalLoot(GlobalLoot globalLoot) {
+			// This is where we add global rules for all NPC. Here is a simple example:
+			globalLoot.Add(ItemDropRule.Common(ModContent.ItemType<Items.StraySoul>(), 1));
+		}
 	}
-  }
 }
-*/

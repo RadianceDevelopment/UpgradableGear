@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Sniper's Essence IV");
-			Tooltip.SetDefault("The essence starts to spew ghostly projectiles...\nGrants +20% Ranged Damage\nBoosts ranged critical chance by 5%\nCurrent Tier: IV");
+			// DisplayName.SetDefault("Soul Sniper's Essence IV");
+			// Tooltip.SetDefault("The essence starts to spew ghostly projectiles...\nGrants +20% Ranged Damage\nBoosts ranged critical chance by 5%\nCurrent Tier: IV");
 		}
 		
         public override void SetDefaults()
@@ -33,8 +33,8 @@ namespace SoulSang.Items.Accessories
         {
 			CreateRecipe(1)
 				.AddIngredient<RangerEssence_T3>(1)
-				.AddIngredient<MobSoul>(225)
-				.AddIngredient(ItemID.ShroomiteBar, 4)
+				.AddIngredient<StraySoul>(225)
+				.AddIngredient(ItemID.ShroomiteBar, 5)
 				.AddTile(TileID.MythrilAnvil)
 				.Register();
         }

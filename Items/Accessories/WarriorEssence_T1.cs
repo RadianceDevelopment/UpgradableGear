@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Warrior's Essence");
-			Tooltip.SetDefault("The Essence of monsters compressed into a form that imbues the user with a bit of power.\nGrants +5% melee damage\nCurrent Tier: I");
+			// DisplayName.SetDefault("Soul Warrior's Essence");
+			// Tooltip.SetDefault("The Essence of monsters compressed into a form that imbues the user with a bit of power.\nGrants +5% melee damage\nCurrent Tier: I");
 		}
 		
         public override void SetDefaults()
@@ -30,7 +30,7 @@ namespace SoulSang.Items.Accessories
         public override void AddRecipes()
         {
 			CreateRecipe(1)
-				.AddIngredient<MobSoul>(10)
+				.AddIngredient<StraySoul>(10)
 				.AddTile(TileID.WorkBenches)
 				.Register();
         }

@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Targeter I");
-			Tooltip.SetDefault("Souls that have been fashioned in a way that makes them enhance the bearer's ability to inflict great damage\nGrants +3% Critical Chance");
+			// DisplayName.SetDefault("Soul Targeter I");
+			// Tooltip.SetDefault("Souls that have been fashioned in a way that makes them enhance the bearer's ability to inflict great damage\nGrants +3% Critical Chance");
 		}
 		
         public override void SetDefaults()
@@ -32,7 +32,7 @@ namespace SoulSang.Items.Accessories
         public override void AddRecipes()
         {
 			CreateRecipe(1)
-				.AddIngredient<MobSoul>(30)
+				.AddIngredient<StraySoul>(30)
 				.AddTile(TileID.Anvils)
 				.Register();
         }

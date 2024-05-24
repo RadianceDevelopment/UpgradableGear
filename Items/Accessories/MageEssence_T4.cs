@@ -8,8 +8,6 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Mage's Essence IV");
-			Tooltip.SetDefault("The whispers grow into audible voices...\nGrants +20% Magic Damage\nIncreases magical critical chance by 6%\nReduces mana usage by 6%\nCurrent Tier: IV");
 		}
 		
         public override void SetDefaults()
@@ -19,7 +17,7 @@ namespace SoulSang.Items.Accessories
             Item.maxStack = 1;
 			Item.accessory = true;
             Item.rare = ItemRarityID.Yellow;
-			Item.value = Item.sellPrice(gold: 5, silver: 50);
+			Item.value = Item.sellPrice(gold: 5);
         }
 		
         public override void UpdateAccessory(Player player, bool hideVisual)
@@ -33,7 +31,7 @@ namespace SoulSang.Items.Accessories
         {
 			CreateRecipe(1)
 				.AddIngredient<MageEssence_T3>(1)
-				.AddIngredient<MobSoul>(225)
+				.AddIngredient<StraySoul>(225)
 				.AddIngredient(ItemID.SpectreBar, 4)
 				.AddTile(TileID.MythrilAnvil)
 				.Register();

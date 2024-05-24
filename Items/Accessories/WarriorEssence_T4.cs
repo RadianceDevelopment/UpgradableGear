@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Warrior's Essence IV");
-			Tooltip.SetDefault("The humming grows louder...\nGrants +20% melee damage and 15% melee speed\nBoosts melee critical chance by 5%\nCurrent Tier: IV");
+			// DisplayName.SetDefault("Soul Warrior's Essence IV");
+			// Tooltip.SetDefault("The humming grows louder...\nGrants +20% melee damage and 15% melee speed\nBoosts melee critical chance by 5%\nCurrent Tier: IV");
 		}
 		
         public override void SetDefaults()
@@ -33,7 +33,7 @@ namespace SoulSang.Items.Accessories
         {
 			CreateRecipe(1)
 				.AddIngredient<WarriorEssence_T3>(1)
-				.AddIngredient<MobSoul>(225)
+				.AddIngredient<StraySoul>(225)
 				.AddIngredient(ItemID.ChlorophyteBar, 5) //1006
 				.AddTile(TileID.MythrilAnvil)
 				.Register();

@@ -8,8 +8,8 @@ namespace SoulSang.Items.Accessories
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("True Soul Warrior's Essence");
-			Tooltip.SetDefault("The Essence twists and convulses, then reveals its true form\nGrants +25% melee damage and +20% melee speed\nBoosts melee critical chance by 8%\nCurrent Tier: V");
+			// DisplayName.SetDefault("True Soul Warrior's Essence");
+			// Tooltip.SetDefault("The Essence twists and convulses, then reveals its true form\nGrants +25% melee damage and +20% melee speed\nBoosts melee critical chance by 8%\nCurrent Tier: V");
 		}
 		
         public override void SetDefaults()
@@ -33,8 +33,8 @@ namespace SoulSang.Items.Accessories
         {
 			CreateRecipe(1)
 				.AddIngredient<WarriorEssence_T4>(1)
-				.AddIngredient<MobSoul>(500)
-				.AddIngredient(ItemID.FragmentSolar, 5)
+				.AddIngredient<StraySoul>(500)
+				.AddIngredient(ItemID.FragmentSolar, 10)
 				.AddTile(TileID.LunarCraftingStation)
 				.Register();
         }

@@ -7,8 +7,8 @@ namespace SoulSang.Buffs
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Soulpeed");
-            Description.SetDefault("40% increased movement speed");
+            // DisplayName.SetDefault("Soulpeed");
+            // Description.SetDefault("40% increased movement speed");
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = false;
         }

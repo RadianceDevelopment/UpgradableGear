@@ -8,8 +8,8 @@ namespace SoulSang.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Bow I");
-			Tooltip.SetDefault("A bow crafted from the souls of fallen foes");
+			// DisplayName.SetDefault("Soul Bow I");
+			// Tooltip.SetDefault("A bow crafted from the souls of fallen foes");
 	    }
 
 		public override void SetDefaults() 
@@ -35,7 +35,7 @@ namespace SoulSang.Items.Weapons
 		public override void AddRecipes()
 		{
 			CreateRecipe(1)
-				.AddIngredient<MobSoul>(10)
+				.AddIngredient<StraySoul>(10)
 				.AddTile(TileID.WorkBenches)
 				.Register();
 		}

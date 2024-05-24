@@ -8,8 +8,8 @@ namespace SoulSang.Items.Weapons
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Soul Sword II");
-			Tooltip.SetDefault("The sword pulses with energy...");
+			// DisplayName.SetDefault("Soul Sword II");
+			// Tooltip.SetDefault("The sword pulses with energy...");
 		}
 
 		public override void SetDefaults() 
@@ -35,14 +35,14 @@ namespace SoulSang.Items.Weapons
 		{
 			CreateRecipe(1)
 				.AddIngredient<SoulSword_T1>(1)
-				.AddIngredient<MobSoul>(6)
+				.AddIngredient<StraySoul>(6)
 				.AddIngredient(ItemID.Ruby, 5)
 				.AddTile(TileID.Anvils)
 				.Register();
 				
 			CreateRecipe(1)
 				.AddIngredient<SoulSword_T1>(1)
-				.AddIngredient<MobSoul>(6)
+				.AddIngredient<StraySoul>(6)
 				.AddIngredient(ItemID.Diamond, 1)
 				.AddTile(TileID.Anvils)
 				.Register();
